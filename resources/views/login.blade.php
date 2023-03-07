@@ -30,7 +30,7 @@
                     <button type="submit" name="submit">Sign In</button>
 
                     <div class="link">
-                    <a href="">Noch kein Konto?</a>
+                    <a href="/register">Noch kein Konto?</a>
                     <a href="">Als Lehrer einloggen?</a>
                     </div>
                    
