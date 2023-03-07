@@ -12,7 +12,7 @@
 <body>
   <style>
       *{
-         background-color: #A8E08E;
+         background-color: rgb(210	,241	,207);
       }
 
       .svgclass{
