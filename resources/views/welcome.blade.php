@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
 <body>
   <style>
-      *{
+      body{
          background-color: #d6edd4;
          font-family: "Poppins", sans-serif;
          margin: 0;
