@@ -19,12 +19,12 @@
                 <form class="loginForm">
                     <h1>Anmelden</h1>
 
-                    <div>
+                    <div class="inputarea">
                         <input type="email" id="email" name="email" value="" placeholder="Email">
                     </div>
 
-                    <div>
-                        <input type="text" id="password" name="password" value="" placeholder="Passwort">
+                    <div class="inputarea">
+                        <input type="password" id="password" name="password" value="" placeholder="Passwort">
                     </div>
 
                     <button type="submit" name="submit">Sign In</button>
@@ -46,7 +46,7 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
     margin: 0;
-    background-color: rgb(236, 247, 235);
+    background-color: #A8E08E;
 }
 
 
@@ -86,6 +86,7 @@
 .login-formular {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 55%;
 }
 
@@ -103,6 +104,11 @@ h1 {
     padding-bottom: 20px;
 }
 
+.inputarea{
+    position: relative;
+    margin: 15px 0;
+    border-bottom: 1.6px solid white;
+}
 
 div label {
     transition: .2s all ease-in;
@@ -112,20 +118,26 @@ div label {
 
 div input {
     height: 35px;
-    width: 250px;
     margin-bottom: 11px;
+    outline: none;
+    text-align: left;
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    background: transparent;
+    
 }
     
 div input::placeholder{
     font-size: 15px;
-    padding-left: 10px;
 }
 
 
 button {
     width: 250px;
+    height: 45px;
     border: none;
-    border-radius: 3px;
+    border-radius: 50px;
     margin: 10px 5px;
     padding: 9px;
     color: white;
@@ -134,15 +146,27 @@ button {
 }
 
 button:hover {
-    transition: .2s all ease-in;
-    background-color: #3E9FFF;
+    transition: .1s;
+    background: linear-gradient(to right, #0acffe 0%, #495aff 100%);
 }
 
 .link{
    display: flex;
    justify-content: center;
    align-items: center;
-   flex-direction: column;
+   flex-direction: column; 
+   margin-top: 17px;
+}
+
+
+.link a{
+    text-decoration: none;
+    color: grey;
+}
+
+.link a:hover{
+    text-decoration: underline;
+    color: grey;
 }
 </style>
 
