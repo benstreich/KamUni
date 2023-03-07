@@ -18,6 +18,8 @@
          margin: 0;
          padding: 0;
       }
+      a { text-decoration: none; }
+
 
       .svgclass{
       animation-name: camelion;  
@@ -158,10 +160,21 @@
     }
 
     .signupinelement{
-      display:flex;
       width: 100px;
       height: 30px;
       padding-top: 50px;
+       
+    }
+
+   
+    .buttonregister{
+      border-radius: 30px; 
+      background-color: #00B0FF;
+      font-family: "Poppins", sans-serif;
+      border-style: inset;
+      width: 100px;
+
+     
     }
 
   </style>
@@ -198,9 +211,12 @@
 <div class="signupin">
 
     
-    <div class="signupinelement">Anmelden</div>
+    <a href="/login"><div class="signupinelement">Sign In</div> </a>
     <div class="signupinelement">
-    Registrieren
+    <a href="/register">
+    <button class="buttonregister">
+    Sign Up
+    </button> </a>
   </div>
 
 
