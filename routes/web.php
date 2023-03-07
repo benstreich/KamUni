@@ -25,5 +25,9 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::get('/courses', function () {
+    return view('courses');
+});
+
 
 
