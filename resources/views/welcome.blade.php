@@ -8,11 +8,15 @@
 </head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
 <body>
   <style>
       *{
          background-color: #d6edd4;
+         font-family: "Poppins", sans-serif;
+         margin: 0;
+         padding: 0;
       }
 
       .svgclass{
@@ -79,6 +83,73 @@
         100%  { opacity: 1;}
     }
 
+          /*Footer*/
+          footer{
+          padding-top: 40px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          background-color: #282D32;
+      }
+
+      footer .container{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 20px;
+          background-color: #282D32;
+      }
+
+      footer h4{
+          font-size: 14px;
+          color: white;
+          padding-bottom: 20px;
+          background-color: #282D32;
+      }
+
+      footer p{
+          font-size: 13px;
+          color: #A0A7AD;
+          margin-bottom: 8px;
+          background-color: #282D32;
+      }
+
+      footer a{
+          font-size: 13px;
+          color: #A0A7AD;
+          margin-bottom: 10px;
+          background-color: #282D32;
+      }
+
+      footer a:hover{
+          text-decoration: underline;
+      }
+
+      footer .follow{
+          margin-top: 20px;
+          background-color: #282D32;
+      }
+
+      footer .follow i{
+          padding-right: 5px;
+          color: #465b52;
+          cursor: pointer;
+          background-color: #282D32;
+      }
+
+      footer img{
+          height: 110px;
+          background-color: #E2E2E2;
+
+      }
+
+      footer .copyright{
+          width: 100%;
+          text-align: center;
+          background-color: #282D32;
+      }
+
+
   </style>
 
 
@@ -140,6 +211,42 @@
 
 
       </div>
+
+
+
+      <footer>
+        <div class="container">
+            <h4>Kontaktieren Sie Uns</h4>
+            <p><strong>Email:</strong> Einfügen! </p>
+            <div class="follow">
+                <h4>Folgen Sie uns </h4>
+                <div class="icon">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-tiktok"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h4>Über Uns</h4>
+            <a href="#">Unsere Geschäfte</a>
+            <a href="#">Rechtliches & Datenschutz</a>
+            <a href="#">FAQ</a>
+        </div>
+
+        <div class="container">
+            <h4>Mein Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">Sign Up</a>
+            <a href="#">Hilfe</a>
+        </div>
+
+
+        <div class="copyright">
+            <p>© 2023 KamUni - Alle Rechte vorbehalten</p>
+        </div>
+
+    </footer>
 
 
 
