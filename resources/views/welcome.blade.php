@@ -9,7 +9,7 @@
 <body>
   <style>
       *{
-         background-color: rgb(236, 247, 235);
+         background-color: #A8E08E;
       }
 
       .svgclass{
