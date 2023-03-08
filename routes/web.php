@@ -29,5 +29,26 @@ Route::get('/courses', function () {
     return view('courses');
 });
 
+Route::get('/courses_english', function () {
+    return view('courses_english');
+});
+
+Route::get('/courses_french', function () {
+    return view('courses_french');
+});
+
+Route::get('/courses_german', function () {
+    return view('courses_german');
+});
+
+Route::get('/courses_math', function () {
+    return view('courses_math');
+});
+
+Route::get('/courses_science', function () {
+    return view('courses_science');
+});
+
+
 
 
