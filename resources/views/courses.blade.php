@@ -82,11 +82,15 @@
 
         .container-boxes {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
+            margin-top: 20px;
         }
 
         .box {
-            width: calc(33.33% - 20px);
+            display: flex;
+            align-items: center;
+            width: calc(20% - 20px);
             height: 200px;
             margin: 10px;
             float: left;
@@ -95,7 +99,9 @@
             border-radius: 5px;
             box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
+            flex-direction: column;
         }
+
 
         .box:hover {
             transform: translateY(-10px);
@@ -123,9 +129,9 @@
 
         .box img {
             width: 100%;
-            height: auto;
+            height: 100%;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 25px;
         }
 
         .box h3 {
@@ -141,16 +147,25 @@
             color: #777;
         }
 
+     .box div h2 {
+       margin: 20px;
+       outline-color:
+        
+     }
+
 
         @media (max-width: 768px) {
             .box {
                 width: calc(50% - 20px);
+                margin: 40px;
             }
         }
 
         @media (max-width: 480px) {
             .box {
                 width: 100%;
+                margin: 50px;
+                
             }
         }
     </style>
@@ -187,31 +202,51 @@
 
     <div class="container-boxes">
 
+
         <div class="box">
-            <img src="bild1.jpg" alt="Bild 1">
-            <h3>Box 1</h3>
-            <p>Text für Box 1</p>
+            <img src="/images/math-book.png" alt="Bild 2">
+            <div>
+                <h2>Mathematik</h2>
+            </div>
         </div>
+
+
+
+
         <div class="box">
-            <img src="bild2.jpg" alt="Bild 2">
-            <h3>Box 2</h3>
-            <p>Text für Box 2</p>
+            <img src="/images/books.png" alt="Bild 2">
+            <div>
+                <h2>Deutsch</h2>
+            </div>
         </div>
+
+
+
         <div class="box">
-            <img src="bild3.jpg" alt="Bild 3">
-            <h3>Box 3</h3>
-            <p>Text für Box 3</p>
+            <img src="/images/flag.png" alt="Bild 3">
+            <div>
+                <h2>Französich</h2>
+            </div>
         </div>
+
+
+
         <div class="box">
-            <img src="bild4.jpg" alt="Bild 4">
-            <h3>Box 4</h3>
-            <p>Text für Box 4</p>
+            <img src="/images/genetic.png" alt="Bild 4">
+            <div>
+                <h2>Naturwissenschaft</h2>
+            </div>
         </div>
+
+
         <div class="box">
-            <img src="bild5.jpg" alt="Bild 5">
-            <h3>Box 5</h3>
-            <p>Text für Box 5</p>
+            <img src="/images/eng.png" alt="Bild 5">
+            <div>
+                <h2>Englisch</h2>
+            </div>
         </div>
+
+
 
     </div>
 
