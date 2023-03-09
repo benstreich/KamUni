@@ -138,6 +138,17 @@
             color: #3E9EEB;
         }
 
+        .contact-link a{
+            text-decoration: none;
+            color: #3E9EEB;
+        }
+
+        @media screen and (max-width: 812px){
+            .member-info{
+                max-width: 100%;
+            }
+        }
+
 
 
     </style>
