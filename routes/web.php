@@ -49,6 +49,12 @@ Route::get('/courses_science', function () {
     return view('courses_science');
 });
 
+Route::get('/about_us', function () {
+    return view('about_us');
+});
+
+
+
 
 
 
