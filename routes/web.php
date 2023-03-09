@@ -28,10 +28,13 @@ Route::get('welcome_signedin', function(){
     return view('welcome_signedin');
 });
 
-Route::get('welcome_teacher_login', function(){
-    return view('/teachersites/welcome_teacher_login');
+Route::get('/welcome_teacher_login', function(){
+    return view('/teachersites/startsite/welcome_teacher_login');
 });
 
+Route::get('/welcome_teacher_signedin', function(){
+    return view('/teachersites/startsite/welcome_teacher_signedin');
+});
 Route::post('/register', function () {
 
 
