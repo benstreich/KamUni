@@ -36,6 +36,21 @@ Route::get('/register', function () {
     return view('/register');
 });
 
+Route::get('welcome_signedin', function(){
+    return view('welcome_signedin');
+});
+
+Route::get('/welcome_teacher_login', function(){
+    return view('/teachersites/startsite/welcome_teacher_login');
+});
+
+Route::get('/welcome_teacher_signedin', function(){
+    return view('/teachersites/startsite/welcome_teacher_signedin');
+});
+
+Route::get('/courses_unsigned', function(){
+    return view('/courses_unsigned');
+});
 Route::post('/register', function () {
 
     $request = request();
