@@ -79,7 +79,7 @@ width: 30%;
   display: flex;
   width: 25%;
   height: 100px;
-  padding-top: 50px;
+  padding-top: 60px;
   justify-content: center;
 }
 
@@ -187,7 +187,7 @@ margin-left: 200px;
 .signupinelement{
 width: 100px;
 height: 30px;
-padding-top: 50px;
+padding-top: 60px;
  
 }
 
