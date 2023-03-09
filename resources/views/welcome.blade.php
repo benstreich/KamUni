@@ -10,7 +10,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/welcomepage.css" >
 <body>
   <style>
    body{
