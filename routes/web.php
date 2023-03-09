@@ -24,6 +24,10 @@ Route::get('/register', function () {
     return view('/register');
 });
 
+Route::get('welcome_signedin', function(){
+    return view('welcome_signedin');
+});
+
 Route::post('/register', function () {
     $request = request();
 
