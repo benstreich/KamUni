@@ -24,15 +24,30 @@ Route::get('/register', function () {
     return view('/register');
 });
 
+Route::get('welcome_signedin', function(){
+    return view('welcome_signedin');
+});
+
+Route::get('/welcome_teacher_login', function(){
+    return view('/teachersites/startsite/welcome_teacher_login');
+});
+
+Route::get('/welcome_teacher_signedin', function(){
+    return view('/teachersites/startsite/welcome_teacher_signedin');
+});
 Route::post('/register', function () {
+
+
     $request = request();
+
+  
+
 
     $registration = new \App\Models\Registration();
     $registration->firstname = $request->get('firstname');
     $registration->lastname = $request->get('lastname');
     $registration->email = $request->get('email');
-    $registration->password = $request->get('password');
-
+    $registration->password = Hash::make($request->get('password'));;
     $registration->save();
 
     return redirect('register');

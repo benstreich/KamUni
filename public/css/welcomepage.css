@@ -139,10 +139,11 @@ footer .copyright{
 
 .signupin{
 display: flex;
-width: 25%;
+width: 15%;
 height: 200px;
 justify-content:  space-evenly;
-margin-left: 120px;
+margin-left: 200px;
+background-color: red;
 }
 
 .signupinelement{
