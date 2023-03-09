@@ -25,14 +25,18 @@ Route::get('/register', function () {
 });
 
 Route::post('/register', function () {
+
+
     $request = request();
+
+  
+
 
     $registration = new \App\Models\Registration();
     $registration->firstname = $request->get('firstname');
     $registration->lastname = $request->get('lastname');
     $registration->email = $request->get('email');
-    $registration->password = $request->get('password');
-
+    $registration->password = Hash::make($request->get('password'));;
     $registration->save();
 
     return redirect('register');
