@@ -4,16 +4,203 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>KamUni</title>
+   <title>KamUni.com</title>
 </head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/welcomepage.css" >
 <body>
-  
+  <style>
+   body{
+   background-color: #d6edd4;
+   font-family: "Poppins", sans-serif;
+   margin: 0;
+   padding: 0;
+}
+a  { text-decoration: none; }
 
+
+.svgclass{
+  display: flex;
+animation-name: camelion;  
+animation-duration: 4s;
+margin-top:20px;
+width: 30%;
+  height: 200px;
+  flex-wrap: nowrap;
+
+}
+@media (max-width: 769px) {
+       
+
+            .headerclass {
+                flex-wrap: wrap;
+                height: auto;
+            }
+
+            .headerelement {
+                width: 50%;
+                padding-top: 25px;
+            }
+
+            .svgclass {
+                width: 50%;
+                height: auto;
+            }
+
+            .nav{
+              width: 50%;
+              padding: 25px;
+            
+            }
+
+        }
+
+@keyframes camelion {
+0%   {  opacity: 0;}
+25%  { opacity: 0,25;}
+50%  { opacity: 0,5;}
+75%  { opacity: 0,75;}
+100%  { opacity: 1;}
+
+
+}
+
+.nav{
+
+  display: flex;
+  width: 30%;
+  height: 200px;
+  justify-content: space-around;
+}
+
+.headerelement{
+  display: flex;
+  width: 25%;
+  height: 100px;
+  padding-top: 50px;
+  justify-content: center;
+}
+
+.headerclass{
+  display: flex;
+  width: 100%;
+  height: 200px;
+
+}
+
+.contentclass{
+  display: flex;
+  width: 100%;
+  height: 500px;
+  justify-content: flex-end;
+  margin-top: 15px;
+  animation-name: camelion2;
+  animation-duration: 4s;
+
+}
+
+@keyframes camelion2 {
+    0%   {  opacity: 0;}
+   25%  { opacity: 0,25;}
+   50%  { opacity: 0,5;}
+   75%  { opacity: 0,75;}
+  100%  { opacity: 1;}
+}
+
+    /*Footer*/
+    footer{
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #282D32;
+}
+
+footer .container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    background-color: #282D32;
+}
+
+footer h4{
+    font-size: 14px;
+    color: white;
+    padding-bottom: 20px;
+    background-color: #282D32;
+}
+
+footer p{
+    font-size: 13px;
+    color: #A0A7AD;
+    margin-bottom: 8px;
+    background-color: #282D32;
+}
+
+footer a{
+    font-size: 13px;
+    color: #A0A7AD;
+    margin-bottom: 10px;
+    background-color: #282D32;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+footer .follow{
+    margin-top: 20px;
+    background-color: #282D32;
+}
+
+footer .follow i{
+    padding-right: 5px;
+    color: #465b52;
+    cursor: pointer;
+    background-color: #282D32;
+}
+
+footer img{
+    height: 110px;
+    background-color: #E2E2E2;
+
+}
+
+footer .copyright{
+    width: 100%;
+    text-align: center;
+    background-color: #282D32;
+}
+
+
+.signupin{
+display: flex;
+width: 15%;
+height: 200px;
+justify-content:  space-evenly;
+margin-left: 200px;
+}
+
+.signupinelement{
+width: 100px;
+height: 30px;
+padding-top: 50px;
+ 
+}
+
+
+.buttonregister{
+border-radius: 30px; 
+background-color: #00B0FF;
+font-family: "Poppins", sans-serif;
+border-style: inset;
+width: 100px;
+
+
+}</style>
 
 <div class="headerclass">
 
@@ -46,7 +233,8 @@
 <div class="signupin">
 
     
-    <a href="/login"><div class="signupinelement">Sign In</div> </a>
+    <div class="signupinelement"><a href="/login"> Sign In</a></div> 
+
     <div class="signupinelement">
     <a href="/register">
     <button class="buttonregister">
