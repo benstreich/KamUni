@@ -15,52 +15,66 @@
         padding: 0;
     }
 
-    .svgclass{
-animation-name: camelion;  
-animation-duration: 4s;
-margin-top:20px;
-width: 400px;
-flex-wrap: nowrap;
-  height: 100px;
+    .svgclass {
+        animation-name: camelion;
+        animation-duration: 4s;
+        margin-top: 20px;
+        width: 400px;
+        flex-wrap: nowrap;
+        height: 100px;
 
-}
-
-
-@keyframes camelion {
-0%   {  opacity: 0;}
-25%  { opacity: 0,25;}
-50%  { opacity: 0,5;}
-75%  { opacity: 0,75;}
-100%  { opacity: 1;}
+    }
 
 
-}
+    @keyframes camelion {
+        0% {
+            opacity: 0;
+        }
 
-.nav{
+        25% {
+            opacity: 0, 25;
+        }
 
-  display: flex;
-  flex-wrap: nowrap;
-  width: 30%;
-  height: 200px;
-  justify-content: space-around;
-}
+        50% {
+            opacity: 0, 5;
+        }
 
-.headerelement{
-  display: flex;
-  flex-wrap: nowrap;
-  width: 25%;
-  height: 100px;
-  justify-content: center;
-  padding-top: 50px;
-}
+        75% {
+            opacity: 0, 75;
+        }
 
-.headerclass{
-  display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
-  height: 180px;
+        100% {
+            opacity: 1;
+        }
 
-}
+
+    }
+
+    .nav {
+
+        display: flex;
+        flex-wrap: nowrap;
+        width: 30%;
+        height: 200px;
+        justify-content: space-around;
+    }
+
+    .headerelement {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 25%;
+        height: 100px;
+        justify-content: center;
+        padding-top: 50px;
+    }
+
+    .headerclass {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+        height: 180px;
+
+    }
 
     .signupin {
         display: flex;
@@ -119,21 +133,8 @@ flex-wrap: nowrap;
         </div>
     </div>
 
-    <div class="signupin">
-
-
-        <a href="/login">
-            <div class="signupinelement">Sign In</div>
-        </a>
-        <div class="signupinelement">
-            <a href="/register">
-                <button class="buttonregister">
-                    Sign Up
-                </button> </a>
-        </div>
-
-
-    </div>
+    
+    
 </body>
 
 </html>
