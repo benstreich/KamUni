@@ -21,7 +21,7 @@
         .svgclass {
             position: relative;
             animation-name: camelion;
-            animation-duration: 4s;
+            animation-duration: 2s;
             margin-top: 20px;
             width: 25%;
             flex-wrap: nowrap;
