@@ -7,7 +7,14 @@
    <title>KamUni</title>
 </head>
 <body>
-  
+  @if($message = Session::get('success'))
+
+  <div class="alert alert-info">
+    {{$message}}
+  </div>
+
+  @endif
+
 
 <section class="login-section">
     <div class="login-container">
@@ -16,15 +23,22 @@
         </div>
         <div class="login-formular">
             <div class="form">
-                <form class="loginForm">
+                <form class="loginForm" action="{{ route('registration.validate_login')}}" method="post">
+                    @csrf
                     <h1>Anmelden</h1>
 
                     <div class="inputarea">
                         <input type="email" id="email" name="email" value="" placeholder="Email">
+                        @if($errors->has('email'))
+                        <span class="text-danger">{{$errors->first('email')}}</span>
+                        @endif
                     </div>
 
                     <div class="inputarea">
                         <input type="password" id="password" name="password" value="" placeholder="Passwort">
+                        @if($errors->has('password'))
+                        <span class="text-danger">{{$errors->first('password')}}</span>
+                        @endif
                     </div>
 
                     <button type="submit" name="submit">Sign In</button>

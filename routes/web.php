@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\registration_controller;
+use Illuminate\Auth\Events\Login;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,17 +23,22 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::controller(registration_controller::class)->group(function () {
+    Route::post('login', 'index')->name('login');
+    
+    Route::get('logout', 'logout')->name('logout');
+
+    Route::get('welcome', 'welcome')->name('welcome');
+});
+
 Route::get('/register', function () {
     return view('/register');
 });
 
 Route::post('/register', function () {
 
-
     $request = request();
-
-  
-
 
     $registration = new \App\Models\Registration();
     $registration->firstname = $request->get('firstname');
@@ -69,9 +77,3 @@ Route::get('/courses_science', function () {
 Route::get('/about_us', function () {
     return view('about_us');
 });
-
-
-
-
-
-
