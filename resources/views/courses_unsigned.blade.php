@@ -6,10 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KamUni</title>
-    
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 </head>
 
 <body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+   
+   $('#click').on("click", function(){
+      Swal.fire({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'Something went wrong!',
+  footer: '<a href="">Why do I have this issue?</a>'
+})
+   });
+  
+</script>
+
+
+
+
+
     <style>
         body {
             background-color: #A8E08E;
@@ -232,7 +251,7 @@
     <div class="container-boxes">
 
 
-        <div class="box" onclick="window.location.href='/courses_math'">
+        <div class="box" id="click">
             <img src="/images/math-book.png" alt="Bild 2">
             <div>
                 <h2>Mathematik</h2>

@@ -35,6 +35,10 @@ Route::get('/welcome_teacher_login', function(){
 Route::get('/welcome_teacher_signedin', function(){
     return view('/teachersites/startsite/welcome_teacher_signedin');
 });
+
+Route::get('/courses_unsigned', function(){
+    return view('/courses_unsigned');
+});
 Route::post('/register', function () {
 
 
