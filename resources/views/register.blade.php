@@ -17,7 +17,8 @@
             </div>
             <div class="register-formular">
                 <div class="form">
-                    <form action="" method="post">
+                    <form action="?" method="post">
+                      @csrf
                         <h1>Registrieren</h1>
 
                         <div class="inputarea">

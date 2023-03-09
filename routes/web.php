@@ -20,9 +20,22 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
-
 Route::get('/register', function () {
-    return view('register');
+    return view('/register');
+});
+
+Route::post('/register', function () {
+    $request = request();
+
+    $registration = new \App\Models\Registration();
+    $registration->firstname = $request->get('firstname');
+    $registration->lastname = $request->get('lastname');
+    $registration->email = $request->get('email');
+    $registration->password = $request->get('password');
+
+    $registration->save();
+
+    return redirect('register');
 });
 
 Route::get('/courses', function () {
