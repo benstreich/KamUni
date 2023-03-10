@@ -23,22 +23,19 @@
         </div>
         <div class="login-formular">
             <div class="form">
-                <form class="loginForm" action="{{ route('registration.validate_login')}}" method="post">
+                <div class="alert-danger">{{Session::get('fail')}}</div>
+                <form class="loginForm" action="{{ route('login-user')}}" method="post">
                     @csrf
                     <h1>Anmelden</h1>
 
                     <div class="inputarea">
-                        <input type="email" id="email" name="email" value="" placeholder="Email">
-                        @if($errors->has('email'))
-                        <span class="text-danger">{{$errors->first('email')}}</span>
-                        @endif
+                        <input type="email" id="email" name="email" value="{{old('email')}}" placeholder="Email">
+                        <span class="text-danger">@error('email') {{$message}} @enderror</span>
                     </div>
 
                     <div class="inputarea">
                         <input type="password" id="password" name="password" value="" placeholder="Passwort">
-                        @if($errors->has('password'))
-                        <span class="text-danger">{{$errors->first('password')}}</span>
-                        @endif
+                        <span class="text-danger">@error('password') {{$message}} @enderror</span>
                     </div>
 
                     <button type="submit" name="submit">Sign In</button>
@@ -60,6 +57,10 @@
     padding: 0;
     font-family: "Poppins", sans-serif;
     margin: 0;
+}
+
+
+body{
     background-color: #A8E08E;
 }
 
@@ -131,7 +132,7 @@ div label {
 
 div input {
     height: 35px;
-    margin-bottom: 11px;
+    margin-bottom: 5px;
     outline: none;
     border: none;
     width: 100%;
@@ -157,6 +158,12 @@ button {
 button:hover {
     transition: .1s;
     background: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+}
+
+span{
+    color: red;
+    font-size: 13px;
+
 }
 
 .link{

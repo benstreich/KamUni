@@ -146,7 +146,7 @@ div label {
 
 div input {
     height: 35px;
-    margin-bottom: 11px;
+    margin-bottom: 5px;
     outline: none;
     border: none;
     width: 100%;
@@ -154,7 +154,6 @@ div input {
     
 div input::placeholder{
     font-size: 15px;
-    
 
 }
 
@@ -178,8 +177,8 @@ button:hover {
 
 span{
     color: red;
-    font-size: 15px;
-    margin-right: 20px;
+    font-size: 13px;
+    margin: auto;
 }
 
 .link{
