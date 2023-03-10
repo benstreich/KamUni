@@ -7,6 +7,7 @@ use Hash;
 use Session;
 use App\Models\Registration;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash as FacadesHash;
 use Illuminate\Support\Facades\Redirect;
 
 class registration_controller extends Controller
@@ -42,7 +43,7 @@ class registration_controller extends Controller
         $user->firstname = $request->firstname;
         $user->lastname = $request->lastname;
         $user->email = $request->email;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
         $res = $user->save();
 
         if($res)
