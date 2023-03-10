@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\registration_controller;
+use App\Http\Controllers\RegistrationController;
 use Illuminate\Auth\Events\Login;
 
 /*
@@ -25,8 +26,8 @@ Route::get('/login', function () {
 });
 
 
-Route::get('register', [registration_controller::class, 'register']);
-Route::post('register-user', [registration_controller::class, 'registerUser'])->name('register-user');
+Route::get('register', [RegistrationController::class, 'register']);
+Route::post('register-user', [RegistrationController::class, 'registerUser'])->name('register-user');
 
 Route::get('welcome_signedin', function(){
     return view('welcome_signedin');

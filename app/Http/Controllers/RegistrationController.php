@@ -2,21 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Hash;
-use Session;
 use App\Models\Registration;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash as FacadesHash;
-use Illuminate\Support\Facades\Redirect;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
-class registration_controller extends Controller
+class RegistrationController extends Controller
 {
-    public function login()
-    {
-        return view('login');
-    }
-
     public function register()
     {
         return view('register');
