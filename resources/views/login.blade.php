@@ -121,7 +121,6 @@ h1 {
 .inputarea{
     position: relative;
     margin: 15px 0;
-    border-bottom: 1.6px solid white;
 }
 
 div label {
@@ -134,12 +133,8 @@ div input {
     height: 35px;
     margin-bottom: 11px;
     outline: none;
-    text-align: left;
     border: none;
-    border-radius: 3px;
     width: 100%;
-    background: transparent;
-    
 }
     
 div input::placeholder{

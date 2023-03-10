@@ -11,32 +11,46 @@ use Illuminate\Support\Facades\Redirect;
 
 class registration_controller extends Controller
 {
-    function index(Request $request)
+    public function login()
     {
-        $credentials = $request->only('email', 'password');
-
-        if(Auth::attempt($credentials))
-        {
-            return redirect('welcome');
-        }
-        return redirect('login')->with('success', 'Login details are not valid');
+        return view('login');
     }
 
-    function welcome()
+    public function register()
     {
-        if(Auth::check())
+        return view('register');
+    }
+
+    public function registerUser(Request $request)
+    {
+        $request->validate(
+            [
+              'firstname'=>'required',
+              'lastname'=>'required',
+              'email'=>'required|email|unique:registration',
+              'password'=>'required|min:6|max:30',
+            ],
+            [
+              'firstname.required'=>'Vorname eingeben!', 
+              'lastname.required'=>'Nachname eingeben!',
+              'email.required'=>'Email eingeben!',
+              'password.required'=>'Passwort eingeben!', 
+            ]
+        
+        );
+        $user = new Registration();
+        $user->firstname = $request->firstname;
+        $user->lastname = $request->lastname;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $res = $user->save();
+
+        if($res)
         {
             return view('welcome');
         }
-        return redirect('login')->with('success', 'you are not allowed to access');
-    }
-
-    function logout()
-    {
-        Session::flush();
-
-        Auth::logout();
-
-        return Redirect('login');
+        else{
+            return back()->with('fail', 'Fehler');
+        }
     }
 }

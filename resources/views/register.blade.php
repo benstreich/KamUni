@@ -17,24 +17,28 @@
             </div>
             <div class="register-formular">
                 <div class="form">
-                    <form action="?" method="post">
+                    <form action="{{route('register-user')}}" method="post">
                       @csrf
                         <h1>Registrieren</h1>
 
                         <div class="inputarea">
-                            <input type="text" id="firstname" name="firstname" value="" placeholder="Vorname">
+                            <input type="text" id="firstname" name="firstname" value="{{old('firstname')}}" placeholder="Vorname">
+                            <span class="text-danger">@error('firstname') {{$message}} @enderror</span>
                         </div>
 
                         <div class="inputarea">
-                            <input type="text" id="lastname" name="lastname" value="" placeholder="Nachname">
+                            <input type="text" id="lastname" name="lastname" value="{{old('lastname')}}" placeholder="Nachname">
+                            <span class="text-danger">@error('lastname') {{$message}} @enderror</span>
                         </div>
 
                         <div class="inputarea">
-                            <input type="email" id="email" name="email" value="" placeholder="Email">
+                            <input type="email" id="email" name="email" value="{{old('email')}}" placeholder="Email">
+                            <span class="text-danger">@error('email') {{$message}} @enderror</span>
                         </div>
 
                         <div class="inputarea">
-                            <input type="password" id="password" name="password" value="" placeholder="Passwort">
+                            <input type="password" id="password" name="password" placeholder="Passwort">
+                            <span class="text-danger">@error('password') {{$message}} @enderror</span>
                         </div>
 
                         <button type="submit" name="submit">Sign In</button>
@@ -55,14 +59,17 @@
 
 
 
-    <style>
+<style>
 * {
     padding: 0;
     font-family: "Poppins", sans-serif;
     margin: 0;
-    background-color: #A8E08E;
+    
 }
 
+body{
+    background-color: #A8E08E;
+}
 .register-section {
     
     padding: 30px;
@@ -129,7 +136,6 @@ h1 {
 .inputarea{
     position: relative;
     margin: 15px 0;
-    border-bottom: 1.6px solid white;
 }
 
 div label {
@@ -142,18 +148,15 @@ div input {
     height: 35px;
     margin-bottom: 11px;
     outline: none;
-    text-align: left;
     border: none;
-    border-radius: 3px;
     width: 100%;
-    background: transparent;
 }
     
 div input::placeholder{
     font-size: 15px;
     
-}
 
+}
 
 button {
     width: 250px;
@@ -171,6 +174,12 @@ button:hover {
     transition: .1s;
     background: linear-gradient(to right, #0acffe 0%, #495aff 100%);
     
+}
+
+span{
+    color: red;
+    font-size: 15px;
+    margin-right: 20px;
 }
 
 .link{

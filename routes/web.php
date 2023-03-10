@@ -24,17 +24,9 @@ Route::get('/login', function () {
     return view('login');
 });
 
-Route::controller(registration_controller::class)->group(function () {
-    Route::post('login', 'index')->name('login');
-    
-    Route::get('logout', 'logout')->name('logout');
 
-    Route::get('welcome', 'welcome')->name('welcome');
-});
-
-Route::get('/register', function () {
-    return view('/register');
-});
+Route::get('register', [registration_controller::class, 'register']);
+Route::post('register-user', [registration_controller::class, 'registerUser'])->name('register-user');
 
 Route::get('welcome_signedin', function(){
     return view('welcome_signedin');
@@ -51,19 +43,7 @@ Route::get('/welcome_teacher_signedin', function(){
 Route::get('/courses_unsigned', function(){
     return view('/courses_unsigned');
 });
-Route::post('/register', function () {
 
-    $request = request();
-
-    $registration = new \App\Models\Registration();
-    $registration->firstname = $request->get('firstname');
-    $registration->lastname = $request->get('lastname');
-    $registration->email = $request->get('email');
-    $registration->password = Hash::make($request->get('password'));;
-    $registration->save();
-
-    return redirect('register');
-});
 
 Route::get('/courses', function () {
     return view('courses');
