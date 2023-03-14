@@ -12,23 +12,6 @@
 <body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-<script>
-   
-   $('#click').on("click", function(){
-      Swal.fire({
-  icon: 'error',
-  title: 'Oops...',
-  text: 'Something went wrong!',
-  footer: '<a href="">Why do I have this issue?</a>'
-})
-   });
-  
-</script>
-
-
-
-
-
     <style>
         body {
             background-color: #A8E08E;
@@ -257,8 +240,7 @@
                 <h2>Mathematik</h2>
             </div>
         </div>
-
-
+        
 
 
         <div class="box" onclick="window.location.href='/courses_german'">
@@ -305,5 +287,19 @@
 
 
 </body>
+
+<script>
+   $('#click').on("click", function(){
+      Swal.fire({
+  icon: 'error',
+  title: 'Oops...',
+  text: 'Sie müssen sich zuerst Anmelden!',
+  footer: '<a href="/login">Anmelden?</a>',
+  background-color: 'green'
+})
+   });
+  
+</script>
+
 
 </html>
