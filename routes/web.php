@@ -28,7 +28,7 @@ Route::get('/', function () {
 Route::get('login', [LoginController::class, 'login']);
 Route::post('login-user', [LoginController::class, 'loginUser'])->name('login-user');
 
-Route::get('register', [RegistrationController::class, 'register']);
+Route::get('register', [RegistrationController::class, 'register'])->middleware('alreadyLoggedIn');
 Route::post('register-user', [RegistrationController::class, 'registerUser'])->name('register-user');
 
 Route::get('welcome_signedin', function(){
@@ -51,7 +51,7 @@ Route::get('/register_teacher', function(){
     return view('/auth/register_teacher');
 });
 
-Route::get('/login', [LoginController::class, 'login']);
+Route::get('/login', [LoginController::class, 'login'])->middleware('alreadyLoggedIn');
 Route::post('/login-teacher', [LoginController::class, 'loginTeacher'])->name('login-teacher');
 
 Route::get('register-t', [TeacherRegistrationController::class, 'register']);
@@ -94,6 +94,6 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('profile', [LoginController::class, 'profile']);
+Route::get('profile', [LoginController::class, 'profile'])->middleware('isLoggedIn');
 
 Route::get('logout', [LoginController::class, 'logout']);

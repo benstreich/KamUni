@@ -17,10 +17,6 @@
         <li><a href="/about_us">Über Uns</a></li>
     </ul>
 
-    <div class="main">
-        <a href="/login">Sign In</a>
-        <a href="/register"><button class="buttonregister">Sign Up</button></a>
-    </div>
 </header>
 
 <table>
