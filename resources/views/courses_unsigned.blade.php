@@ -295,7 +295,6 @@
   title: 'Oops...',
   text: 'Sie müssen sich zuerst Anmelden!',
   footer: '<a href="/login">Anmelden?</a>',
-  background-color: 'green'
 })
    });
   
