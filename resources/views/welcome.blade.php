@@ -19,8 +19,13 @@
             text-decoration: none;
             list-style: none;
             font-family: "Poppins", sans-serif;
+          
+        }
+
+        body{
             margin: 0;
             padding: 0;
+            background-color: #d6edd4;
         }
 
  
@@ -32,7 +37,7 @@
             justify-content: space-between;
             z-index: 1000;
             padding: 1px 0;
-            background-color: #d6edd4;
+            
 
         }
 
@@ -232,19 +237,7 @@
     </style>
 
 
-<header>
-    <a href="" class="logo"><img src="/images/logo.png" alt=""></a>
-    <ul class="navbar">
-        <li><a href="/">Tutoring Uni</a></li>
-        <li><a href="/courses">Kurse suchen</a></li>
-        <li><a href="/about_us">Über Uns</a></li>
-    </ul>
-
-    <div class="main">
-        <a href="/login">Sign In</a>
-        <a href="/register"><button class="buttonregister">Sign Up</button></a>
-    </div>
-</header>
+@include('header_templates.header_unsigned_in')
 
     <div class="contentclass">
 

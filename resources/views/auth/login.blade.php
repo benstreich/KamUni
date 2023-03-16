@@ -26,14 +26,6 @@
         </div>
     </header>
 
-    @if($message = Session::get('success'))
-
-    <div class="alert alert-info">
-        {{$message}}
-    </div>
-
-    @endif
-
 
     <section class="login-section">
         <div class="login-container">
@@ -110,17 +102,20 @@
 
     <style>
         * {
-            padding: 0;
-            font-family: "Poppins", sans-serif;
-            margin: 0;
             text-decoration: none;
             list-style: none;
+            font-family: "Poppins", sans-serif;
+          
         }
 
-
-        body {
+        body{
+            margin: 0;
+            padding: 0;
             background-color: #A8E08E;
         }
+            
+            
+        
 
         header{
             width: 100%;
@@ -182,13 +177,20 @@
             cursor: pointer;
         
         }
+        
+        .alert-danger{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FF595B;
+        }
 
 
         .login-container {
             display: flex;
             width: 100%;
             flex-direction: row;
-            min-height: 100vh;
+            height: 70vh;
             min-width: 100vh;
         }
 
@@ -274,7 +276,7 @@
             cursor: pointer;
         }
 
-        button:hover {
+        .login-formular button:hover {
             transition: .1s;
             background: linear-gradient(to right, #0acffe 0%, #495aff 100%);
         }
@@ -282,6 +284,8 @@
         span {
             color: red;
             font-size: 13px;
+            padding: 0;
+            margin: 0;
 
         }
 
@@ -290,7 +294,8 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin-top: 17px;
+            margin-top: 15px;
+            font-size: 15px;
         }
 
 

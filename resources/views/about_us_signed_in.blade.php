@@ -16,7 +16,7 @@
 
 <body>
 
-@include('header_templates.header_unsigned_in')
+@include('header_templates.header_signed_in')
 
     <div class="container">
         <div class="title">

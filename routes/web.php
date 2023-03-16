@@ -35,6 +35,10 @@ Route::get('welcome_signedin', function(){
     return view('welcome_signedin');
 });
 
+Route::get('/teacher_schedule', function(){
+    return view('/teachersites/teacher_schedule');
+});
+
 Route::get('/welcome_teacher_login', function(){
     return view('/teachersites/startsite/welcome_teacher_login');
 });
@@ -63,7 +67,7 @@ Route::get('/courses_unsigned', function(){
 
 
 Route::get('/courses', function () {
-    return view('courses');
+    return view('courses_unsigned');
 });
 
 Route::get('/courses_english', function () {
@@ -89,3 +93,11 @@ Route::get('/courses_science', function () {
 Route::get('/about_us', function () {
     return view('about_us');
 });
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('profile', [LoginController::class, 'profile']);
+
+Route::get('logout', [LoginController::class, 'logout']);

@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Registration;
+use App\Models\User;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -36,10 +38,10 @@ class LoginController extends Controller
          {
             if(Hash::check($request->password, $user->password)){
                 $request->session()->put('loginId', $user->id);
-                return redirect('/');
+                return redirect('/welcome_signedin');
             }
             else{
-                return back()->with('fail', 'Passwort stimmt nicht überein.');
+                return back()->with('fail', 'Anmeldung fehlgeschlagen');
             }
 
          }
@@ -48,6 +50,22 @@ class LoginController extends Controller
          }
 
 
+    }
+
+    public function profile()
+    {
+        $data = array();
+        if(Session::has('loginId')){
+            $data = Registration::where('id', '=', Session::get('loginId'))->first();
+        }
+        return view('profile', compact('data'));
+    }
+
+    public function logout(){
+        if(Session::has('loginId')){
+            Session::pull('loginId');
+            return redirect('login');
+        }
     }
 
 }

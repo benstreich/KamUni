@@ -281,7 +281,7 @@
             cursor: pointer;
         }
 
-        button:hover {
+        .register-container button:hover {
             transition: .1s;
             background: linear-gradient(to right, #0acffe 0%, #495aff 100%);
 
@@ -298,7 +298,8 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin-top: 17px;
+            margin-top: 15px;
+            font-size: 15px;
         }
 
         .link a {
