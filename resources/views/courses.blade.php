@@ -21,6 +21,7 @@
             box-sizing: border-box;
         }
 
+
         header{
             width: 100%;
             display: flex;
@@ -165,6 +166,8 @@
          footer {
             background-color: #333;
             color: white;
+           
+            
         }
 
         .footer-info{
@@ -172,6 +175,7 @@
             margin: 0 auto;
             display: flex;
             padding: 45px 0;
+
         }
 
         .footer-info h2{
