@@ -64,7 +64,7 @@
                             <span class="text-danger">@error('certificate') {{$message}} @enderror</span>
                         </div>
 
-                        <button type="submit" name="submit">Sign In</button>
+                        <button type="submit" name="submit">Sign Up</button>
 
 
                     </form>
@@ -278,7 +278,7 @@
             cursor: pointer;
         }
 
-        button:hover {
+        .register-container button:hover {
             transition: .1s;
             background: linear-gradient(to right, #0acffe 0%, #495aff 100%);
 

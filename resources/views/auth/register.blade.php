@@ -193,7 +193,7 @@
             display: flex;
             width: 100%;
             flex-direction: row;
-            min-height: 100vh;
+            min-height: 60vh;
             min-width: 100vh;
         }
 
@@ -225,7 +225,7 @@
         .register-formular {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             width: 55%;
         }
 
@@ -279,7 +279,7 @@
             cursor: pointer;
         }
 
-        button:hover {
+        .register-container button:hover {
             transition: .1s;
             background: linear-gradient(to right, #0acffe 0%, #495aff 100%);
 

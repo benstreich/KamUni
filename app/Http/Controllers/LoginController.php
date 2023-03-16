@@ -40,7 +40,7 @@ class LoginController extends Controller
                 return redirect('/welcome_signedin');
             }
             else{
-                return back()->with('fail', 'Passwort stimmt nicht überein.');
+                return back()->with('fail', 'Anmeldung fehlgeschlagen');
             }
 
          }
