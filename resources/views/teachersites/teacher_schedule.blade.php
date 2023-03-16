@@ -10,37 +10,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
-
-<script>
-
-  // Get all the cells in the timetable
-const cells = document.querySelectorAll('.cell');
-
-// Add a click event listener to each cell
-cells.forEach(cell => {
-  cell.addEventListener('click', () => {
-    // Get the date of the cell clicked
-    console.log('clicked');
-    const date = cell.dataset.date;
-
-    // Create a new popup with the date
-    const popup = window.open('', '', 'width=200,height=100');
-    popup.document.write(`<p>You clicked on ${date}</p>`);
-  });
-});
+<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 
 
-</script>
 
 
 <body>
-
-
-
-
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <style>
+
    body{
    background-color: #d6edd4;
    font-family: "Poppins", sans-serif;
@@ -359,9 +338,9 @@ width: 100px;
     <div class="cell" data-date="2023-03-22"></div>
     <div class="cell" data-date="2023-03-23"></div>
     <div class="cell" data-date="2023-03-24"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
+    <div class="cell" data-date="2023-03-25"></div>
+    <div class="cell" data-date="2023-03-26"></div>
+    <div class="cell" data-date="2023-03-27"></div>
   </div>
   <div class="row">
     <div class="cell time">10:00am - 11:00am</div>
@@ -512,4 +491,46 @@ width: 100px;
 
 
 </body>
+<script>
+// get all cell elements
+const cells = document.querySelectorAll('.cell');
+console.log(cells);
+// add click event listener to each cell
+cells.forEach(cell => {
+  cell.addEventListener('click', function() {
+    const date = this.getAttribute('data-date');
+    console.log(date); 
+
+    Swal.fire({
+  title: 'Do you want to save the changes?',
+  showDenyButton: true,
+  showCancelButton: true,
+  confirmButtonText: 'Save',
+  denyButtonText: `Don't save`,
+}).then((result) => {
+  if (result.isConfirmed) {
+    
+    Swal.fire('Saved!', '', 'success')
+  } else if (result.isDenied) {
+    Swal.fire('Changes are not saved', '', 'info')
+  }
+})
+
+
+
+
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+</script>
 </html>

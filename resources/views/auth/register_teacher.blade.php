@@ -66,6 +66,9 @@
 
                         <button type="submit" name="submit">Sign Up</button>
 
+                        <div class="link">
+                        <a href="register">Als Schüler registrieren?</a>
+                        </div>
 
                     </form>
                 </div>
