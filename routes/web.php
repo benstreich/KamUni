@@ -35,6 +35,10 @@ Route::get('welcome_signedin', function(){
     return view('welcome_signedin');
 });
 
+Route::get('/teacher_schedule', function(){
+    return view('/teachersites/teacher_schedule');
+});
+
 Route::get('/welcome_teacher_login', function(){
     return view('/teachersites/startsite/welcome_teacher_login');
 });
