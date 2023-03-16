@@ -79,12 +79,17 @@
 
 
     <style>
-        * {
+       * {
             text-decoration: none;
             list-style: none;
             font-family: "Poppins", sans-serif;
+          
+        }
+
+        body{
             margin: 0;
             padding: 0;
+            background-color: #d6edd4;
         }
 
  

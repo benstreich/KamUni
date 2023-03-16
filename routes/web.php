@@ -89,3 +89,7 @@ Route::get('/about_us', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+
+Route::get('profile', [LoginController::class, 'profile']);
+
+Route::get('logout', [LoginController::class, 'logout']);

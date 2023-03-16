@@ -37,7 +37,7 @@ class LoginController extends Controller
          {
             if(Hash::check($request->password, $user->password)){
                 $request->session()->put('loginId', $user->id);
-                return redirect('/');
+                return redirect('/welcome_signedin');
             }
             else{
                 return back()->with('fail', 'Passwort stimmt nicht überein.');
@@ -49,6 +49,22 @@ class LoginController extends Controller
          }
 
 
+    }
+
+    public function profile()
+    {
+        $data = array();
+        if(Session::has('loginId')){
+            $data = Registration::where('id', '=', Session::get('loginId'))->first();
+        }
+        return view('profile', compact('data'));
+    }
+
+    public function logout(){
+        if(Session::has('loginId')){
+            Session::pull('loginId');
+            return redirect('login');
+        }
     }
 
     

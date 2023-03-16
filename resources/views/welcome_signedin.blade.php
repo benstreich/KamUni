@@ -13,13 +13,19 @@
 
 <body>
   <style>
-   body{
-   background-color: #d6edd4;
-   font-family: "Poppins", sans-serif;
-   margin: 0;
-   padding: 0;
-}
-a  { text-decoration: none; }
+
+      * {
+            text-decoration: none;
+            list-style: none;
+            font-family: "Poppins", sans-serif;     
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #d6edd4;
+        }
+
 
 
 .svgclass{
@@ -111,70 +117,111 @@ width: 30%;
 }
 
     /*Footer*/
-    footer{
-    padding-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    background-color: #282D32;
-}
+ /*Footer*/
+ footer {
+            background-color: #333;
+            color: white;
+        }
 
-footer .container{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    background-color: #282D32;
-}
+        .footer-info{
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            padding: 45px 0;
+        }
 
-footer h4{
-    font-size: 14px;
-    color: white;
-    padding-bottom: 20px;
-    background-color: #282D32;
-}
+        .footer-info h2{
+          margin-bottom: 20px;
+        }
 
-footer p{
-    font-size: 13px;
-    color: #A0A7AD;
-    margin-bottom: 8px;
-    background-color: #282D32;
-}
+        
 
-footer a{
-    font-size: 13px;
-    color: #A0A7AD;
-    margin-bottom: 10px;
-    background-color: #282D32;
-}
+        .about, .contact{
+          width: 40%;
+          padding: 0 15px;
+        }
 
-footer a:hover{
-    text-decoration: underline;
-}
+        .links{
+          width: 20%;
+          padding: 0 15px;
+        }
 
-footer .follow{
-    margin-top: 20px;
-    background-color: #282D32;
-}
 
-footer .follow i{
-    padding-right: 5px;
-    color: #465b52;
-    cursor: pointer;
-    background-color: #282D32;
-}
+        .links ul li{
+          margin-bottom: 15px;
+          font-size: 15px;
+        }
 
-footer img{
-    height: 110px;
-    background-color: #E2E2E2;
+        .links ul li a{
+            color: white;
+        }
 
-}
+       
+        .links ul li a:hover{
+          color: black;
+        }
 
-footer .copyright{
-    width: 100%;
-    text-align: center;
-    background-color: #282D32;
-}
+
+        .socials{
+          margin-top: 30px;
+        }
+
+        .socials ul{
+          display: flex;
+        }
+
+        .socials ul li a{
+          display: inline-block;
+          margin-right: 30px;
+          width: 40px;
+          height: 35px;
+          background-color: transparent;
+          border: 1px solid white;
+          text-align: center;
+          padding-top:10px;
+          color: white;
+        }
+
+        .socials ul li a:hover{
+          background-color: white;
+          color: black;
+        }
+
+
+        .contact ul li{
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+        }
+
+       
+
+
+        @media  screen and (max-width: 992px) {
+            .about, .contact{
+                width: 35%;
+            }
+
+            .link{
+                width: 30%;
+            }
+        }
+
+        @media screen and (max-width: 767px){
+            .about, .link, .contact{
+                width: 100%;
+                margin-right: 30px;
+            }
+
+            .footer-info{
+                flex-direction: column;
+            }
+        }
+
+        img{
+            width: 200px;
+            height:200px;
+        }
 
 
 .accountimage{
@@ -308,43 +355,42 @@ jetzt angemeldet 😎" transform="translate(93.975 80.917)" fill="#707070" font-
 
 
 
-      <footer>
-        <div class="container">
-            <h4>Kontaktieren Sie Uns</h4>
-            <p><strong>Email:</strong> Einfügen! </p>
-            <div class="follow">
-                <h4>Folgen Sie uns </h4>
-                <div class="icon">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-tiktok"></i>
+     <footer>
+        <div class="footer-info">
+            <div class="about">
+                <h2>Über Uns</h2>
+                <p>
+                Wir sind ein Team von vier Informatikern, die sich zum Ziel gesetzt haben, eine innovative 
+                digitale Lernplattform zu entwickeln, die darauf abzielt, die Lernfähigkeit 
+                von Schülern und Studenten zu fördern. Mit unserer Plattform möchten wir den Bildungsbereich 
+                revolutionieren und den Lernprozess effektiver und zugänglicher gestalten.
+                </p>
+                <div class="socials">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
                 </div>
             </div>
+            <div class="links">
+                <h2>Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/courses">Kurse suchen</a></li>
+                    <li><a href="/about_us">Über Uns</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h2>Kontakt</h2>
+                <ul>
+                    <li>Email einfügen</li>
+                    <li>Email einfügen</li>
+                    <li>Email einfügen</li>
+                    <li>Email einfügen</li>
+                </ul>
+            </div>
         </div>
-
-        <div class="container">
-            <h4>Über Uns</h4>
-            <a href="#">Unsere Geschäfte</a>
-            <a href="#">Rechtliches & Datenschutz</a>
-            <a href="#">FAQ</a>
-        </div>
-
-        <div class="container">
-            <h4>Mein Account</h4>
-            <a href="#">Sign In</a>
-            <a href="#">Sign Up</a>
-            <a href="#">Hilfe</a>
-        </div>
-
-
-        <div class="copyright">
-            <p>© 2023 KamUni - Alle Rechte vorbehalten</p>
-        </div>
-
     </footer>
-
-
-
-
 
 
 
