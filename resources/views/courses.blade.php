@@ -90,6 +90,7 @@
             justify-content: space-around;
             padding-top: 20px;
             background-color: #d6edd4;
+            padding-bottom: 95px;
         }
 
         .box {
@@ -105,6 +106,7 @@
             box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
             flex-direction: column;
+            font-size: 14px;
         }
 
 
