@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\registration_controller;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\TeacherRegistrationController;
+use App\Models\TeacherRegistration;
 use Illuminate\Auth\Events\Login;
 
 /*
@@ -40,6 +42,16 @@ Route::get('/welcome_teacher_login', function(){
 Route::get('/welcome_teacher_signedin', function(){
     return view('/teachersites/startsite/welcome_teacher_signedin');
 });
+
+Route::get('/register_teacher', function(){
+    return view('/auth/register_teacher');
+});
+
+Route::get('login', [LoginController::class, 'login']);
+Route::post('login-teacher', [LoginController::class, 'loginTeacher'])->name('login-teacher');
+
+Route::get('register', [TeacherRegistrationController::class, 'register']);
+Route::post('register-teacher', [TeacherRegistrationController::class, 'registerTeacher'])->name('register-teacher');
 
 Route::get('/courses_unsigned', function(){
     return view('/courses_unsigned');
