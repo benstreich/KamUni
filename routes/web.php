@@ -33,7 +33,7 @@ Route::post('register-user', [RegistrationController::class, 'registerUser'])->n
 
 Route::get('welcome_signedin', function(){
     return view('welcome_signedin');
-});
+})->middleware('isLoggedIn');
 
 Route::get('/teacher_schedule', function(){
     return view('/teachersites/teacher_schedule');
