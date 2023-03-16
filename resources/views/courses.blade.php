@@ -271,19 +271,7 @@
     </style>
 
 
-    <header>
-        <a href="" class="logo"><img src="/images/logo.png" alt=""></a>
-        <ul class="navbar">
-            <li><a href="/">Tutoring Uni</a></li>
-            <li><a href="#">Kurse suchen</a></li>
-            <li><a href="about_us">Über Uns</a></li>
-        </ul>
-
-        <div class="main">
-            <a href="/login">Sign In</a>
-            <a href="/register"><button class="buttonregister">Sign Up</button> </a>
-        </div>
-    </header>
+@include('header_templates.header_signed_in')
 
 
 
