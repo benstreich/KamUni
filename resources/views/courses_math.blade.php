@@ -14,10 +14,52 @@
         margin: 0;
         padding: 0;
     }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 20px;
+    }
+
+    img {
+        margin: 10px;
+        width: 300px;
+        height: 300px;
+        padding: 0px 50px 0px 50px;
+    }
+
+    p {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 30px;
+    }
 </style>
 
 <body>
 @include('header_templates.header_signed_in')
+
+<div class="container">
+        <div class="image-container">
+            <img src="/images/algebra.png" alt="Image 1">
+            <p>Algebra</p>
+        </div>
+        <div class="image-container">
+            <img src="/images/shapes.png" alt="Image 2">
+            <p>Formen</p>
+        </div>
+        <div class="image-container">
+            <img src="images/vector.png" alt="Image 3">
+            <p>Vektoren</p>
+        </div>
+    </div>
 </body>
 
 </html>
