@@ -13,7 +13,7 @@ class TeacherRegistrationController extends Controller
         return view('auth.register_teacher');
     }
 
-    public function register(Request $request)
+    public function registerTeacher(Request $request)
     {
         $request->validate(
             [

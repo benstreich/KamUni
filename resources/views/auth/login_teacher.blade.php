@@ -41,11 +41,11 @@
 
             </div>
             <div class="login-formular">
-                <div class="form">
+                <div class="form" >
                     <div class="alert-danger">{{Session::get('fail')}}</div>
-                    <form class="loginForm" action="{{ route('login-user')}}" method="post">
+                    <form class="loginForm" action="{{ route('login-teacher')}}" method="post">
                         @csrf
-                        <h1>Anmelden</h1>
+                        <h1>Lehrer Anmeldung</h1>
 
                         <div class="inputarea">
                             <input type="email" id="email" name="email" value="{{old('email')}}" placeholder="Email">
@@ -61,7 +61,6 @@
 
                         <div class="link">
                             <a href="/register">Noch kein Konto?</a>
-                            <a href="login_teacher">Als Lehrer einloggen?</a>
                         </div>
 
                     </form>

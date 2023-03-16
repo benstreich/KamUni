@@ -47,8 +47,12 @@ Route::get('/register_teacher', function(){
     return view('/auth/register_teacher');
 });
 
-Route::get('/login', [LoginController::class, 'login']);
-Route::post('/login-teacher', [LoginController::class, 'loginTeacher'])->name('login-teacher');
+Route::get('/login_teacher', function(){
+    return view('/auth/login_teacher');
+});
+
+Route::get('/login-t', [App\Http\Controllers\TeacherLoginController::class, 'login']);
+Route::post('/login-teacher', [App\Http\Controllers\TeacherLoginController::class, 'loginTeacher'])->name('login-teacher');
 
 Route::get('register-t', [TeacherRegistrationController::class, 'register']);
 Route::post('register-teacher', [TeacherRegistrationController::class, 'registerTeacher'])->name('register-teacher');

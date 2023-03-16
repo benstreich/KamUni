@@ -64,8 +64,11 @@
                             <span class="text-danger">@error('certificate') {{$message}} @enderror</span>
                         </div>
 
-                        <button type="submit" name="submit">Sign In</button>
+                        <button type="submit" name="submit">Sign Up</button>
 
+                        <div class="link">
+                        <a href="register">Als Schüler registrieren?</a>
+                        </div>
 
                     </form>
                 </div>

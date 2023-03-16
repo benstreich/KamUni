@@ -2,21 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Registration;
-use Illuminate\Auth\Events\Login;
 use Illuminate\Http\Request;
+use App\Models\TeacherRegistration;
+use Illuminate\Auth\Events\Teacherlogin;
 use Illuminate\Support\Facades\Hash;
 
-class LoginController extends Controller
+class TeacherLoginController extends Controller
 {
-    public function login()
+    public function Teacherlogin()
     {
-        return view('auth.login');
+        return view('auth.login_teacher');
     }
 
-    
-
-    public function loginUser(Request $request)
+    public function loginTeacher(Request $request)
     {
         $request->validate(
         [
@@ -31,11 +29,11 @@ class LoginController extends Controller
        
     );
 
-    $user = Registration::where('email', '=', $request->email)->first();
-         if($user)
+    $teacher = TeacherRegistration::where('email', '=', $request->email)->first();
+         if($teacher)
          {
-            if(Hash::check($request->password, $user->password)){
-                $request->session()->put('loginId', $user->id);
+            if(Hash::check($request->password, $teacher->password)){
+                $request->session()->put('loginId', $teacher->id);
                 return redirect('/');
             }
             else{
@@ -49,5 +47,4 @@ class LoginController extends Controller
 
 
     }
-
 }

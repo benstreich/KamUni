@@ -59,7 +59,7 @@
                             <span class="text-danger">@error('password') {{$message}} @enderror</span>
                         </div>
 
-                        <button type="submit" name="submit">Sign In</button>
+                        <button type="submit" name="submit">Sign Up</button>
 
 
                         <div class="link">
