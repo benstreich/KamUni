@@ -26,14 +26,6 @@
         </div>
     </header>
 
-    @if($message = Session::get('success'))
-
-    <div class="alert alert-info">
-        {{$message}}
-    </div>
-
-    @endif
-
 
     <section class="login-section">
         <div class="login-container">
@@ -61,7 +53,7 @@
 
                         <div class="link">
                             <a href="/register">Noch kein Konto?</a>
-                            <a href="register_teacher">Als Lehrer einloggen?</a>
+                            <a href="login_teacher">Als Lehrer einloggen?</a>
                         </div>
 
                     </form>
@@ -185,13 +177,20 @@
             cursor: pointer;
         
         }
+        
+        .alert-danger{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #FF595B;
+        }
 
 
         .login-container {
             display: flex;
             width: 100%;
             flex-direction: row;
-            min-height: 100vh;
+            height: 70vh;
             min-width: 100vh;
         }
 
@@ -277,7 +276,7 @@
             cursor: pointer;
         }
 
-        button:hover {
+        .login-formular button:hover {
             transition: .1s;
             background: linear-gradient(to right, #0acffe 0%, #495aff 100%);
         }
@@ -285,6 +284,8 @@
         span {
             color: red;
             font-size: 13px;
+            padding: 0;
+            margin: 0;
 
         }
 

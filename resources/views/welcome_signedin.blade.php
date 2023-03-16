@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KamUni.com</title>
+  <title>KamUni</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
@@ -14,11 +14,13 @@
 
 <body>
   <style>
+
     * {
-      text-decoration: none;
-      list-style: none;
-      font-family: "Poppins", sans-serif;
-    }
+        text-decoration: none;
+        list-style: none;
+        font-family: "Poppins", sans-serif;   
+             
+      }
 
     body {
       margin: 0;

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Registration;
 use App\Models\User;
+use Illuminate\Auth\Events\Login;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
@@ -40,7 +41,7 @@ class LoginController extends Controller
                 return redirect('/welcome_signedin');
             }
             else{
-                return back()->with('fail', 'Passwort stimmt nicht überein.');
+                return back()->with('fail', 'Anmeldung fehlgeschlagen');
             }
 
          }
@@ -66,7 +67,5 @@ class LoginController extends Controller
             return redirect('login');
         }
     }
-
-    
 
 }
