@@ -110,17 +110,20 @@
 
     <style>
         * {
-            padding: 0;
-            font-family: "Poppins", sans-serif;
-            margin: 0;
             text-decoration: none;
             list-style: none;
+            font-family: "Poppins", sans-serif;
+          
         }
 
-
-        body {
+        body{
+            margin: 0;
+            padding: 0;
             background-color: #A8E08E;
         }
+            
+            
+        
 
         header{
             width: 100%;
@@ -290,7 +293,8 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin-top: 17px;
+            margin-top: 15px;
+            font-size: 15px;
         }
 
 

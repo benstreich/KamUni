@@ -23,6 +23,8 @@
         <li><a href="#">Über Uns</a></li>
     </ul>
 
+
+
     <div class="main">
         <a href="/login">Sign In</a>
         <a href="/register"><button class="buttonregister">Sign Up</button> </a>
@@ -132,15 +134,15 @@
     <style>
 
         * {
-            padding: 0;
-            font-family: "Poppins", sans-serif;
-            margin: 0;
             text-decoration: none;
             list-style: none;
-            
+            font-family: "Poppins", sans-serif;
+          
         }
 
         body{
+            margin: 0;
+            padding: 0;
             background-color: #d6edd4;
         }
 
@@ -161,9 +163,11 @@
 
         .navbar{
             display: flex;
-            
+          
             
         }
+
+
 
         .navbar a{
             padding: 5px 0;
@@ -207,7 +211,6 @@
         }
 
         .title {
-            padding-top: 60px;
             font-size: 25px;
             margin: auto;
         }

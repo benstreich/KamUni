@@ -12,14 +12,20 @@
 <body>
     <style>
 
+      
         * {
             text-decoration: none;
             list-style: none;
             font-family: "Poppins", sans-serif;
+          
+        }
+
+        body{
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #d6edd4;
         }
+
 
         header{
             width: 100%;
@@ -28,7 +34,6 @@
             justify-content: space-between;
             z-index: 1000;
             padding: 1px 0;
-            background-color: #d6edd4;
 
         }
 
@@ -90,6 +95,7 @@
             justify-content: space-around;
             padding-top: 20px;
             background-color: #d6edd4;
+            padding-bottom: 95px;
         }
 
         .box {
@@ -105,6 +111,7 @@
             box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
             flex-direction: column;
+            font-size: 14px;
         }
 
 
@@ -163,6 +170,8 @@
          footer {
             background-color: #333;
             color: white;
+           
+            
         }
 
         .footer-info{
@@ -170,6 +179,7 @@
             margin: 0 auto;
             display: flex;
             padding: 45px 0;
+
         }
 
         .footer-info h2{

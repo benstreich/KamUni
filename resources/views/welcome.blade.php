@@ -19,8 +19,13 @@
             text-decoration: none;
             list-style: none;
             font-family: "Poppins", sans-serif;
+          
+        }
+
+        body{
             margin: 0;
             padding: 0;
+            background-color: #d6edd4;
         }
 
  
@@ -32,7 +37,7 @@
             justify-content: space-between;
             z-index: 1000;
             padding: 1px 0;
-            background-color: #d6edd4;
+            
 
         }
 

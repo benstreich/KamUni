@@ -295,7 +295,8 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin-top: 17px;
+            margin-top: 15px;
+            font-size: 15px;
         }
 
         .link a {

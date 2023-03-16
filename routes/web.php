@@ -51,10 +51,10 @@ Route::get('/register_teacher', function(){
     return view('/auth/register_teacher');
 });
 
-Route::get('login', [LoginController::class, 'login']);
-Route::post('login-teacher', [LoginController::class, 'loginTeacher'])->name('login-teacher');
+Route::get('/login', [LoginController::class, 'login']);
+Route::post('/login-teacher', [LoginController::class, 'loginTeacher'])->name('login-teacher');
 
-Route::get('register-teacher', [TeacherRegistrationController::class, 'register']);
+Route::get('register-t', [TeacherRegistrationController::class, 'register']);
 Route::post('register-teacher', [TeacherRegistrationController::class, 'registerTeacher'])->name('register-teacher');
 
 Route::get('/courses_unsigned', function(){
@@ -89,3 +89,11 @@ Route::get('/courses_science', function () {
 Route::get('/about_us', function () {
     return view('about_us');
 });
+
+Route::get('/profile', function () {
+    return view('profile');
+});
+
+Route::get('profile', [LoginController::class, 'profile']);
+
+Route::get('logout', [LoginController::class, 'logout']);
