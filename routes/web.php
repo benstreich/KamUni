@@ -63,7 +63,7 @@ Route::get('/courses_unsigned', function(){
 
 
 Route::get('/courses', function () {
-    return view('courses');
+    return view('courses_unsigned');
 });
 
 Route::get('/courses_english', function () {

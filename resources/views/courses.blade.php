@@ -11,82 +11,20 @@
 
 <body>
     <style>
-
-      
         * {
             text-decoration: none;
             list-style: none;
             font-family: "Poppins", sans-serif;
-          
+
         }
 
-        body{
+        body {
             margin: 0;
             padding: 0;
             background-color: #d6edd4;
         }
 
 
-        header{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 1000;
-            padding: 1px 0;
-
-        }
-
-        header img{
-            width: 200px;
-            height:200px;
-        }
-
-        .logo{
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar{
-            display: flex;
-            
-            
-        }
-
-        .navbar a{
-            padding: 5px 0;
-            margin: 10px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            color: black;
-
-        }
-
-        .main{
-            display: flex;
-            align-items: center;
-        }
-
-        .main a{
-            margin-right: 45px;
-            margin-left: 40px;
-            font-weight: 500;
-            font-size: 18px;
-            font-weight: bold;
-            color: black;
-
-        }
-
-        .buttonregister{
-            width: 120px;
-            height: 40px;
-            border-radius: 25px; 
-            border: 1px solid black ;
-            background-color: #00B0FF;
-            font-size: 18px;
-            cursor: pointer;
-        
-        }
 
 
         .container-boxes {
@@ -167,14 +105,14 @@
 
 
         /*Footer*/
-         footer {
+        footer {
             background-color: #333;
             color: white;
-           
-            
+
+
         }
 
-        .footer-info{
+        .footer-info {
             width: 90%;
             margin: 0 auto;
             display: flex;
@@ -182,107 +120,113 @@
 
         }
 
-        .footer-info h2{
-          margin-bottom: 20px;
-        }
-
-        
-
-        .about, .contact{
-          width: 40%;
-          padding: 0 15px;
-        }
-
-        .links{
-          width: 20%;
-          padding: 0 15px;
+        .footer-info h2 {
+            margin-bottom: 20px;
         }
 
 
-        .links ul li{
-          margin-bottom: 15px;
-          font-size: 15px;
+
+        .about,
+        .contact {
+            width: 40%;
+            padding: 0 15px;
         }
 
-        .links ul li a{
+        .links {
+            width: 20%;
+            padding: 0 15px;
+        }
+
+
+        .links ul li {
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .links ul li a {
             color: white;
         }
 
-       
-        .links ul li a:hover{
-          color: black;
+
+        .links ul li a:hover {
+            color: black;
         }
 
 
-        .socials{
-          margin-top: 30px;
+        .socials {
+            margin-top: 30px;
         }
 
-        .socials ul{
-          display: flex;
+        .socials ul {
+            display: flex;
         }
 
-        .socials ul li a{
-          display: inline-block;
-          margin-right: 30px;
-          width: 40px;
-          height: 35px;
-          background-color: transparent;
-          border: 1px solid white;
-          text-align: center;
-          padding-top:10px;
-          color: white;
+        .socials ul li a {
+            display: inline-block;
+            margin-right: 30px;
+            width: 40px;
+            height: 35px;
+            background-color: transparent;
+            border: 1px solid white;
+            text-align: center;
+            padding-top: 10px;
+            color: white;
         }
 
-        .socials ul li a:hover{
-          background-color: white;
-          color: black;
+        .socials ul li a:hover {
+            background-color: white;
+            color: black;
         }
 
 
-        .contact ul li{
-          display: flex;
-          align-items: center;
-          margin-bottom: 15px;
+        .contact ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
         }
 
-        @media  screen and (max-width: 992px) {
-            .about, .contact{
+        @media screen and (max-width: 992px) {
+
+            .about,
+            .contact {
                 width: 35%;
             }
 
-            .link{
+            .link {
                 width: 30%;
             }
         }
 
-        @media screen and (max-width: 767px){
-            .about, .link, .contact{
+        @media screen and (max-width: 767px) {
+
+            .about,
+            .link,
+            .contact {
                 width: 100%;
                 margin-right: 30px;
             }
 
-            .footer-info{
+            .footer-info {
                 flex-direction: column;
             }
         }
-        
-
     </style>
 
 
-@include('header_templates.header_signed_in')
+    @include('header_templates.header_signed_in')
 
 
 
     <div class="container-boxes">
 
-        <div class="box" onclick="window.location.href='/courses_math'">
+
+        <div class="box" id="click">
             <img src="/images/math-book.png" alt="Bild 2">
             <div>
                 <h2>Mathematik</h2>
             </div>
         </div>
+
 
 
         <div class="box" onclick="window.location.href='/courses_german'">
@@ -328,10 +272,10 @@
             <div class="about">
                 <h2>Über Uns</h2>
                 <p>
-                Wir sind ein Team von vier Informatikern, die sich zum Ziel gesetzt haben, eine innovative 
-                digitale Lernplattform zu entwickeln, die darauf abzielt, die Lernfähigkeit 
-                von Schülern und Studenten zu fördern. Mit unserer Plattform möchten wir den Bildungsbereich 
-                revolutionieren und den Lernprozess effektiver und zugänglicher gestalten.
+                    Wir sind ein Team von vier Informatikern, die sich zum Ziel gesetzt haben, eine innovative
+                    digitale Lernplattform zu entwickeln, die darauf abzielt, die Lernfähigkeit
+                    von Schülern und Studenten zu fördern. Mit unserer Plattform möchten wir den Bildungsbereich
+                    revolutionieren und den Lernprozess effektiver und zugänglicher gestalten.
                 </p>
                 <div class="socials">
                     <ul>

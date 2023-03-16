@@ -13,88 +13,36 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <style>
+       * {
+            text-decoration: none;
+            list-style: none;
+            font-family: "Poppins", sans-serif;
+
+        }
+
         body {
-            background-color: #A8E08E;
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: "Poppins", sans-serif;
-        }
-
-        .svgclass {
-            position: relative;
-            animation-name: camelion;
-            animation-duration: 2s;
-            margin-top: 20px;
-            width: 25%;
-            flex-wrap: nowrap;
-            height: 100px;
-
+            background-color: #d6edd4;
         }
 
 
-        @keyframes camelion {
-            0% {
-                opacity: 0;
-            }
 
-            25% {
-                opacity: 0, 25;
-            }
-
-            50% {
-                opacity: 0, 5;
-            }
-
-            75% {
-                opacity: 0, 75;
-            }
-
-            100% {
-                opacity: 1;
-            }
-
-
-        }
-
-        .nav {
-            display: flex;
-            width: 100%;
-            height: 200px;
-            justify-content: space-around;
-        }
-
-        .headerelement {
-            display: flex;
-            width: 25%;
-            height: 100px;
-            justify-content: center;
-            padding-top: 50px;
-        }
-
-        .headerclass {
-            display: flex;
-            width: 100%;
-            height: 300px;
-
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-        }
 
         .container-boxes {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            margin-top: 20px;
+            padding-top: 20px;
+            background-color: #d6edd4;
+            padding-bottom: 95px;
         }
 
         .box {
             display: flex;
             align-items: center;
             width: calc(17% - 20px);
-            height: 200px;
+            height: auto;
             margin: 10px;
             float: left;
             padding: 20px;
@@ -103,6 +51,7 @@
             box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
             flex-direction: column;
+            font-size: 14px;
         }
 
 
@@ -157,46 +106,113 @@
         }
 
 
-        @media (max-width: 769px) {
-            .box {
+        /*Footer*/
+        footer {
+            background-color: #333;
+            color: white;
+
+
+        }
+
+        .footer-info {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            padding: 45px 0;
+
+        }
+
+        .footer-info h2 {
+            margin-bottom: 20px;
+        }
+
+
+
+        .about,
+        .contact {
+            width: 40%;
+            padding: 0 15px;
+        }
+
+        .links {
+            width: 20%;
+            padding: 0 15px;
+        }
+
+
+        .links ul li {
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .links ul li a {
+            color: white;
+        }
+
+
+        .links ul li a:hover {
+            color: black;
+        }
+
+
+        .socials {
+            margin-top: 30px;
+        }
+
+        .socials ul {
+            display: flex;
+        }
+
+        .socials ul li a {
+            display: inline-block;
+            margin-right: 30px;
+            width: 40px;
+            height: 35px;
+            background-color: transparent;
+            border: 1px solid white;
+            text-align: center;
+            padding-top: 10px;
+            color: white;
+        }
+
+        .socials ul li a:hover {
+            background-color: white;
+            color: black;
+        }
+
+
+        .contact ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            .about,
+            .contact {
+                width: 35%;
+            }
+
+            .link {
                 width: 30%;
-                margin: 40px;
-            }
-
-            .headerclass {
-                flex-wrap: wrap;
-                height: auto;
-            }
-
-            .headerelement {
-                width: 50%;
-                padding-top: 25px;
-            }
-
-            .svgclass {
-                width: 50%;
-                height: auto;
-            }
-
-        }
-
-        @media (max-width: 480px) {
-            .box {
-                width: 50%;
-                margin: 50px;
-
-            }
-
-            .headerelement {
-                width: 100%;
-                padding-top: 25px;
-            }
-
-            .svgclass {
-                width: 100%;
-                height: auto;
             }
         }
+
+        @media screen and (max-width: 767px) {
+
+            .about,
+            .link,
+            .contact {
+                width: 100%;
+                margin-right: 30px;
+            }
+
+            .footer-info {
+                flex-direction: column;
+            }
+        }
+      
     </style>
 
 
