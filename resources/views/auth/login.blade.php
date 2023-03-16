@@ -53,7 +53,7 @@
 
                         <div class="link">
                             <a href="/register">Noch kein Konto?</a>
-                            <a href="register_teacher">Als Lehrer einloggen?</a>
+                            <a href="login_teacher">Als Lehrer einloggen?</a>
                         </div>
 
                     </form>

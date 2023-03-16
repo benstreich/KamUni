@@ -11,6 +11,7 @@
 
 <body>
 
+
     <header>
         <a href="" class="logo"><img src="/images/logo.png" alt=""></a>
         <ul class="navbar">
@@ -20,34 +21,31 @@
         </ul>
 
         <div class="main">
-            <a href="/login">Sign In</a>
-            <a href="#"><button class="buttonregister">Sign Up</button> </a>
+            <a href="#">Sign In</a>
+            <a href="/register"><button class="buttonregister">Sign Up</button> </a>
         </div>
     </header>
 
-    <section class="register-section">
-        <div class="register-container">
-            <div class="register-info">
+    @if($message = Session::get('success'))
 
+    <div class="alert alert-info">
+        {{$message}}
+    </div>
+
+    @endif
+
+
+    <section class="login-section">
+        <div class="login-container">
+            <div class="login-info">
 
             </div>
-            <div class="register-formular">
-                <div class="form">
-                    <form action="{{route('register-teacher')}}" method="post">
+            <div class="login-formular">
+                <div class="form" >
+                    <div class="alert-danger">{{Session::get('fail')}}</div>
+                    <form class="loginForm" action="{{ route('login-teacher')}}" method="post">
                         @csrf
-                        <h1>Registrieren</h1>
-
-                        <div class="inputarea">
-                            <input type="text" id="firstname" name="firstname" value="{{old('firstname')}}"
-                                placeholder="Vorname">
-                            <span class="text-danger">@error('firstname') {{$message}} @enderror</span>
-                        </div>
-
-                        <div class="inputarea">
-                            <input type="text" id="lastname" name="lastname" value="{{old('lastname')}}"
-                                placeholder="Nachname">
-                            <span class="text-danger">@error('lastname') {{$message}} @enderror</span>
-                        </div>
+                        <h1>Lehrer Anmeldung</h1>
 
                         <div class="inputarea">
                             <input type="email" id="email" name="email" value="{{old('email')}}" placeholder="Email">
@@ -55,19 +53,14 @@
                         </div>
 
                         <div class="inputarea">
-                            <input type="password" id="password" name="password" placeholder="Passwort">
+                            <input type="password" id="password" name="password" value="" placeholder="Passwort">
                             <span class="text-danger">@error('password') {{$message}} @enderror</span>
                         </div>
 
-                        <div class="inputarea">
-                            <input type="file" id="certificate" name="certificate" placeholder="certificate">
-                            <span class="text-danger">@error('certificate') {{$message}} @enderror</span>
-                        </div>
-
-                        <button type="submit" name="submit">Sign Up</button>
+                        <button type="submit" name="submit">Sign In</button>
 
                         <div class="link">
-                        <a href="register">Als Schüler registrieren?</a>
+                            <a href="/register">Noch kein Konto?</a>
                         </div>
 
                     </form>
@@ -81,10 +74,10 @@
             <div class="about">
                 <h2>Über Uns</h2>
                 <p>
-                    Wir sind ein Team von vier Informatikern, die sich zum Ziel gesetzt haben, eine innovative
-                    digitale Lernplattform zu entwickeln, die darauf abzielt, die Lernfähigkeit
-                    von Schülern und Studenten zu fördern. Mit unserer Plattform möchten wir den Bildungsbereich
-                    revolutionieren und den Lernprozess effektiver und zugänglicher gestalten.
+                Wir sind ein Team von vier Informatikern, die sich zum Ziel gesetzt haben, eine innovative 
+                digitale Lernplattform zu entwickeln, die darauf abzielt, die Lernfähigkeit 
+                von Schülern und Studenten zu fördern. Mit unserer Plattform möchten wir den Bildungsbereich 
+                revolutionieren und den Lernprozess effektiver und zugänglicher gestalten.
                 </p>
                 <div class="socials">
                     <ul>
@@ -114,8 +107,6 @@
     </footer>
 
 
-
-
     <style>
         * {
             padding: 0;
@@ -123,8 +114,8 @@
             margin: 0;
             text-decoration: none;
             list-style: none;
-
         }
+
 
         body {
             background-color: #A8E08E;
@@ -191,7 +182,8 @@
         
         }
 
-        .register-container {
+
+        .login-container {
             display: flex;
             width: 100%;
             flex-direction: row;
@@ -199,32 +191,32 @@
             min-width: 100vh;
         }
 
-        .register-info {
+        .login-info {
             width: 55%;
             border-right: 2px solid;
         }
 
-        .register-info h1 {
+        .login-info h1 {
             font-size: 30px;
             color: #3E9EEB;
         }
 
-        .register-info h3 {
+        .login-info h3 {
             color: #FF595B;
             margin: 20px 0 9px 0;
         }
 
-        .register-info a {
+        .login-info a {
             text-decoration: none;
             color: #3E9EEB;
         }
 
-        .register-info a:hover {
+        .login-info a:hover {
             text-decoration: underline;
         }
 
 
-        .register-formular {
+        .login-formular {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -266,8 +258,8 @@
 
         div input::placeholder {
             font-size: 15px;
-
         }
+
 
         button {
             width: 250px;
@@ -281,16 +273,15 @@
             cursor: pointer;
         }
 
-        .register-container button:hover {
+        button:hover {
             transition: .1s;
             background: linear-gradient(to right, #0acffe 0%, #495aff 100%);
-
         }
 
         span {
             color: red;
             font-size: 13px;
-            margin: auto;
+
         }
 
         .link {
@@ -298,9 +289,9 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            margin-top: 15px;
-            font-size: 15px;
+            margin-top: 17px;
         }
+
 
         .link a {
             text-decoration: none;
