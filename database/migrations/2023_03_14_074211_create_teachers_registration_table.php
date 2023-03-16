@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('certificate');
+            $table->json('dates')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
