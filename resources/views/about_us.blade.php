@@ -23,6 +23,8 @@
         <li><a href="#">Über Uns</a></li>
     </ul>
 
+
+
     <div class="main">
         <a href="/login">Sign In</a>
         <a href="/register"><button class="buttonregister">Sign Up</button> </a>
@@ -161,9 +163,11 @@
 
         .navbar{
             display: flex;
-            
+          
             
         }
+
+
 
         .navbar a{
             padding: 5px 0;
@@ -207,7 +211,6 @@
         }
 
         .title {
-            padding-top: 60px;
             font-size: 25px;
             margin: auto;
         }
