@@ -47,11 +47,11 @@ Route::get('/register_teacher', function(){
     return view('/auth/register_teacher');
 });
 
-Route::get('login', [LoginController::class, 'login']);
-Route::post('login-teacher', [LoginController::class, 'loginTeacher'])->name('login-teacher');
+Route::get('/login', [LoginController::class, 'login']);
+Route::post('/login-teacher', [LoginController::class, 'loginTeacher'])->name('login-teacher');
 
-Route::get('register', [TeacherRegistrationController::class, 'register']);
-Route::post('register-teacher', [TeacherRegistrationController::class, 'registerTeacher'])->name('register-teacher');
+Route::get('/register-t', [TeacherRegistrationController::class, 'register']);
+Route::post('/register-teacher', [TeacherRegistrationController::class, 'registerTeacher'])->name('register-teacher');
 
 Route::get('/courses_unsigned', function(){
     return view('/courses_unsigned');
