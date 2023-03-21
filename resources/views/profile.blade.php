@@ -21,42 +21,20 @@
 
     </header>
 
-    <table>
-        <thead>
-            <th>Vorname</th>
-            <th>Nachname</th>
-            <th>Email</th>
-        </thead>
-        <tbody>
-            <tr>
-                <td>{{$data->firstname}}</td>
-                <td>{{$data->lastname}}</td>
-                <td>{{$data->email}}</td>
-                <td><a href="logout">Logout</a></td>
-            </tr>
-        </tbody>
-    </table>
 
-    
 
     <div class="container">
-        <div class="accordion">
-            <div class="accordion-item">
-                <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Why is the moon
-                        sometimes out during the day?</span><span class="icon" aria-hidden="true"></span></button>
-                <div class="accordion-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium
-                        viverra suspendisse potenti.</p>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Why is the sky
-                        blue?</span><span class="icon" aria-hidden="true"></span></button>
-                <div class="accordion-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium
-                        viverra suspendisse potenti.</p>
+        <div class="title">
+            <h1>Mein Profil</h1>
+        </div>
+        <div class="profile-container">
+            <div class="profile-info">
+                <img src="/images/pb.svg">
+                <p><span></span></p>
+                <p>{{$data->firstname}} {{$data->lastname}}</p>
+                <p>{{$data->email}}</p>
+                <div class="logout-link">
+                    <p><a href="logout">Logout</a></p>
                 </div>
             </div>
         </div>
@@ -175,6 +153,62 @@
 
         }
 
+        .container {
+            text-align: center;
+            
+        }
+
+        .title {
+            font-size: 25px;
+            margin: auto;
+        }
+
+        .profile-container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 0;
+            
+        }
+
+        .profile-info {
+            margin: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+            max-width: 30%;
+            transition: 0.4s;
+            background-color: white;
+        }
+
+        .profile-info img{
+            width: 200px;
+            height:200px;
+        }
+
+        p span{
+            padding: 12px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        p{
+           margin: 13px 0; 
+        }
+
+        .logout-link a{
+            text-decoration: none;
+            color: #3E9EEB;
+        }
+
+        @media screen and (max-width: 812px){
+            .profile-info{
+                max-width: 100%;
+            }
+        }
+
+
 
         /*Footer*/
         footer {
@@ -285,104 +319,7 @@
             height: 200px;
         }
 
-        .container {
-          margin: 0 auto;
-          padding: 4rem;
-          width: 48rem;
-        }
-        
-        
-        
-        .container {
-        	 margin: 0 auto;
-        	 padding: 4rem;
-        	 width: 48rem;
-        }
-         .accordion .accordion-item {
-        	 border-bottom: 1px solid #e5e5e5;
-        }
-         .accordion .accordion-item button[aria-expanded='true'] {
-        	 border-bottom: 1px solid #03b5d2;
-        }
-         .accordion button {
-        	 position: relative;
-        	 display: block;
-        	 text-align: left;
-        	 width: 100%;
-        	 padding: 1em 0;
-        	 color: #7288a2;
-        	 font-size: 1.15rem;
-        	 font-weight: 400;
-        	 border: none;
-        	 background: none;
-        	 outline: none;
-        }
-         .accordion button:hover, .accordion button:focus {
-        	 cursor: pointer;
-        	 color: #03b5d2;
-        }
-         .accordion button:hover::after, .accordion button:focus::after {
-        	 cursor: pointer;
-        	 color: #03b5d2;
-        	 border: 1px solid #03b5d2;
-        }
-         .accordion button .accordion-title {
-        	 padding: 1em 1.5em 1em 0;
-        }
-         .accordion button .icon {
-        	 display: inline-block;
-        	 position: absolute;
-        	 top: 18px;
-        	 right: 0;
-        	 width: 22px;
-        	 height: 22px;
-        	 border: 1px solid;
-        	 border-radius: 22px;
-        }
-         .accordion button .icon::before {
-        	 display: block;
-        	 position: absolute;
-        	 content: '';
-        	 top: 9px;
-        	 left: 5px;
-        	 width: 10px;
-        	 height: 2px;
-        	 background: currentColor;
-        }
-         .accordion button .icon::after {
-        	 display: block;
-        	 position: absolute;
-        	 content: '';
-        	 top: 5px;
-        	 left: 9px;
-        	 width: 2px;
-        	 height: 10px;
-        	 background: currentColor;
-        }
-         .accordion button[aria-expanded='true'] {
-        	 color: #03b5d2;
-        }
-         .accordion button[aria-expanded='true'] .icon::after {
-        	 width: 0;
-        }
-         .accordion button[aria-expanded='true'] + .accordion-content {
-        	 opacity: 1;
-        	 max-height: 9em;
-        	 transition: all 200ms linear;
-        	 will-change: opacity, max-height;
-        }
-         .accordion .accordion-content {
-        	 opacity: 0;
-        	 max-height: 0;
-        	 overflow: hidden;
-        	 transition: opacity 200ms linear, max-height 200ms linear;
-        	 will-change: opacity, max-height;
-        }
-         .accordion .accordion-content p {
-        	 font-size: 1rem;
-        	 font-weight: 300;
-        	 margin: 2em 0;
-        }
+       
  
     </style>
 </body>

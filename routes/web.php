@@ -25,10 +25,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('login', [LoginController::class, 'login']);
+Route::get('login', [LoginController::class, 'login'])->middleware('alreadyLoggedIn');;;
 Route::post('login-user', [LoginController::class, 'loginUser'])->name('login-user');
 
-Route::get('register', [RegistrationController::class, 'register']);
+Route::get('register', [RegistrationController::class, 'register'])->middleware('alreadyLoggedIn');;
 Route::post('register-user', [RegistrationController::class, 'registerUser'])->name('register-user');
 
 Route::get('welcome_signedin', function(){
