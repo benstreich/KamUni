@@ -21,7 +21,7 @@
 
         <div class="main">
             <a href="/login">Sign In</a>
-            <a href="#"><button class="buttonregister">Sign Up</button> </a>
+            <a href="#"><button class="buttonregister">Sign Up</button></a>
         </div>
     </header>
 
@@ -40,23 +40,23 @@
                         <div class="inputarea">
                             <input type="text" id="firstname" name="firstname" value="{{old('firstname')}}"
                                 placeholder="Vorname">
-                            <span class="text-danger">@error('firstname') {{$message}} @enderror</span>
+                            <span class="text-danger">@error('firstname'){{$message}}@enderror</span>
                         </div>
 
                         <div class="inputarea">
                             <input type="text" id="lastname" name="lastname" value="{{old('lastname')}}"
                                 placeholder="Nachname">
-                            <span class="text-danger">@error('lastname') {{$message}} @enderror</span>
+                            <span class="text-danger">@error('lastname'){{$message}}@enderror</span>
                         </div>
 
                         <div class="inputarea">
                             <input type="email" id="email" name="email" value="{{old('email')}}" placeholder="Email">
-                            <span class="text-danger">@error('email') {{$message}} @enderror</span>
+                            <span class="text-danger">@error('email'){{$message}}@enderror</span>
                         </div>
 
                         <div class="inputarea">
                             <input type="password" id="password" name="password" placeholder="Passwort">
-                            <span class="text-danger">@error('password') {{$message}} @enderror</span>
+                            <span class="text-danger">@error('password'){{$message}}@enderror</span>
                         </div>
 
                         <button type="submit" name="submit">Sign Up</button>
@@ -125,68 +125,99 @@
         body{
             margin: 0;
             padding: 0;
-            background-color: #A8E08E;
+            background-color: #d6edd4;
         }
 
-        header{
-            width: 100%;
-            display: flex;
+        header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px;
+        }
+
+        img {
+          width: 150px;
+          height: 150px;
+        }
+
+        .navbar {
+          display: flex;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+
+        .navbar li {
+          margin: 0 10px;
+        }
+
+        .navbar a {
+          display: block;
+          padding: 10px;
+          color: #333;
+          text-decoration: none;
+          font-weight: bold;
+        }
+
+        .main {
+          display: flex;
+          align-items: center;
+        }
+
+        .main a {
+          margin-right: 10px;
+          color: black;
+          font-weight: bold;
+        }
+
+        .buttonregister {
+          background-color: #00B0FF;
+          color: #fff;
+          border-radius: 25px; 
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          width: 120px;
+          height: 40px;
+          cursor: pointer;
+        }
+
+        .buttonregister:hover{
+            scale: 1.05;
+        }
+
+        /* Responsive design for mobile */
+        @media only screen and (max-width: 767px) {
+          header {
+            flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            z-index: 1000;
-            padding: 1px 0;
-
-        }
-
-        img{
-            width: 200px;
-            height:200px;
-        }
-
-        .logo{
-            display: flex;
+            padding: 20px;
+          }
+      
+          .logo {
+            margin-bottom: 10px;
+          }
+      
+          .navbar {
+            flex-direction: column;
             align-items: center;
-        }
-
-        .navbar{
-            display: flex;
-            
-            
-        }
-
-        .navbar a{
-            padding: 5px 0;
-            margin: 10px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            color: black;
-
-        }
-
-        .main{
-            display: flex;
-            align-items: center;
-        }
-
-        .main a{
-            margin-right: 45px;
-            margin-left: 40px;
-            font-weight: 500;
-            font-size: 18px;
-            font-weight: bold;
-            color: black;
-
-        }
-
-        .buttonregister{
-            width: 120px;
-            height: 40px;
-            border-radius: 25px; 
-            border: 1px solid black ;
-            background-color: #00B0FF;
-            font-size: 18px;
-            cursor: pointer;
-        
+            margin: 20px 0;
+          }
+      
+          .navbar li {
+            margin: 10px 0;
+          }
+      
+          .main {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+          }
+      
+          .main a {
+            display: block;
+            margin-bottom: 10px;
+          }
         }
 
         .register-container {
