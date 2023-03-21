@@ -1,117 +1,110 @@
 <style>
-  .accountimage {
-    display: flex;
-    width: 15%;
-    height: 100px;
-    margin-left: 250px;
-    margin-top: 27px;
-    justify-content: flex-end;
-  }
+    
+    header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px;
+        }
 
-  header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    padding: 1px 0;
-    background-color: #d6edd4;
+        img {
+          width: 150px;
+          height: 150px;
+        }
 
-  }
+        .navbar {
+          display: flex;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
 
-  header img {
-    width: 200px;
-    height: 200px;
-    padding-left: 0px;
-    margin-left: 0px;
-  }
+        .navbar li {
+          margin: 0 10px;
+        }
 
-  .logo {
-    display: flex;
-    align-items: center;
+        .navbar a {
+          display: block;
+          padding: 10px;
+          color: #333;
+          text-decoration: none;
+          font-weight: bold;
+        }
 
-  }
+        .main {
+          display: flex;
+          align-items: center;
+        }
 
-  .navbar {
-    display: flex;
+        .main a {
+          margin-right: 10px;
+          color: black;
+          font-weight: bold;
+        }
 
 
-  }
+        .buttonregister {
+          background-color: #00B0FF;
+          color: #fff;
+          border-radius: 25px; 
+          border: none;
+          padding: 10px 20px;
+          font-size: 16px;
+          width: 120px;
+          height: 40px;
+          cursor: pointer;
+        }
 
-  .navbar a {
-    padding: 5px 0;
-    margin: 10px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
+        .buttonregister:hover{
+            scale: 1.05;
+        }
 
-  }
+        /* Responsive design for mobile */
+        @media only screen and (max-width: 767px) {
+          header {
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+          }
+      
+          .logo {
+            margin-bottom: 10px;
+          }
+      
+          .navbar {
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
+          }
+      
+          .navbar li {
+            margin: 10px 0;
+          }
+      
+          .main {
+            display: block;
+            text-align: center;
+            margin: 20px 0;
+          }
+      
+          .main a {
+            display: block;
+            margin-bottom: 10px;
+          }
+        }
 
-  .main {
-    display: flex;
-    align-items: center;
-  }
+     
 
-  .main a {
-    margin-right: 45px;
-    margin-left: 40px;
-    font-weight: 500;
-    font-size: 18px;
-    font-weight: bold;
-    color: black;
-
-  }
 </style>
 <header>
-  <a href="" class="logo"><img src="/images/logo.png" alt=""></a>
-  <ul class="navbar">
-    <li><a href="/">Tutoring Uni</a></li>
-    <li><a href="#">Kurse suchen</a></li>
-    <li><a href="about_us">Über Uns</a></li>
-  </ul>
+        <a href="" class="logo"><img src="/images/logo.png" alt=""></a>
+        <ul class="navbar">
+            <li><a href="/">Tutoring Uni</a></li>
+            <li><a href="courses">Kurse suchen</a></li>
+            <li><a href="about_us">Über Uns</a></li>
+        </ul>
 
-  <div class="accountimage">
-
-
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="73" height="72" viewBox="0 0 73 72">
-      <defs>
-        <clipPath id="clip-path">
-          <path id="Pfad_33" data-name="Pfad 33" d="M72.314,35.517c0,19.584-16.144,35.517-36.157,35.517S0,55.1,0,35.517C0,15.9,16.188,0,36.157,0S72.314,15.9,72.314,35.517Z" transform="translate(0 0)" />
-        </clipPath>
-      </defs>
-      <g id="Gruppe_38" data-name="Gruppe 38" transform="translate(-1712 -28)">
-        <g id="Ellipse_17" data-name="Ellipse 17" transform="translate(1712 28)" fill="#fff" stroke="#707070" stroke-width="1">
-          <ellipse cx="36.5" cy="36" rx="36.5" ry="36" stroke="none" />
-          <ellipse cx="36.5" cy="36" rx="36" ry="35.5" fill="none" />
-        </g>
-        <g id="Gruppe_32" data-name="Gruppe 32" transform="translate(1712.462 28.339)">
-          <path id="Pfad_20" data-name="Pfad 20" d="M72.314,35.517c0,19.584-16.144,35.517-36.157,35.517S0,55.1,0,35.517C0,15.9,16.188,0,36.157,0S72.314,15.9,72.314,35.517Z" transform="translate(0 0)" fill="#2a96ae" />
-          <g id="Gruppe_2" data-name="Gruppe 2" transform="translate(0 0)" clip-path="url(#clip-path)">
-            <path id="Pfad_21" data-name="Pfad 21" d="M11.667,0S.267,2.537.027,2.6,1.221,14.968,1.221,14.968l14.21-6.1Z" transform="translate(20.466 15.789)" fill="#fab687" />
-            <path id="Pfad_22" data-name="Pfad 22" d="M65.7,21.516H0A20.264,20.264,0,0,1,15.583,1.922c.174-.05.359-.091.543-.131.42-.091.84-.181,1.27-.272.574-.111,1.137-.211,1.711-.312.43-.08.861-.151,1.291-.221.041-.01.092-.01.133-.02a79.033,79.033,0,0,1,24.639,0c.041.01.092.01.133.02.318.05.625.1.942.161.686.121,1.373.242,2.059.382.42.081.84.171,1.26.262h.01c.184.04.369.081.543.131A20.264,20.264,0,0,1,65.7,21.516Z" transform="translate(3.221 49.63)" fill="#445a6b" />
-            <path id="Pfad_23" data-name="Pfad 23" d="M26.2.986a79.115,79.115,0,0,0-24.905,0C.861,1.057.43,1.127,0,1.208A61.812,61.812,0,0,0,7.089,11.382c.236.287.472.561.708.842a13.243,13.243,0,0,1,3.477,2.259c.554.472,1.07.985,1.6,1.478.262.241.535.469.8.707-.47-.423-.263-.212.068.01,1.991-1.417,3.912-2.947,5.821-4.56,3.637-3.079,6.567-6.38,7.571-10.969C26.821,1.087,26.514,1.036,26.2.986Z" transform="translate(22.328 49.63)" fill="#fab687" />
-            <path id="Pfad_24" data-name="Pfad 24" d="M30.909.564c-3.883,7.92-8.852,13.314-14.794,16.071l-.656.3-.656-.3C8.852,13.878,3.873,8.473,0,.553.574.443,1.137.342,1.711.242,2.141.161,2.571.091,3,.02c.041-.01.092-.01.133-.02,3.36,6.571,7.5,11.13,12.325,13.586C20.275,11.13,24.414,6.571,27.774,0c.041.01.092.01.133.02.318.05.625.1.942.161C29.536.3,30.222.423,30.909.564Z" transform="translate(20.617 50.596)" fill="#d2dbe0" />
-            <path id="Pfad_25" data-name="Pfad 25" d="M12.832,0V9.072a6.477,6.477,0,0,1-6.225,6.7H6.225A6.477,6.477,0,0,1,0,9.072V0Z" transform="translate(29.656 40.305)" fill="#fab687" />
-            <path id="Pfad_26" data-name="Pfad 26" d="M6.441,11.593h0C3.161,11.593.361,9.654.073,7.1a11.676,11.676,0,0,1,0-2.6C.358,1.938,3.16,0,6.439,0h0c3.53,0,6.391,2.241,6.391,5V6.588C12.832,9.352,9.971,11.593,6.441,11.593Z" transform="translate(29.655 37.158)" fill="#e59865" />
-            <path id="Pfad_27" data-name="Pfad 27" d="M15.578.607C-7.988,13.1,2.183,9.1,2.183,19.57s6,18.964,13.4,18.964,13.4-8.49,13.4-18.964S22.088-2.845,15.578.607Z" transform="translate(20.494 8.776)" fill="#fab687" />
-            <path id="Pfad_28" data-name="Pfad 28" d="M31.348,12.921c-.444,2.963-2.18,11.792-2.18,11.792V19.1a11.031,11.031,0,0,0-1.126-5.043,8.516,8.516,0,0,0-1.157-1.766,4.065,4.065,0,0,0-3.027-1.634,3.469,3.469,0,0,0-1.986.665,12.64,12.64,0,0,1-2.1,1.212h0a8.755,8.755,0,0,1-7.608-.221,2.592,2.592,0,0,1-.572-.377,3.818,3.818,0,0,0-2.717-1.279,4.031,4.031,0,0,0-3.027,1.634C4.127,14.3,2.98,17.954,2.98,22.135c0,1.045.062.375.207,1.329.134.416.268.842.424,1.248C-3.828,11.3,1.926,5.341,5.759,6.8c0-3.755,4-6.911,8.936-6.8C19.778.125,32.092,7.888,31.348,12.921Z" transform="translate(19.614 6.877)" fill="#663430" />
-            <ellipse id="Ellipse_5" data-name="Ellipse 5" cx="1.808" cy="1.776" rx="1.808" ry="1.776" transform="translate(27.448 28.909)" fill="#3d2f46" />
-            <ellipse id="Ellipse_6" data-name="Ellipse 6" cx="1.808" cy="1.776" rx="1.808" ry="1.776" transform="translate(40.179 28.909)" fill="#3d2f46" />
-            <ellipse id="Ellipse_7" data-name="Ellipse 7" cx="3.12" cy="3.957" rx="3.12" ry="3.957" transform="translate(46.061 26.905)" fill="#fab687" />
-            <ellipse id="Ellipse_8" data-name="Ellipse 8" cx="3.12" cy="3.957" rx="3.12" ry="3.957" transform="translate(19.086 26.905)" fill="#fab687" />
-            <g id="Gruppe_1" data-name="Gruppe 1" transform="translate(22.605 25.816)">
-              <path id="Pfad_29" data-name="Pfad 29" d="M10.9,1.684A2.1,2.1,0,0,0,10.559.9a1.079,1.079,0,0,0-.1-.122l-.01-.01A2.153,2.153,0,0,0,8.782,0H.921A.9.9,0,0,0,.549.081.8.8,0,0,0,.2.345.767.767,0,0,0,.032.69a.851.851,0,0,0-.01.426L.993,4.972A3.757,3.757,0,0,0,4.671,7.814H6.313A3.829,3.829,0,0,0,9.888,5.358l.93-2.5A2.09,2.09,0,0,0,10.9,1.684Zm-.868.893-.93,2.5A2.968,2.968,0,0,1,6.313,6.992H4.671A2.951,2.951,0,0,1,1.8,4.78L.859,1,.838.923.921.812H8.782a1.332,1.332,0,0,1,1.1.558A1.3,1.3,0,0,1,10.032,2.577ZM23.483.345a.81.81,0,0,0-.269-.223A.87.87,0,0,0,22.76,0H14.9a2.15,2.15,0,0,0-1.643.741l-.01.01L13.121.9a1.8,1.8,0,0,0-.341.771v.01a2,2,0,0,0,.083,1.177l.93,2.5a3.8,3.8,0,0,0,3.564,2.456H19.01a3.766,3.766,0,0,0,3.678-2.841l.971-3.856a.914.914,0,0,0,.01-.335A.911.911,0,0,0,23.483.345Zm-1.6,4.435A2.951,2.951,0,0,1,19.01,6.992H17.357a2.988,2.988,0,0,1-2.789-1.918l-.93-2.5a1.276,1.276,0,0,1,.165-1.2A1.3,1.3,0,0,1,14.9.812H22.76l.083.112Z" transform="translate(1.176 0.974)" fill="#0f1619" />
-              <path id="Pfad_30" data-name="Pfad 30" d="M14.3,1.643a2.4,2.4,0,0,0-1.315-.312,2.813,2.813,0,0,0-1.266.358A3.011,3.011,0,0,0,11.273,2a2.854,2.854,0,0,1,.3.838c.195-.081.392-.157.578-.216a3.166,3.166,0,0,1,.869-.146,3.142,3.142,0,0,1,1.4.356,2.887,2.887,0,0,1,.307-.885A2,2,0,0,0,14.3,1.643ZM26.178.061V1.126a3.3,3.3,0,0,0-1.333.629,4.062,4.062,0,0,0-.413.426.569.569,0,0,1-.124-1.035l.083-.051ZM2.128,1.786a.616.616,0,0,1-.072.173.022.022,0,0,1-.021.02.525.525,0,0,1-.289.2,3.67,3.67,0,0,0-.537-.518A3.106,3.106,0,0,0,0,1.116C0,.741.021.365.041,0L1.725,1.055l.145.091A.575.575,0,0,1,2.128,1.786Z" transform="translate(0 0)" fill="#0f1619" />
-            </g>
-            <path id="Pfad_31" data-name="Pfad 31" d="M8.832.781A4.371,4.371,0,0,1,6.353,3.958a4.337,4.337,0,0,1-1.921.436A4.46,4.46,0,0,1,1.394,3.227,4.372,4.372,0,0,1,.01.781.678.678,0,0,1,.681,0H8.161A.678.678,0,0,1,8.832.781Z" transform="translate(31.351 39.822)" fill="#663430" />
-            <path id="Pfad_32" data-name="Pfad 32" d="M4.959,1.37a4.337,4.337,0,0,1-1.921.436A4.46,4.46,0,0,1,0,.639,3.694,3.694,0,0,1,2.138,0,3.261,3.261,0,0,1,4.959,1.37Z" transform="translate(32.745 42.41)" fill="#ef4f63" />
-          </g>
-        </g>
-      </g>
-    </svg>
-
-
-
-
-  </div>
+        <div class="main">
+            <a href="profile"><img src="/images/profil.png"></a>
+        </div>
 </header>
