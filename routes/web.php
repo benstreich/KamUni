@@ -25,11 +25,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::get('login', [LoginController::class, 'login']);
 Route::post('login-user', [LoginController::class, 'loginUser'])->name('login-user');
 
-Route::get('register', [RegistrationController::class, 'register'])->middleware('alreadyLoggedIn');
+Route::get('register', [RegistrationController::class, 'register']);
 Route::post('register-user', [RegistrationController::class, 'registerUser'])->name('register-user');
 
 Route::get('welcome_signedin', function(){
@@ -37,9 +36,10 @@ Route::get('welcome_signedin', function(){
 })->middleware('isLoggedIn');
 
 
-
 Route::get('/teacher_schedule', [DateController::class, 'save']);
-Route::get('/teacher_schedule', [DateController::class, 'load']);
+
+Route::get('/teacher_schedule', [DateController::class, 'get']);
+
 
 Route::get('/welcome_teacher_login', function(){
     return view('/teachersites/startsite/welcome_teacher_login');
@@ -53,10 +53,14 @@ Route::get('/register_teacher', function(){
     return view('/auth/register_teacher');
 });
 
-Route::get('/login', [LoginController::class, 'login'])->middleware('alreadyLoggedIn');
+Route::get('/login_teacher', function(){
+    return view('/auth/login_teacher');
+});
+
+Route::get('/login-t', [LoginController::class, 'login-t'])->middleware('alreadyLoggedIn');
 Route::post('/login-teacher', [LoginController::class, 'loginTeacher'])->name('login-teacher');
 
-Route::get('register-t', [TeacherRegistrationController::class, 'register']);
+Route::get('register-t', [TeacherRegistrationController::class, 'register-t']);
 Route::post('register-teacher', [TeacherRegistrationController::class, 'registerTeacher'])->name('register-teacher');
 
 Route::get('/courses_unsigned', function(){

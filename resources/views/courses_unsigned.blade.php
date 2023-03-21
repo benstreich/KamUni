@@ -223,7 +223,7 @@
     <div class="container-boxes">
 
 
-        <div class="box" id="click">
+        <div class="box">
             <img src="/images/math-book.png" alt="Bild 2">
             <div>
                 <h2>Mathematik</h2>
@@ -232,7 +232,7 @@
         
 
 
-        <div class="box" onclick="window.location.href='/courses_german'">
+        <div class="box">
             <img src="/images/books.png" alt="Bild 2">
             <div>
                 <h2>Deutsch</h2>
@@ -241,7 +241,7 @@
 
 
 
-        <div class="box" onclick="window.location.href='/courses_french'">
+        <div class="box">
             <img src="/images/flag.png" alt="Bild 3">
             <div>
                 <h2>Französich</h2>
@@ -250,7 +250,7 @@
 
 
 
-        <div class="box" onclick="window.location.href='/courses_science'">
+        <div class="box">
             <img src="/images/genetic.png" alt="Bild 4">
             <div>
                 <h2>Naturwissenschaften</h2>
@@ -258,7 +258,7 @@
         </div>
 
 
-        <div class="box" onclick="window.location.href='/courses_english'">
+        <div class="box">
             <img src="/images/eng.png" alt="Bild 5">
             <div>
                 <h2>Englisch</h2>
@@ -278,10 +278,10 @@
 </body>
 
 <script>
-   $('#click').on("click", function(){
+   $('.box').on("click", function(){
       Swal.fire({
   icon: 'error',
-  title: 'Oops...',
+  title: 'Noch nicht angemeldet',
   text: 'Sie müssen sich zuerst Anmelden!',
   footer: '<a href="/login">Anmelden?</a>',
 })
