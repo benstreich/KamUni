@@ -133,64 +133,6 @@
             background-color: #d6edd4;
         }
 
-        header{
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            z-index: 1000;
-            padding: 1px 0;
-
-        }
-
-        .logo{
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar{
-            display: flex;
-          
-            
-        }
-
-
-
-        .navbar a{
-            padding: 5px 0;
-            margin: 10px 30px;
-            font-size: 18px;
-            font-weight: bold;
-            color: black;
-
-        }
-
-        .main{
-            display: flex;
-            align-items: center;
-        }
-
-        .main a{
-            margin-right: 45px;
-            margin-left: 40px;
-            font-weight: 500;
-            font-size: 18px;
-            font-weight: bold;
-            color: black;
-
-        }
-
-        .buttonregister{
-            width: 120px;
-            height: 40px;
-            border-radius: 25px; 
-            border: 1px solid black ;
-            background-color: #00B0FF;
-            font-size: 18px;
-            cursor: pointer;
-        
-        }
-
        
         .container {
             text-align: center;
@@ -221,7 +163,7 @@
             background-color: white;
         }
 
-        img{
+        .member-info img{
             width: 200px;
             height:200px;
         }
