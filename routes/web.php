@@ -54,6 +54,10 @@ Route::get('/register_teacher', function(){
     return view('/auth/register_teacher');
 });
 
+Route::get('/login_teacher', function(){
+    return view('/auth/login_teacher');
+});
+
 Route::get('/login', [LoginController::class, 'login'])->middleware('alreadyLoggedIn');
 Route::post('/login-teacher', [LoginController::class, 'loginTeacher'])->name('login-teacher');
 
