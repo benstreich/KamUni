@@ -9,13 +9,6 @@ class Date extends Model
 {
     use HasFactory;
 
-    public $guarded = [];
-
-    protected function data(): Model
-    {
-        return Model::make(
-            get: fn ($value) => json_decode($value, true),
-            set: fn ($value) => json_encode($value),
-        );
-    }
+   
+    public $table = 'teacher_available_at';
 }

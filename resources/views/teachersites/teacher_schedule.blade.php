@@ -333,14 +333,14 @@ width: 100px;
   </div>
   <div class="row">
     <div class="cell time">9:00am - 10:00am</div>
-    <div class="cell" data-date="2023-03-20"></div>
-    <div class="cell" data-date="2023-03-21"></div>
-    <div class="cell" data-date="2023-03-22"></div>
-    <div class="cell" data-date="2023-03-23"></div>
-    <div class="cell" data-date="2023-03-24"></div>
-    <div class="cell" data-date="2023-03-25"></div>
-    <div class="cell" data-date="2023-03-26"></div>
-    <div class="cell" data-date="2023-03-27"></div>
+    <div class="cell" data-date="20-03-2023"></div>
+    <div class="cell" data-date="21-03-2023"></div>
+    <div class="cell" data-date="22-03-2023"></div>
+    <div class="cell" data-date="23-03-2023"></div>
+    <div class="cell" data-date="24-03-2023"></div>
+    <div class="cell" data-date="25-03-2023"></div>
+    <div class="cell" data-date="26-03-2023"></div>
+    <div class="cell" data-date="27-03-2023"></div>
   </div>
   <div class="row">
     <div class="cell time">10:00am - 11:00am</div>
@@ -491,15 +491,15 @@ width: 100px;
 
 
 </body>
+
 <script>
 // get all cell elements
 const cells = document.querySelectorAll('.cell');
-console.log(cells);
 // add click event listener to each cell
 cells.forEach(cell => {
   cell.addEventListener('click', function() {
     const date = this.getAttribute('data-date');
-    console.log(date); 
+    
 
     Swal.fire({
   title: 'Do you want to save the changes?',
@@ -508,9 +508,12 @@ cells.forEach(cell => {
   confirmButtonText: 'Save',
   denyButtonText: `Don't save`,
 }).then((result) => {
+
   if (result.isConfirmed) {
-    
+
     Swal.fire('Saved!', '', 'success')
+    console.log(date);
+    
   } else if (result.isDenied) {
     Swal.fire('Changes are not saved', '', 'info')
   }
@@ -521,12 +524,6 @@ cells.forEach(cell => {
 
   });
 });
-
-
-
-
-
-
 
 
 

@@ -16,11 +16,10 @@ class DateController extends Controller
 
     public function save(){
 
-        $dates = [
-            
+       $request = request();
 
-
-        ];
+       $datesm = new \App\Models\Date();
+       $datesm->date = $request->get('date');
       
 
     } 
