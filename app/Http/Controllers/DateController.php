@@ -10,13 +10,9 @@ class DateController extends Controller
     //
 
 
-public function load(){
-    $id = Date::all();
-    return view('/teachersites/teacher_schedule', [
-        'id' => $id
-    ]);
-   
-}
+    public function get(){
+        return view('teachersites/teacher_schedule');
+    }
 
     public function save(){
 
