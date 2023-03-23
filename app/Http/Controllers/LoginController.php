@@ -38,7 +38,7 @@ class LoginController extends Controller
          {
             if(Hash::check($request->password, $user->password)){
                 $request->session()->put('loginId', $user->id);
-                return redirect('/welcome_signedin');
+                return redirect('/start');
             }
             else{
                 return back()->with('fail', 'Anmeldung fehlgeschlagen');

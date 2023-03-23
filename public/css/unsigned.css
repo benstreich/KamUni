@@ -355,11 +355,11 @@ header {
 }
 
 .login-formular div input {
-    height: 35px;
-    margin-bottom: 5px;
-    outline: none;
-    border: none;
-    width: 100%;
+    width: 90%;
+    border:1px solid #ccc;
+    padding:10px 15px;
+    font-size: 15px;
+    text-transform: none;
 }
 
 .login-formular div input::placeholder {
@@ -478,11 +478,11 @@ header {
 }
 
 .register-container div input {
-    height: 35px;
-    margin-bottom: 5px;
-    outline: none;
-    border: none;
-    width: 100%;
+    width: 90%;
+    border:1px solid #ccc;
+    padding:10px 15px;
+    font-size: 15px;
+    text-transform: none;
 }
 
 .register-container div input::placeholder {

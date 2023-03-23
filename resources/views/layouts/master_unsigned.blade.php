@@ -18,7 +18,7 @@
 <body>
 
     <header>
-        <a href="" class="logo"><img src="/images/logo.png" alt=""></a>
+        <a href="/" class="logo"><img src="/images/logo.png" alt=""></a>
         <ul class="navbar">
             <li><a href="/">Tutoring Uni</a></li>
             <li><a href="courses">Kurse suchen</a></li>

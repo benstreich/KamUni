@@ -2,6 +2,7 @@
     text-decoration: none;
     list-style: none;
     font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
   
 }
 
@@ -281,6 +282,62 @@ header {
 
 @media screen and (max-width: 812px){
     .member-info{
+        max-width: 100%;
+    }
+}
+
+/*Profil*/
+.profile-section {
+    text-align: center;
+    
+}
+
+.profile-section .title {
+    font-size: 25px;
+    margin: auto;
+}
+
+.profile-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 0;
+    
+}
+
+.profile-info {
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 30%;
+    transition: 0.4s;
+    background-color: white;
+}
+
+.profile-info img{
+    width: 200px;
+    height:200px;
+}
+
+.profile-info p span{
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.profile-info p{
+   margin: 13px 0; 
+}
+
+.logout-link a{
+    text-decoration: none;
+    color: #3E9EEB;
+}
+
+@media screen and (max-width: 812px){
+    .profile-info{
         max-width: 100%;
     }
 }
