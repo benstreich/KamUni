@@ -13,9 +13,9 @@ return new class extends Migration
     {
        Schema::create('teacher_available_at_date', function (Blueprint $table)
        {
-
+            $table->timestamps();
             $table->id();
-            $table->date('date');
+            $table->string('date');
 
        });
     }

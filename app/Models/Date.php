@@ -9,6 +9,5 @@ class Date extends Model
 {
     use HasFactory;
 
-   
-    public $table = 'teacher_available_at';
+    public $table = 'teacher_available_at_date';
 }

@@ -36,7 +36,8 @@ Route::get('welcome_signedin', function(){
 })->middleware('isLoggedIn');
 
 
-Route::get('/teacher_schedule', [DateController::class, 'save']);
+Route::get('/teacher_schedule/save/{date}', [DateController::class, 'save']);
+
 Route::get('/teacher_schedule', [DateController::class, 'get']);
 
 
