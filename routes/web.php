@@ -101,5 +101,10 @@ Route::get('/profile', function () {
 });
 
 Route::get('profile', [LoginController::class, 'profile'])->middleware('isLoggedIn');
-
 Route::get('logout', [LoginController::class, 'logout']);
+
+Route::get('/sel_teacher', function () {
+    return view('select_teacher');
+});
+
+

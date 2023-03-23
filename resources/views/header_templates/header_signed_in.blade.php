@@ -12,6 +12,11 @@
           height: 150px;
         }
 
+        .main img{
+          width: 80px;
+          height: 80px;
+        }
+
         .navbar {
           display: flex;
           margin: 0;
