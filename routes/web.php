@@ -103,7 +103,7 @@ Route::get('profile', [LoginController::class, 'profile'])->middleware('isLogged
 Route::get('logout', [LoginController::class, 'logout']);
 
 Route::get('/sel_teacher', function () {
-    return view('select_teacher');
+    return view('sel_teacher');
 });
 
 
