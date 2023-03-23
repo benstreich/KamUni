@@ -22,7 +22,7 @@
         <ul class="navbar">
             <li><a href="/start">Tutoring Uni</a></li>
             <li><a href="courses">Kurse suchen</a></li>
-            <li><a href="about_us">Über Uns</a></li>
+            <li><a href="/about_us_signed">Über Uns</a></li>
         </ul>
 
         <div class="main">

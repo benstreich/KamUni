@@ -95,6 +95,9 @@ Route::get('/courses_science', function () {
 Route::get('/about_us', function () {
     return view('about_us');
 });
+Route::get('/about_us_signed', function () {
+    return view('about_us_signed_in');
+});
 
 Route::get('/profile', function () {
     return view('profile');
