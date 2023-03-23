@@ -23,15 +23,15 @@ use Illuminate\Auth\Events\Login;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('alreadyLoggedIn');
 
-Route::get('login', [LoginController::class, 'login'])->middleware('alreadyLoggedIn');;;
+Route::get('login', [LoginController::class, 'login'])->middleware('alreadyLoggedIn');
 Route::post('login-user', [LoginController::class, 'loginUser'])->name('login-user');
 
-Route::get('register', [RegistrationController::class, 'register'])->middleware('alreadyLoggedIn');;
+Route::get('register', [RegistrationController::class, 'register'])->middleware('alreadyLoggedIn');
 Route::post('register-user', [RegistrationController::class, 'registerUser'])->name('register-user');
 
-Route::get('welcome_signedin', function(){
+Route::get('/start', function(){
     return view('welcome_signedin');
 })->middleware('isLoggedIn');
 
