@@ -385,10 +385,9 @@ header {
 }
 
 .login-formular span {
-    color: red;
+    color: #FF595B;
     font-size: 13px;
-    padding: 0;
-    margin: 0;
+    padding-bottom: 3px;
 
 }
 
@@ -510,9 +509,9 @@ header {
 }
 
 .register-container span {
-    color: red;
+    color: #FF595B;
     font-size: 13px;
-    margin: auto;
+    padding-bottom: 3px;
 }
 
 .register-container .link {
