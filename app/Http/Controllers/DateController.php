@@ -14,13 +14,15 @@ class DateController extends Controller
         return view('teachersites/teacher_schedule');
     }
 
-    public function save(){
+    public function save($date){
 
-       $request = request();
+       $datesm = request();
 
        $datesm = new \App\Models\Date();
-       $datesm->date = $request->get('date');
+       $datesm->date = $date;
+       $datesm->save();
       
-
+       return view('teachersites/teacher_schedule');
+      
     } 
 }

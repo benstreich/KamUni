@@ -511,12 +511,15 @@ cells.forEach(cell => {
 
   if (result.isConfirmed) {
 
-    Swal.fire('Saved!', '', 'success')
-    console.log(date);
+    window.location.href = "/teacher_schedule/save/"+ date.toString();
+
     
   } else if (result.isDenied) {
     Swal.fire('Changes are not saved', '', 'info')
   }
+  console.log(date);
+
+
 })
 
 
@@ -524,7 +527,6 @@ cells.forEach(cell => {
 
   });
 });
-
 
 
 
