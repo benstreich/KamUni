@@ -16,7 +16,18 @@
 
 
 <body>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+const date = new Date();
+
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+
+// This arrangement can be altered based on how we want the date's format to appear.
+let currentDate = `${day}-${month}-${year}`;</script>
+
+
+
 
   <style>
 
@@ -50,10 +61,17 @@ a  { text-decoration: none; }
 }
 
 .time {
-  font-weight: bold;
+  display: table-cell;
+  border: 1px solid black;
+  padding: 5px;
+  width: 20%; /* set the width to 20% to make all cells equally large */
 }
 
 .cell:first-child {
+  width: auto; /* set the first cell width to auto to adjust to the content */
+}
+
+.time:first-child {
   width: auto; /* set the first cell width to auto to adjust to the content */
 }
 
@@ -321,20 +339,19 @@ width: 100px;
 
       <div class="timetable">
   <div class="header">
-    <div class="cell"></div>
-    <div class="cell">Zeit</div>
-    <div class="cell">Montag</div>
-    <div class="cell">Dienstag</div>
-    <div class="cell">Mittwoch</div>
-    <div class="cell">Donnerstag</div>
-    <div class="cell">Friday</div>
-    <div class="cell">Samstag</div>
-    <div class="cell">Sonntag</div>
+    <div class="time"></div>
+    <div class="time">Zeit</div>
+    <div class="time">Montag</div>
+    <div class="time">Dienstag</div>
+    <div class="time">Mittwoch</div>
+    <div class="time">Donnerstag</div>
+    <div class="time">Friday</div>
+    <div class="time">Samstag</div>
   </div>
   <div class="row">
-    <div class="cell time">9:00am - 10:00am</div>
-    <div class="cell" data-date="20-03-2023"></div>
-    <div class="cell" data-date="21-03-2023"></div>
+    <div class="time">9:00am - 10:00am</div>
+    <div class="time"></div>
+    <div class="cell" data-date="" id="currentDate"></div>
     <div class="cell" data-date="22-03-2023"></div>
     <div class="cell" data-date="23-03-2023"></div>
     <div class="cell" data-date="24-03-2023"></div>
@@ -343,7 +360,7 @@ width: 100px;
     <div class="cell" data-date="27-03-2023"></div>
   </div>
   <div class="row">
-    <div class="cell time">10:00am - 11:00am</div>
+    <div class="cell-time">10:00am - 11:00am</div>
     <div class="cell"></div>
     <div class="cell"></div>
     <div class="cell"></div>
@@ -354,7 +371,7 @@ width: 100px;
     <div class="cell"></div>
   </div>
   <div class="row">
-    <div class="cell time">11:00am - 12:00pm</div>
+    <div class="cell-time">11:00am - 12:00pm</div>
     <div class="cell"></div>
     <div class="cell"></div>
     <div class="cell"></div>
@@ -365,7 +382,7 @@ width: 100px;
     <div class="cell"></div>
   </div>
   <div class="row">
-    <div class="cell time">12:00pm - 1:00pm</div>
+    <div class="cell-time">12:00pm - 1:00pm</div>
     <div class="cell"></div>
     <div class="cell"></div>
     <div class="cell"></div>
@@ -376,7 +393,7 @@ width: 100px;
     <div class="cell"></div>
   </div>
   <div class="row">
-    <div class="cell time">1:00pm - 2:00pm</div>
+    <div class="cell-time">1:00pm - 2:00pm</div>
     <div class="cell"></div>
     <div class="cell"></div>
     <div class="cell"></div>
@@ -387,7 +404,7 @@ width: 100px;
     <div class="cell"></div>
   </div>
   <div class="row">
-    <div class="cell time">14:00 - 15:00</div>
+    <div class="cell-time">14:00 - 15:00</div>
     <div class="cell"></div>
     <div class="cell"></div>
     <div class="cell"></div>
@@ -398,7 +415,7 @@ width: 100px;
     <div class="cell"></div>
   </div>
   <div class="row">
-    <div class="cell time">15:00 - 16:00</div>
+    <div class="cell-time">15:00 - 16:00</div>
     <div class="cell"></div>
     <div class="cell"></div>
     <div class="cell"></div>
@@ -409,7 +426,7 @@ width: 100px;
     <div class="cell"></div>
   </div>
   <div class="row">
-    <div class="cell time">16:00 - 17:00</div>
+    <div class="cell-time">16:00 - 17:00</div>
     <div class="cell"></div>
     <div class="cell"></div>
     <div class="cell"></div>
@@ -420,7 +437,7 @@ width: 100px;
     <div class="cell"></div>
   </div>
   <div class="row">
-    <div class="cell time">17:00 - 18:00</div>
+    <div class="cell-time">17:00 - 18:00</div>
     <div class="cell"></div>
     <div class="cell"></div>
     <div class="cell"></div>
@@ -432,7 +449,7 @@ width: 100px;
 
   </div>
   <div class="row">
-    <div class="cell time">18:00 - 19:00</div>
+    <div class="cell-time">18:00 - 19:00</div>
     <div class="cell"></div>
     <div class="cell"></div>
     <div class="cell"></div>
@@ -517,8 +534,8 @@ cells.forEach(cell => {
   } else if (result.isDenied) {
     Swal.fire('Changes are not saved', '', 'info')
   }
-  console.log(date);
 
+  console.log(date);
 
 })
 
@@ -528,7 +545,9 @@ cells.forEach(cell => {
   });
 });
 
-
+var today = new Date();
+    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    document.getElementById("currentDate").data-date = date;
 
 
 </script>
