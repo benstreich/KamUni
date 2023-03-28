@@ -38,7 +38,6 @@ class TeacherRegistrationController extends Controller
         $teacher->email = $request->email;
         $teacher->password = Hash::make($request->password);
         $teacher->certificate = $request->certificate;
-        $teacher->image = file_get_contents('/path/to/image.jpg');
         $res = $teacher->save();
 
         if($res)

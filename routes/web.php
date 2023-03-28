@@ -9,6 +9,7 @@ use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\TeacherRegistrationController;
 use App\Models\TeacherRegistration;
 use Illuminate\Auth\Events\Login;
+use App\Http\Controllers\TeacherLoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,12 +24,12 @@ use Illuminate\Auth\Events\Login;
 
 Route::get('/', function () {
     return view('welcome');
-})->middleware('alreadyLoggedIn');
+});
 
-Route::get('login', [LoginController::class, 'login'])->middleware('alreadyLoggedIn');
+Route::get('login', [LoginController::class, 'login']);
 Route::post('login-user', [LoginController::class, 'loginUser'])->name('login-user');
 
-Route::get('register', [RegistrationController::class, 'register'])->middleware('alreadyLoggedIn');
+Route::get('register', [RegistrationController::class, 'register']);
 Route::post('register-user', [RegistrationController::class, 'registerUser'])->name('register-user');
 
 Route::get('/start', function(){
@@ -57,8 +58,8 @@ Route::get('/login_teacher', function(){
     return view('/auth/login_teacher');
 });
 
-Route::get('/login-t', [LoginController::class, 'login-t'])->middleware('alreadyLoggedIn');
-Route::post('/login-teacher', [LoginController::class, 'loginTeacher'])->name('login-teacher');
+Route::get('/login-t', [TeacherLoginController::class, 'login-t'])->middleware('alreadyLoggedIn');
+Route::post('/login-teacher', [TeacherLoginController::class, 'loginTeacher'])->name('login-teacher');
 
 Route::get('register-t', [TeacherRegistrationController::class, 'register-t']);
 Route::post('register-teacher', [TeacherRegistrationController::class, 'registerTeacher'])->name('register-teacher');
@@ -67,6 +68,9 @@ Route::get('/courses_unsigned', function(){
     return view('/courses_unsigned');
 });
 
+Route::get('courses_signed', function(){
+    return view('courses_signed');
+})->middleware('isLoggedIn');
 
 Route::get('/courses', function () {
     return view('courses_unsigned');
