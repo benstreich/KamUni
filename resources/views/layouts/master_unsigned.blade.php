@@ -27,7 +27,7 @@
 
         <div class="main">
             <a href="/login">Sign In</a>
-            <a href="/register"><button class="buttonregister">Sign Up</button> </a>
+            <a href="/register"><button class="buttonregister">Sign Up</button></a>
         </div>
     </header>
 

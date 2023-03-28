@@ -15,13 +15,13 @@
                     <h1>Anmelden</h1>
 
                     <div class="inputarea">
-                        <span class="text-danger">@error('email'){{$message}}@enderror</span>
+                        <span class="text-danger" role="alert">@error('email'){{$message}}@enderror</span>
                         <input type="email" id="email" name="email" value="{{old('email')}}" placeholder="Email">
                     </div>
 
                     <div class="inputarea">
                         <span class="text-danger">@error('password'){{$message}}@enderror</span>
-                        <input type="password" id="password" name="password" value="" placeholder="Passwort">
+                        <input type="password" id="password" name="password" placeholder="Passwort">
                     </div>
 
                     <button type="submit" name="submit">Sign In</button>
