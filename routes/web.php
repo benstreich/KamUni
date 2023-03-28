@@ -10,6 +10,7 @@ use App\Http\Controllers\TeacherRegistrationController;
 use App\Models\TeacherRegistration;
 use Illuminate\Auth\Events\Login;
 use App\Http\Controllers\TeacherLoginController;
+use App\Http\Middleware\AlreadyLoggedIn;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,10 +64,6 @@ Route::post('/login-teacher', [TeacherLoginController::class, 'loginTeacher'])->
 
 Route::get('register-t', [TeacherRegistrationController::class, 'register-t']);
 Route::post('register-teacher', [TeacherRegistrationController::class, 'registerTeacher'])->name('register-teacher');
-
-Route::get('/courses_unsigned', function(){
-    return view('/courses_unsigned');
-});
 
 Route::get('courses_signed', function(){
     return view('courses_signed');

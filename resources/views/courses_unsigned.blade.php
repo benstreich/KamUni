@@ -3,8 +3,7 @@
 @section('content')
 
 <div class="container-boxes">
-
-
+    
     <div class="box">
         <img src="/images/math-book.png" alt="Bild 2">
         <div>
