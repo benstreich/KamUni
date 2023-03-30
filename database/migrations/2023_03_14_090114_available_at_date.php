@@ -13,9 +13,11 @@ return new class extends Migration
     {
        Schema::create('teacher_available_at_date', function (Blueprint $table)
        {
-            $table->timestamps();
             $table->id();
             $table->string('date');
+            $table->unsignedBigInteger('teacher_id')->nullable();
+            $table->foreign('teacher_id')->references('id')->on('teachers_registration');
+            $table->timestamps();
 
        });
     }
