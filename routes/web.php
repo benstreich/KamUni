@@ -111,4 +111,6 @@ Route::get('/sel_teacher', function () {
     return view('sel_teacher');
 });
 
+Route::get('/sel_teacher', [TeacherRegistrationController::class, 'list']);
+
 
