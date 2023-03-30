@@ -34,10 +34,10 @@ class TeacherLoginController extends Controller
          {
             if(Hash::check($request->password, $teacher->password)){
                 $request->session()->put('loginId', $teacher->id);
-                return redirect('/');
+                return redirect('/welcome_teacher_signedin');
             }
             else{
-                return back()->with('fail', 'Passwort stimmt nicht überein.');
+                return back()->with('fail', 'Anmeldung fehlgeschlagen');
             }
 
          }

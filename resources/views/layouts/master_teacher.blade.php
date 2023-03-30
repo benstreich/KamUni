@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title')</title>
-    <link rel="stylesheet" type="text/css" href="{{asset('css/unsigned.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/signed.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
@@ -18,16 +18,15 @@
 <body>
 
     <header>
-        <a href="/" class="logo"><img src="/images/logo.png" alt=""></a>
+        <a href="/start" class="logo"><img src="/svg/teacher_logo.svg" alt=""></a>
         <ul class="navbar">
-            <li><a href="/">Tutoring Uni</a></li>
-            <li><a href="courses">Kurse suchen</a></li>
-            <li><a href="about_us">Über Uns</a></li>
+            <li><a href="/welcome_teacher_signedin">Tutoring Uni</a></li>
+            <li><a href="">Kurse suchen</a></li>
+            <li><a href="/">Über Uns</a></li>
         </ul>
 
         <div class="main">
-            <a href="/login">Sign In</a>
-            <a href="/register"><button class="buttonregister">Sign Up</button></a>
+            <a href="profile"><img src="/images/profil.png"></a>
         </div>
     </header>
 
@@ -72,6 +71,5 @@
     </footer>
 
 </body>
-@yield('script')
 
 </html>

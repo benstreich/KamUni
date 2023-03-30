@@ -21,14 +21,14 @@ class TeacherRegistrationController extends Controller
               'lastname'=>'required',
               'email'=>'required|email|unique:registration',
               'password'=>'required|min:6|max:30',
-              'certificate'=>'required',
+              //'certificate'=>'required',
             ],
             [
               'firstname.required'=>'Vorname eingeben!', 
               'lastname.required'=>'Nachname eingeben!',
               'email.required'=>'Email eingeben!',
               'password.required'=>'Passwort eingeben!', 
-              'certificate.required'=>'Zertifikat einfügen', 
+             //'certificate.required'=>'Zertifikat einfügen', 
             ]
         
         );
@@ -42,7 +42,7 @@ class TeacherRegistrationController extends Controller
 
         if($res)
         {
-            return view('welcome');
+            return view('/welcome_teacher_login');
         }
         else{
             return back()->with('fail', 'Fehler');
