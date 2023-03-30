@@ -2,6 +2,22 @@
 @section('title', 'Über Uns')
 @section('content')
 
+<style>
+.slide-in {
+  transform: translateX(-100%);
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+</style>
+
 <div class="team-section">
     <div class="title">
         <h1>Unser Team</h1>
