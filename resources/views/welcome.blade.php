@@ -9,19 +9,6 @@
 </div>
 
 
-<section class="row">
-    <div class="left">
-        <div class="content">
-            <h1>Indivduelle Nachhiflfe maximiert das  </h1>
-        </div>
-
-    </div>
-
-    <div class="right">
-        <img src="">
-    </div>
-</section>
-
 
 <section class="features-section">
     <h1>Unsere Features</h1>
