@@ -22,7 +22,7 @@ class DateController extends Controller
        $datesm->date = $date;
        $datesm->save();
       
-       return view('teachersites/teacher_schedule');
+       return redirect('/teacher_schedule');
       
     } 
 }

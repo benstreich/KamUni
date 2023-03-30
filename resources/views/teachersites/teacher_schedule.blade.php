@@ -76,6 +76,9 @@ a  { text-decoration: none; }
 }
 
 
+  .cell.clicked {
+    background-color: #afd9ab;
+  }
 
 
 
@@ -338,126 +341,233 @@ width: 100px;
 
 
       <div class="timetable">
-  <div class="header">
+      <div class="header">
     <div class="time"></div>
     <div class="time">Zeit</div>
-    <div class="time">Montag</div>
-    <div class="time">Dienstag</div>
-    <div class="time">Mittwoch</div>
-    <div class="time">Donnerstag</div>
-    <div class="time">Friday</div>
-    <div class="time">Samstag</div>
-  </div>
+    <?php
+    $currentDate = strtotime("next Monday");
+    for ($i = 0; $i < 7; $i++) {
+        echo '<div class="time">' . date('l d.m.', $currentDate) . '</div>';
+        $currentDate = strtotime("+1 day", $currentDate);
+    }
+    ?>
+
+
+</div>
   <div class="row">
-    <div class="time">9:00am - 10:00am</div>
+    <div class="time">9:00 - 10:00</div>
     <div class="time"></div>
-    <div class="cell" data-date="" id="currentDate"></div>
-    <div class="cell" data-date="22-03-2023"></div>
-    <div class="cell" data-date="23-03-2023"></div>
-    <div class="cell" data-date="24-03-2023"></div>
-    <div class="cell" data-date="25-03-2023"></div>
-    <div class="cell" data-date="26-03-2023"></div>
-    <div class="cell" data-date="27-03-2023"></div>
+    <?php
+$date = date("d-m-Y", strtotime("next Monday"));
+$time = "9:00 - 10:00";
+for ($i = 0; $i < 7; $i++) {
+  $datetime = $date . " " . $time;
+  echo '<div class="cell" data-date="' . $datetime . '">';
+  echo '<div class="cell-time">' . '</div>';
+  echo '</div>';
+  $date = date("d-m-Y", strtotime("+1 day", strtotime($date)));
+}
+for ($i = 0; $i < 6; $i++) {
+  echo '<div class="cell" data-date="">';
+  echo '<div class="cell-time"></div>';
+  echo '</div>';
+}
+?>
+
+  </div>
+
+
+  
+  <div class="row">
+  <div class="time">10:00 - 11:00</div>
+    <div class="time"></div>
+  <?php
+$date = date("d-m-Y", strtotime("next Monday"));
+$time = "10:00 - 11:00";
+for ($i = 0; $i < 7; $i++) {
+  $datetime = $date . " " . $time;
+  echo '<div class="cell" data-date="' . $datetime . '">';
+  echo '<div class="cell-time">' . '</div>';
+  echo '</div>';
+  $date = date("d-m-Y", strtotime("+1 day", strtotime($date)));
+}
+for ($i = 0; $i < 6; $i++) {
+  echo '<div class="cell" data-date="">';
+  echo '<div class="cell-time"></div>';
+  echo '</div>';
+}
+?>
+
+
   </div>
   <div class="row">
-    <div class="cell-time">10:00am - 11:00am</div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
+    <div class="cell-time">11:00 - 12:00</div>
+    <div class="time"></div>
+    <?php
+$date = date("d-m-Y", strtotime("next Monday"));
+$time = "11:00 - 12:00";
+for ($i = 0; $i < 7; $i++) {
+  $datetime = $date . " " . $time;
+  echo '<div class="cell" data-date="' . $datetime . '">';
+  echo '<div class="cell-time">' . '</div>';
+  echo '</div>';
+  $date = date("d-m-Y", strtotime("+1 day", strtotime($date)));
+}
+for ($i = 0; $i < 6; $i++) {
+  echo '<div class="cell" data-date="">';
+  echo '<div class="cell-time"></div>';
+  echo '</div>';
+}
+?>
+
   </div>
   <div class="row">
-    <div class="cell-time">11:00am - 12:00pm</div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
+    <div class="cell-time">12:00 - 13:00</div>
+    <div class="time"></div>
+    <?php
+$date = date("d-m-Y", strtotime("next Monday"));
+$time = "12:00 - 13:00";
+for ($i = 0; $i < 7; $i++) {
+  $datetime = $date . " " . $time;
+  echo '<div class="cell" data-date="' . $datetime . '">';
+  echo '<div class="cell-time">' . '</div>';
+  echo '</div>';
+  $date = date("d-m-Y", strtotime("+1 day", strtotime($date)));
+}
+for ($i = 0; $i < 6; $i++) {
+  echo '<div class="cell" data-date="">';
+  echo '<div class="cell-time"></div>';
+  echo '</div>';
+}
+?>
+
   </div>
   <div class="row">
-    <div class="cell-time">12:00pm - 1:00pm</div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-  </div>
-  <div class="row">
-    <div class="cell-time">1:00pm - 2:00pm</div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
+    <div class="cell-time">13:00pm - 14:00pm</div>
+    <div class="time"></div>
+    <?php
+$date = date("d-m-Y", strtotime("next Monday"));
+$time = "13:00am - 14:00am";
+for ($i = 0; $i < 7; $i++) {
+  $datetime = $date . " " . $time;
+  echo '<div class="cell" data-date="' . $datetime . '">';
+  echo '<div class="cell-time">' . '</div>';
+  echo '</div>';
+  $date = date("d-m-Y", strtotime("+1 day", strtotime($date)));
+}
+for ($i = 0; $i < 6; $i++) {
+  echo '<div class="cell" data-date="">';
+  echo '<div class="cell-time"></div>';
+  echo '</div>';
+}
+?>
+
   </div>
   <div class="row">
     <div class="cell-time">14:00 - 15:00</div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
+    <div class="time"></div>
+    <?php
+$date = date("d-m-Y", strtotime("next Monday"));
+$time = "14:00 - 15:00am";
+for ($i = 0; $i < 7; $i++) {
+  $datetime = $date . " " . $time;
+  echo '<div class="cell" data-date="' . $datetime . '">';
+  echo '<div class="cell-time">' . '</div>';
+  echo '</div>';
+  $date = date("d-m-Y", strtotime("+1 day", strtotime($date)));
+}
+for ($i = 0; $i < 6; $i++) {
+  echo '<div class="cell" data-date="">';
+  echo '<div class="cell-time"></div>';
+  echo '</div>';
+}
+?>
+
   </div>
   <div class="row">
     <div class="cell-time">15:00 - 16:00</div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
+    <div class="time"></div>
+    <?php
+$date = date("d-m-Y", strtotime("next Monday"));
+$time = "15:00 - 16:00";
+for ($i = 0; $i < 7; $i++) {
+  $datetime = $date . " " . $time;
+  echo '<div class="cell" data-date="' . $datetime . '">';
+  echo '<div class="cell-time">' . '</div>';
+  echo '</div>';
+  $date = date("d-m-Y", strtotime("+1 day", strtotime($date)));
+}
+for ($i = 0; $i < 6; $i++) {
+  echo '<div class="cell" data-date="">';
+  echo '<div class="cell-time"></div>';
+  echo '</div>';
+}
+?>
+
   </div>
   <div class="row">
     <div class="cell-time">16:00 - 17:00</div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
+    <div class="time"></div>
+    <?php
+$date = date("d-m-Y", strtotime("next Monday"));
+$time = "16:00 - 17:00";
+for ($i = 0; $i < 7; $i++) {
+  $datetime = $date . " " . $time;
+  echo '<div class="cell" data-date="' . $datetime . '">';
+  echo '<div class="cell-time">' . '</div>';
+  echo '</div>';
+  $date = date("d-m-Y", strtotime("+1 day", strtotime($date)));
+}
+for ($i = 0; $i < 6; $i++) {
+  echo '<div class="cell" data-date="">';
+  echo '<div class="cell-time"></div>';
+  echo '</div>';
+}
+?>
+
   </div>
   <div class="row">
     <div class="cell-time">17:00 - 18:00</div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
+    <div class="time"></div>
+    <?php
+$date = date("d-m-Y", strtotime("next Monday"));
+$time = "17:00 - 18:00";
+for ($i = 0; $i < 7; $i++) {
+  $datetime = $date . " " . $time;
+  echo '<div class="cell" data-date="' . $datetime . '">';
+  echo '<div class="cell-time">' . '</div>';
+  echo '</div>';
+  $date = date("d-m-Y", strtotime("+1 day", strtotime($date)));
+}
+for ($i = 0; $i < 6; $i++) {
+  echo '<div class="cell" data-date="">';
+  echo '<div class="cell-time"></div>';
+  echo '</div>';
+}
+?>
+
 
   </div>
   <div class="row">
     <div class="cell-time">18:00 - 19:00</div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
-    <div class="cell"></div>
+    <div class="time"></div>
+    <?php
+$date = date("d-m-Y", strtotime("next Monday"));
+$time = "18:00 - 19:00";
+for ($i = 0; $i < 7; $i++) {
+  $datetime = $date . " " . $time;
+  echo '<div class="cell" data-date="' . $datetime . '">';
+  echo '<div class="cell-time">' . '</div>';
+  echo '</div>';
+  $date = date("d-m-Y", strtotime("+1 day", strtotime($date)));
+}
+for ($i = 0; $i < 6; $i++) {
+  echo '<div class="cell" data-date="">';
+  echo '<div class="cell-time"></div>';
+  echo '</div>';
+}
+?>
+
   </div>
 </div>
 
@@ -503,10 +613,6 @@ width: 100px;
     </div>
 
 
-
-
-
-
 </body>
 
 <script>
@@ -529,9 +635,12 @@ cells.forEach(cell => {
   if (result.isConfirmed) {
 
     window.location.href = "/teacher_schedule/save/"+ date.toString();
+    cell.classList.add('clicked');
+      localStorage.setItem(cell.dataset.date, 'clicked');
 
     
-  } else if (result.isDenied) {
+  } 
+  else if (result.isDenied) {
     Swal.fire('Changes are not saved', '', 'info')
   }
 
@@ -541,13 +650,14 @@ cells.forEach(cell => {
 
 
 
-
   });
+
+  if (localStorage.getItem(cell.dataset.date) === 'clicked') {
+      cell.classList.add('clicked');
+    }
 });
 
-var today = new Date();
-    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-    document.getElementById("currentDate").data-date = date;
+
 
 
 </script>
