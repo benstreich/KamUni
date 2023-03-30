@@ -249,6 +249,13 @@ footer .copyright{
 
 }
 
+.buttonnextweek{
+  display: flex;
+  width: 20%
+  height: 50px;
+  justify-content: flex-end;
+}
+
 
 .buttonregister{
 border-radius: 30px; 
@@ -337,6 +344,27 @@ width: 100px;
 
 </div>
 
+<div class="buttonnextweek">
+
+<div id="btn-next-week">
+<svg xmlns="http://www.w3.org/2000/svg" width="82" height="68" viewBox="0 0 82 68" id="btn-next-week">
+  <g id="Rechteck_12" data-name="Rechteck 12" fill="#c1d2ba" stroke="#707070" stroke-width="1">
+    <rect width="82" height="68" stroke="none"/>
+    <rect x="0.5" y="0.5" width="81" height="67" fill="none"/>
+  </g>
+  <g id="Komponente_61_1" data-name="Komponente 61 – 1" transform="translate(20 4)">
+    <g id="Polygon_2" data-name="Polygon 2" transform="translate(54) rotate(90)" fill="#ece9e2">
+      <path d="M 61.13642883300781 53.5 L 0.8635731935501099 53.5 L 31.00000190734863 1.004285454750061 L 61.13642883300781 53.5 Z" stroke="none"/>
+      <path d="M 31.00000190734863 2.008563995361328 L 1.727138519287109 53 L 60.27286529541016 53 L 31.00000190734863 2.008563995361328 M 31.00000190734863 0 L 62 54 L 3.814697265625e-06 54 L 31.00000190734863 0 Z" stroke="none" fill="#707070"/>
+    </g>
+  </g>
+</svg>
+</div>
+
+</div>
+
+
+
       <div class="contentclass">
 
 
@@ -349,6 +377,7 @@ width: 100px;
     for ($i = 0; $i < 7; $i++) {
         echo '<div class="time">' . date('l d.m.', $currentDate) . '</div>';
         $currentDate = strtotime("+1 day", $currentDate);
+
     }
     ?>
 
@@ -645,11 +674,9 @@ cells.forEach(cell => {
     Swal.fire('Changes are not saved', '', 'info')
   }
 
-  console.log(date);
+  
 
 })
-
-
 
   });
 
@@ -657,6 +684,12 @@ cells.forEach(cell => {
       cell.classList.add('clicked');
     }
 });
+
+
+
+
+
+ 
 
 
 
