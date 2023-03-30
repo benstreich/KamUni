@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DateController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\registration_controller;
@@ -112,5 +113,8 @@ Route::get('/sel_teacher', function () {
 });
 
 Route::get('/sel_teacher', [TeacherRegistrationController::class, 'list']);
+
+
+Route::get('courses_teacher', [TeacherController::class, 'courses']);
 
 

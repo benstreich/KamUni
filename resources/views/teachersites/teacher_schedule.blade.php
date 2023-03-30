@@ -400,6 +400,7 @@ for ($i = 0; $i < 6; $i++) {
 
 
   </div>
+
   <div class="row">
     <div class="cell-time">11:00 - 12:00</div>
     <div class="time"></div>
