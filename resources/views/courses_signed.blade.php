@@ -4,8 +4,8 @@
 
 <div class="container-boxes">
 
-    @auth
-    <div class="box" id="click">
+
+    <div class="box" onclick="window.location.href='/courses_math'">
         <img src="/images/math-book.png" alt="Bild 2">
         <div>
             <h2>Mathematik</h2>
@@ -24,7 +24,7 @@
 
 
 
-    <div class="box">
+    <div class="box" onclick="window.location.href='/courses_french'" >
         <img src="/images/flag.png" alt="Bild 3">
         <div>
             <h2>Französich</h2>
@@ -33,7 +33,7 @@
 
 
 
-    <div class="box">
+    <div class="box" onclick="window.location.href='/courses_science'">
         <img src="/images/genetic.png" alt="Bild 4">
         <div>
             <h2>Naturwissenschaften</h2>
@@ -41,50 +41,13 @@
     </div>
 
 
-    <div class="box">
+    <div class="box" onclick="window.location.href='/courses_english'">
         <img src="/images/eng.png" alt="Bild 5">
         <div>
             <h2>Englisch</h2>
         </div>
     </div>
     
-    @else
-    <div class="box">
-        <img src="/images/math-book.png" alt="Bild 2">
-        <div>
-            <h2>Mathematik</h2>
-        </div>
-    </div>
-
-    <div class="box">
-        <img src="/images/books.png" alt="Bild 2">
-        <div>
-            <h2>Deutsch</h2>
-        </div>
-    </div>
-
-    <div class="box">
-        <img src="/images/flag.png" alt="Bild 3">
-        <div>
-            <h2>Französich</h2>
-        </div>
-    </div>
-
-    <div class="box">
-        <img src="/images/genetic.png" alt="Bild 4">
-        <div>
-            <h2>Naturwissenschaften</h2>
-        </div>
-    </div>
-
-    <div class="box">
-        <img src="/images/eng.png" alt="Bild 5">
-        <div>
-            <h2>Englisch</h2>
-        </div>
-    </div>
-@endauth
-
 
 </div>
 

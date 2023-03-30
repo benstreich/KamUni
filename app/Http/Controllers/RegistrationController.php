@@ -39,7 +39,7 @@ class RegistrationController extends Controller
 
         if($res)
         {
-            return view('welcome');
+            return view('start');
         }
         else{
             return back()->with('fail', 'Fehler');
