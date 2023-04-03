@@ -15,8 +15,8 @@ return new class extends Migration
        {
             $table->id();
             $table->string('date');
-            $table->unsignedBigInteger('teacher_id')->nullable();
-            $table->foreign('teacher_id')->references('id')->on('teachers_registration');
+            $table->unsignedBigInteger('teacher_id')->unsigned()->nullable();
+            $table->foreign('teacher_id')->references('id')->on('teachers_registration')->onDelete('set null');
             $table->timestamps();
 
        });
