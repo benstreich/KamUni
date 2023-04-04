@@ -2,6 +2,7 @@
 @section('title', 'Profil')
 @section('content')
 
+
 <div class="profile-section">
     <div class="title">
         <h1>Mein Profil</h1>

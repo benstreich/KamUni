@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Date;
 
+
+
 class DateController extends Controller
 {
-    //
-
 
     public function get(){
-        return view('teachersites/teacher_schedule');
+        return view('teachersites/create_courses');
     }
 
     public function save($date){
@@ -22,7 +22,7 @@ class DateController extends Controller
        $datesm->date = $date;
        $datesm->save();
       
-       return redirect('/teacher_schedule');
+       return redirect('/create_courses');
       
     } 
 }

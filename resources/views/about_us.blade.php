@@ -2,7 +2,8 @@
 @section('title', 'Über Uns')
 @section('content')
 
-<div class="team-section">
+
+<section class="team-section">
         <div class="title">
             <h1>Unser Team</h1>
         </div>
@@ -56,13 +57,11 @@
                     <a href="https://github.com/LianEifert" <i class="fa-brands fa-github"></i></a>
                     <p><a href="mailto:lian_eifert@sluz.ch">lian_eifert@sluz.ch</a></p>
                 </div>
-
             </div>
-
+            
         </div>
+    </section>
 
-
-    </div>
 
 
 @endsection

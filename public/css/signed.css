@@ -3,10 +3,10 @@
     list-style: none;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
-  
+
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: #d6edd4;
@@ -18,98 +18,98 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-  }
+}
 
-  .logo img {
+.logo img {
     width: 150px;
     height: 150px;
-  }
+}
 
-  .main img{
+.main img {
     width: 80px;
     height: 80px;
-  }
+}
 
-  .navbar {
+.navbar {
     display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
-  }
+}
 
-  .navbar li {
+.navbar li {
     margin: 0 10px;
-  }
+}
 
-  .navbar a {
+.navbar a {
     display: block;
     padding: 10px;
     color: #333;
     text-decoration: none;
     font-weight: bold;
-  }
+}
 
-  .main {
+.main {
     display: flex;
     align-items: center;
-  }
+}
 
-  .main a {
+.main a {
     margin-right: 10px;
     color: black;
     font-weight: bold;
-  }
+}
 
 
-  .buttonregister {
+.buttonregister {
     background-color: #00B0FF;
     color: #fff;
-    border-radius: 25px; 
+    border-radius: 25px;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     width: 120px;
     height: 40px;
     cursor: pointer;
-  }
+}
 
-  .buttonregister:hover{
-      scale: 1.05;
-  }
+.buttonregister:hover {
+    scale: 1.05;
+}
 
-  /* Responsive design for mobile */
-  @media only screen and (max-width: 767px) {
+/* Responsive design for mobile */
+@media only screen and (max-width: 767px) {
     header {
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
     }
 
     .logo {
-      margin-bottom: 10px;
+        margin-bottom: 10px;
     }
 
     .navbar {
-      flex-direction: column;
-      align-items: center;
-      margin: 20px 0;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
     }
 
     .navbar li {
-      margin: 10px 0;
+        margin: 10px 0;
     }
 
     .main {
-      display: block;
-      text-align: center;
-      margin: 20px 0;
+        display: block;
+        text-align: center;
+        margin: 20px 0;
     }
 
     .main a {
-      display: block;
-      margin-bottom: 10px;
+        display: block;
+        margin-bottom: 10px;
     }
-  }
+}
 
 
 .contentclass {
@@ -121,7 +121,7 @@ header {
     background-color: #d6edd4;
 }
 
-.camellot{
+.camellot {
     animation-name: camelion2;
     animation-duration: 4s;
 }
@@ -260,7 +260,7 @@ header {
 /*About Us*/
 .team-section {
     text-align: center;
-    
+
 }
 
 .team-section .title {
@@ -268,14 +268,14 @@ header {
     margin: auto;
 }
 
-.team-container{
+.team-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1200px;
     margin: auto;
     padding: 40px 0;
-    
+
 }
 
 .member-info {
@@ -287,33 +287,33 @@ header {
     background-color: white;
 }
 
-.member-info img{
+.member-info img {
     width: 200px;
-    height:200px;
+    height: 200px;
 }
 
-.contact-link p span{
+.contact-link p span {
     padding: 12px;
     font-size: 16px;
     font-weight: bold;
 }
 
-.contact-link p{
-   margin: 13px 0; 
+.contact-link p {
+    margin: 13px 0;
 }
 
-.contact-link a{
+.contact-link a {
     text-decoration: none;
     color: #3E9EEB;
 }
 
-.contact-link a{
+.contact-link a {
     text-decoration: none;
     color: #3E9EEB;
 }
 
-@media screen and (max-width: 812px){
-    .member-info{
+@media screen and (max-width: 812px) {
+    .member-info {
         max-width: 100%;
     }
 }
@@ -321,7 +321,7 @@ header {
 /*Profil*/
 .profile-section {
     text-align: center;
-    
+
 }
 
 .profile-section .title {
@@ -329,14 +329,14 @@ header {
     margin: auto;
 }
 
-.profile-container{
+.profile-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 1200px;
     margin: auto;
     padding: 40px 0;
-    
+
 }
 
 .profile-info {
@@ -348,35 +348,35 @@ header {
     background-color: white;
 }
 
-.profile-info img{
+.profile-info img {
     width: 200px;
-    height:200px;
+    height: 200px;
 }
 
-.profile-info p span{
+.profile-info p span {
     padding: 12px;
     font-size: 16px;
     font-weight: bold;
 }
 
-.profile-info p{
-   margin: 13px 0; 
+.profile-info p {
+    margin: 13px 0;
 }
 
-.logout-link a{
+.logout-link a {
     text-decoration: none;
     color: #3E9EEB;
 }
 
-@media screen and (max-width: 812px){
-    .profile-info{
+@media screen and (max-width: 812px) {
+    .profile-info {
         max-width: 100%;
     }
 }
 
 
 /*Sel_techer*/
-.table-container{
+.table-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -399,10 +399,10 @@ main.table {
     align-items: center;
 }
 
-.table__header h1{
+.table__header h1 {
     color: #FF595B;
     font-size: 30px;
-    
+
 
 }
 
@@ -419,18 +419,18 @@ main.table {
     overflow: overlay;
 }
 
-.table__body::-webkit-scrollbar{
+.table__body::-webkit-scrollbar {
     width: 0.5rem;
     height: 0.5rem;
 }
 
-.table__body::-webkit-scrollbar-thumb{
+.table__body::-webkit-scrollbar-thumb {
     border-radius: .5rem;
     background-color: #0004;
     visibility: hidden;
 }
 
-.table__body:hover::-webkit-scrollbar-thumb{ 
+.table__body:hover::-webkit-scrollbar-thumb {
     visibility: visible;
 }
 
@@ -447,7 +447,9 @@ td img {
     vertical-align: middle;
 }
 
-table, th, td {
+table,
+th,
+td {
     border-collapse: collapse;
     padding: 1rem;
     text-align: left;
@@ -521,106 +523,177 @@ thead th:hover {
 
 
 
-thead th.active,tbody td.active {
+thead th.active,
+tbody td.active {
     color: #6c00bd;
 }
 
+
+/*Stundenplan*/
+
+.timetable-section {
+    display: flex;
+    width: 100%;
+    height: 800px;
+    justify-content: center;
+    padding-top: 15px;
+    background-color: #d6edd4;
+}
+
+.timetable {
+    display: table;
+    width: 80%;
+    table-layout: fixed;
+}
+
+.timetable .header {
+    display: table-row;
+}
+
+.timetable .row {
+    display: table-row;
+}
+
+.timetable .cell {
+    display: table-cell;
+    border: 1px solid black;
+    padding: 5px;
+    width: 20%;
+    /* set the width to 20% to make all cells equally large */
+}
+
+.timetable .time {
+    display: table-cell;
+    border: 1px solid black;
+    padding: 5px;
+    width: 20%;
+    /* set the width to 20% to make all cells equally large */
+}
+
+.timetable .cell:first-child {
+    width: auto;
+    /* set the first cell width to auto to adjust to the content */
+}
+
+.timetable .time:first-child {
+    width: auto;
+    /* set the first cell width to auto to adjust to the content */
+}
+
+
+.timetable .cell.clicked {
+    background-color: #afd9ab;
+}
+
+.buttonnextweek{
+    display: flex;
+    width: 20%;
+    height: 50px;
+    justify-content: flex-end;
+}
+/*
+
 /*Footer*/
- footer {
+footer {
     background-color: #333;
     color: white;
 }
 
-.footer-info{
+.footer-info {
     width: 90%;
     margin: 0 auto;
     display: flex;
     padding: 45px 0;
 }
 
-.footer-info h2{
-  margin-bottom: 20px;
-}
-
-.about, .contact{
-  width: 40%;
-  padding: 0 15px;
-}
-
-.links{
-  width: 20%;
-  padding: 0 15px;
+.footer-info h2 {
+    margin-bottom: 20px;
 }
 
 
-.links ul li{
-  margin-bottom: 15px;
-  font-size: 15px;
+.about,
+.contact {
+    width: 40%;
 }
 
-.links ul li a{
+.links {
+    width: 20%;
+    padding: 0 15px;
+}
+
+
+.links ul li {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.links ul li a {
     color: white;
 }
 
 
-.links ul li a:hover{
-  color: black;
+.links ul li a:hover {
+    color: black;
 }
 
 
-.socials{
-  margin-top: 30px;
+.socials {
+    margin-top: 30px;
 }
 
-.socials ul{
-  display: flex;
+.socials ul {
+    display: flex;
 }
 
-.socials ul li a{
-  display: inline-block;
-  margin-right: 30px;
-  width: 40px;
-  height: 35px;
-  background-color: transparent;
-  border: 1px solid white;
-  text-align: center;
-  padding-top:10px;
-  color: white;
+.socials ul li a {
+    display: inline-block;
+    margin-right: 30px;
+    width: 40px;
+    height: 35px;
+    background-color: transparent;
+    border: 1px solid white;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
 }
 
-.socials ul li a:hover{
-  background-color: white;
-  color: black;
-}
-
-
-.contact ul li{
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
+.socials ul li a:hover {
+    background-color: white;
+    color: black;
 }
 
 
+.contact ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
 
 
-@media  screen and (max-width: 992px) {
-    .about, .contact{
+
+
+@media screen and (max-width: 992px) {
+
+    .about,
+    .contact {
         width: 35%;
     }
 
-    .link{
+    .link {
         width: 30%;
     }
 }
 
-@media screen and (max-width: 767px){
-    .about, .link, .contact{
+@media screen and (max-width: 767px) {
+
+    .about,
+    .link,
+    .contact {
         width: 100%;
         margin-right: 30px;
     }
 
-    .footer-info{
+    .footer-info {
         flex-direction: column;
     }
 }
-
