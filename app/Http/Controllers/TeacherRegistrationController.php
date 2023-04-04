@@ -42,7 +42,7 @@ class TeacherRegistrationController extends Controller
 
         if($res)
         {
-            return view('/welcome_teacher_login');
+            return redirect('/welcome_teacher_login');
         }
         else{
             return back()->with('fail', 'Fehler');
