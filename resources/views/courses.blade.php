@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>KamUni</title>
     <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
 </head>
@@ -15,7 +16,7 @@
             text-decoration: none;
             list-style: none;
             font-family: "Poppins", sans-serif;
-          
+
         }
 
         body {
@@ -185,31 +186,10 @@
             margin-bottom: 15px;
         }
 
-        @media screen and (max-width: 992px) {
 
-            .about,
-            .contact {
-                width: 35%;
-            }
 
-            .link {
-                width: 30%;
-            }
-        }
+     
 
-        @media screen and (max-width: 767px) {
-
-            .about,
-            .link,
-            .contact {
-                width: 100%;
-                margin-right: 30px;
-            }
-
-            .footer-info {
-                flex-direction: column;
-            }
-        }
     </style>
 
 

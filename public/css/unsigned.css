@@ -344,6 +344,17 @@ header {
 
 }
 
+@media only screen and (max-width: 767px) {
+    .box {
+        width: calc(50% - 20px);
+        font-size: 10px;
+    }
+
+
+}
+
+
+
 /*About Us*/
 .team-section {
     text-align: center;
