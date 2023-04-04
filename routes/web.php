@@ -117,4 +117,8 @@ Route::get('/sel_teacher', [TeacherRegistrationController::class, 'list'])->midd
 
 Route::get('courses_teacher', [TeacherController::class, 'courses']);
 
+Route::get('/sel_courses', function () {
+    return view('sel_courses');
+});
+
 
