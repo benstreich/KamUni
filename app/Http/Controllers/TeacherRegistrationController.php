@@ -48,4 +48,13 @@ class TeacherRegistrationController extends Controller
             return back()->with('fail', 'Fehler');
         }
     }
+
+    public function list()
+    {
+        $teachers = TeacherRegistration::all();
+
+        return view('sel_teacher', [
+            'teachers' => $teachers
+        ]);
+    }
 }

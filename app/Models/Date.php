@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Date extends Model
 {
     use HasFactory;
-
+    public $timestamps = false;
     public $table = 'teacher_available_at_date';
 }

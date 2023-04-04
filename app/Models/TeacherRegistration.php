@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class TeacherRegistration extends Model
 {
     use HasFactory;
+    public $timestamps = false;
 
     public $table = 'teachers_registration';
 }

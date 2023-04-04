@@ -18,36 +18,14 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach ($teachers as $teacher)
                     <tr>
-                        <td> <img src="images/profil.png" alt="">Testname Test</td>
+                        <td> <img src="images/profil.png" alt="">{{$teacher -> firstname}} {{$teacher -> lastname}}</td>
                         <td> 17 Dec, 2022 </td>
                         <td> <strong> $128.90 </strong></td>
                         <th><a href='' class="action">Auswählen</a></th>
-                    </tr>
-                    <tr>
-                        <td><img src="images/profil.png" alt="">Testname Test</td>
-                        <td> 27 Aug, 2023 </td>
-                        <td> <strong>$5350.50</strong> </td>
-                        <th><a href='' class="action">Auswählen</a></th>
-                    </tr>
-                    <tr>
-                        <td><img src="images/profil.png" alt="">Testname Test</td>
-                        <td> 14 Mar, 2023 </td>
-                        <td> <strong>$210.40</strong> </td>
-                        <th><a href='' class="action">Auswählen</a></th>
-                    </tr>
-                    <tr>
-                        <td><img src="images/profil.png" alt="">Testname Test</td>
-                        <td> 14 Mar, 2023 </td>
-                        <td> <strong>$210.40</strong> </td>
-                        <th><a href='' class="action">Auswählen</a></th>
-                    </tr>
-                    <tr>
-                        <td><img src="images/profil.png" alt="">Testname Test</td>
-                        <td> 14 Mar, 2023 </td>
-                        <td> <strong>$210.40</strong> </td>
-                        <th><a href='' class="action">Auswählen</a></th>
-                    </tr>
+                    </tr>   
+                @endforeach
                 </tbody>
             </table>
         </section>

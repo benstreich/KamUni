@@ -26,12 +26,12 @@ use App\Http\Middleware\AlreadyLoggedIn;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware('alreadyLoggedIn');
 
-Route::get('login', [LoginController::class, 'login']);
+Route::get('login', [LoginController::class, 'login'])->middleware('alreadyLoggedIn');
 Route::post('login-user', [LoginController::class, 'loginUser'])->name('login-user');
 
-Route::get('register', [RegistrationController::class, 'register']);
+Route::get('register', [RegistrationController::class, 'register'])->middleware('alreadyLoggedIn');
 Route::post('register-user', [RegistrationController::class, 'registerUser'])->name('register-user');
 
 Route::get('/start', function(){
@@ -39,9 +39,9 @@ Route::get('/start', function(){
 })->middleware('isLoggedIn');
 
 
-Route::get('/teacher_schedule/save/{date}', [DateController::class, 'save']);
+Route::get('/teacher_schedule/save/{date}', [DateController::class, 'save'])->middleware('isLoggedIn');
 
-Route::get('/teacher_schedule', [DateController::class, 'get']);
+Route::get('/teacher_schedule', [DateController::class, 'get'])->middleware('isLoggedIn');
 
 
 Route::get('/welcome_teacher_login', function(){
@@ -110,7 +110,9 @@ Route::get('logout', [LoginController::class, 'logout']);
 
 Route::get('/sel_teacher', function () {
     return view('sel_teacher');
-});
+})->middleware('isLoggedIn');
+
+Route::get('/sel_teacher', [TeacherRegistrationController::class, 'list'])->middleware('isLoggedIn');
 
 
 Route::get('courses_teacher', [TeacherController::class, 'courses']);

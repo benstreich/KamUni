@@ -415,53 +415,41 @@ header {
 }
 
 
-.login-container {
+.login-section {
     display: flex;
+    position: relative;
+    height: 100vh;
     width: 100%;
-    flex-direction: row;
-    height: 70vh;
-    min-width: 100vh;
+    justify-content: right;
+    transition: 1.5s ease;
 }
 
-.login-info {
-    width: 55%;
-    border-right: 2px solid;
+.login-section::before{
+    content: '';
+    position: relative;
+    align-self: center;
+    height: 400px;
+    width: 400px;
+    left: 80px;
+    background: url(/images/login_side.jpg);
+    background-size: contain;
+    background-position: center;
+    transition: .8s;
+    opacity: 1;
 }
 
-.login-info h1 {
-    font-size: 30px;
-    color: #3E9EEB;
-}
-
-.login-info h3 {
-    color: #FF595B;
-    margin: 20px 0 9px 0;
-}
-
-.login-info a {
-    text-decoration: none;
-    color: #3E9EEB;
-}
-
-.login-info a:hover {
-    text-decoration: underline;
-}
-
-
-.login-formular {
+.login-wrapper{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 55%;
-}
-
-.login-formular form {
-    display: flex;
+    position: relative;
     flex-direction: column;
-    margin: 15px;
+    justify-content: center;
+    height: 100vh;
+    width: 60%;
+    top: 0;
+    transition: .8s ease;
 }
 
-.login-formular h1 {
+.login-wrapper h1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -469,31 +457,30 @@ header {
     padding-bottom: 20px;
 }
 
-.login-formular .inputarea {
-    position: relative;
-    margin: 15px 0;
+.login-section form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
 }
 
-.login-formular div label {
-    transition: .2s all ease-in;
-    color: #444748;
-    display: block;
+.login-section .inputarea {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
 }
 
-.login-formular div .input {
-    width: 90%;
+.login-section form input[type="email"],
+.login-section form input[type="password"]{
+    width: 300px;
     border: 1px solid #ccc;
     padding: 10px 15px;
     font-size: 15px;
     text-transform: none;
 }
 
-.login-formular div input::placeholder {
-    font-size: 15px;
-}
 
-
-.login-formular button {
+.login-section button {
     width: 250px;
     height: 45px;
     border: none;
@@ -505,19 +492,19 @@ header {
     cursor: pointer;
 }
 
-.login-formular button:hover {
+.login-section  button:hover {
     transition: .1s;
     background: linear-gradient(to right, #0acffe 0%, #495aff 100%);
 }
 
-.login-formular span {
+.login-section  span {
     color: #FF595B;
     font-size: 13px;
     padding-bottom: 3px;
 
 }
 
-.login-formular .link {
+.login-section .link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -527,64 +514,69 @@ header {
 }
 
 
-.login-formular .link a {
+.login-section  .link a {
     text-decoration: none;
     color: grey;
 }
 
-.login-formular .link a:hover {
+.login-section  .link a:hover {
     text-decoration: underline;
     color: grey;
 }
+
+
+
+@media screen and (max-width: 1010px){
+    .login-section{
+        background-position: center;
+        justify-content: center;
+    }
+    
+
+    .login-section::before{
+        position: absolute;
+        display: none;
+        opacity: 0;
+    }
+}
+
 
 /*Sign Up*/
-.register-container {
+.register-section {
     display: flex;
+    position: relative;
+    height: 100vh;
     width: 100%;
-    flex-direction: row;
-    min-height: 60vh;
-    min-width: 100vh;
+    justify-content: right;
+    transition: 1.5s ease;
 }
 
-.register-info {
-    width: 55%;
-    border-right: 2px solid;
+.register-section::before{
+    content: '';
+    position: relative;
+    align-self: center;
+    height: 400px;
+    width: 400px;
+    left: 80px;
+    background: url(/images/login_side.jpg);
+    background-size: contain;
+    background-position: center;
+    transition: .8s;
+    opacity: 1;
 }
 
-.register-info h1 {
-    font-size: 30px;
-    color: #3E9EEB;
-}
-
-.register-info h3 {
-    color: #FF595B;
-    margin: 20px 0 9px 0;
-}
-
-.register-info a {
-    text-decoration: none;
-    color: #3E9EEB;
-}
-
-.register-info a:hover {
-    text-decoration: underline;
-}
-
-
-.register-formular {
+.register-wrapper{
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    width: 55%;
-}
-
-.register-container form {
-    display: flex;
+    position: relative;
     flex-direction: column;
-    margin: 15px;
+    justify-content: center;
+    height: 100vh;
+    width: 60%;
+    top: 0;
+    transition: .8s ease;
 }
 
-.register-container h1 {
+.register-wrapper h1 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -592,34 +584,31 @@ header {
     padding-bottom: 20px;
 }
 
-.register-container .inputarea {
-    position: relative;
-    margin: 15px 0;
+.register-section form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
 }
 
-.register-container div label {
-    transition: .2s all ease-in;
-    color: #444748;
-    display: block;
+.register-section .inputarea {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0;
 }
 
-.register-container div input[type=text],
-[type=email],
-[type=password] {
-    width: 90%;
+.register-section form input[type="text"],
+.register-section form input[type="email"],
+.register-section form input[type="password"]{
+    width: 300px;
     border: 1px solid #ccc;
     padding: 10px 15px;
     font-size: 15px;
     text-transform: none;
 }
 
-.register-container div input::placeholder {
-    font-size: 15px;
 
-}
-
-
-.register-container button {
+.register-section button {
     width: 250px;
     height: 45px;
     border: none;
@@ -631,19 +620,19 @@ header {
     cursor: pointer;
 }
 
-.register-container button:hover {
+.register-section  button:hover {
     transition: .1s;
     background: linear-gradient(to right, #0acffe 0%, #495aff 100%);
-
 }
 
-.register-container span {
+.register-section  span {
     color: #FF595B;
     font-size: 13px;
     padding-bottom: 3px;
+
 }
 
-.register-container .link {
+.register-section .link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -652,15 +641,33 @@ header {
     font-size: 15px;
 }
 
-.register-container .link a {
+
+.register-section  .link a {
     text-decoration: none;
     color: grey;
 }
 
-.register-container .link a:hover {
+.register-section  .link a:hover {
     text-decoration: underline;
     color: grey;
 }
+
+
+
+@media screen and (max-width: 1010px){
+    .register-section{
+        background-position: center;
+        justify-content: center;
+    }
+    
+
+    .register-section::before{
+        position: absolute;
+        display: none;
+        opacity: 0;
+    }
+}
+
 
 
 /*Footer*/
@@ -681,11 +688,9 @@ footer {
 }
 
 
-
 .about,
 .contact {
     width: 40%;
-    padding: 0 15px;
 }
 
 .links {
@@ -769,3 +774,14 @@ footer {
         flex-direction: column;
     }
 }
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+  }
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
