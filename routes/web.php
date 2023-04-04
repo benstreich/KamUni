@@ -39,9 +39,9 @@ Route::get('/start', function(){
 })->middleware('isLoggedIn');
 
 
-Route::get('/teacher_schedule/save/{date}', [DateController::class, 'save'])->middleware('isLoggedIn');
+Route::get('/create_courses/save/{date}', [DateController::class, 'save'])->middleware('isLoggedIn');
 
-Route::get('/teacher_schedule', [DateController::class, 'get'])->middleware('isLoggedIn');
+Route::get('/create_courses', [DateController::class, 'get'])->middleware('isLoggedIn');
 
 
 Route::get('/welcome_teacher_login', function(){
@@ -116,5 +116,6 @@ Route::get('/sel_teacher', [TeacherRegistrationController::class, 'list'])->midd
 
 
 Route::get('courses_teacher', [TeacherController::class, 'courses']);
+
 
 
