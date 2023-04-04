@@ -21,23 +21,24 @@ class TeacherRegistrationController extends Controller
               'lastname'=>'required',
               'email'=>'required|email|unique:registration',
               'password'=>'required|min:6|max:30',
-              //'certificate'=>'required',
+              'certificate'=>'required',
             ],
             [
               'firstname.required'=>'Vorname eingeben!', 
               'lastname.required'=>'Nachname eingeben!',
               'email.required'=>'Email eingeben!',
               'password.required'=>'Passwort eingeben!', 
-             //'certificate.required'=>'Zertifikat einfügen', 
+              'certificate.required'=>'Zertifikat einfügen', 
             ]
         
         );
+
         $teacher = new TeacherRegistration();
         $teacher->firstname = $request->firstname;
         $teacher->lastname = $request->lastname;
         $teacher->email = $request->email;
         $teacher->password = Hash::make($request->password);
-        $teacher->certificate = $request->certificate;
+        $teacher->certificate = $request->file('certificate')->store('images');
         $res = $teacher->save();
 
         if($res)

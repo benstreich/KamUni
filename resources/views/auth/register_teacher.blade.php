@@ -5,7 +5,7 @@
 <section class="register-section">
     <div class="register-wrapper">
         <h1>Lehrer Registration</h1>
-        <form action="{{route('register-teacher')}}" method="post">
+        <form action="{{route('register-teacher')}}" enctype="multipart/form-data" method="post">
             @csrf
 
             <div class="inputarea">
