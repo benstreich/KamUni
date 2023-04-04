@@ -12,6 +12,7 @@ use App\Models\TeacherRegistration;
 use Illuminate\Auth\Events\Login;
 use App\Http\Controllers\TeacherLoginController;
 use App\Http\Middleware\AlreadyLoggedIn;
+use App\Http\Controllers\SubjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -116,6 +117,9 @@ Route::get('/sel_teacher', [TeacherRegistrationController::class, 'list'])->midd
 
 
 Route::get('courses_teacher', [TeacherController::class, 'courses']);
+
+
+Route::post('/subjects', [SubjectController::class, 'store'])->name('subjects.store');
 
 
 
