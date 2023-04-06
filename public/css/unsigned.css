@@ -663,7 +663,20 @@ header {
     color: grey;
 }
 
-
+.register-section input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #EA5455;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+  }
+  
+  .register-section input[type=file]::file-selector-button:hover {
+    background: #FFB4B4;
+  }
 
 @media screen and (max-width: 1010px){
     .register-section{
