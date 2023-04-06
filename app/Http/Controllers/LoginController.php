@@ -17,7 +17,6 @@ class LoginController extends Controller
     }
 
     
-
     public function loginUser(Request $request)
     {
         $request->validate(
@@ -48,8 +47,6 @@ class LoginController extends Controller
          else{
             return back()->with('fail', 'Diese Email wurde noch nicht registriert');
          }
-
-
     }
 
     public function profile()
@@ -59,6 +56,21 @@ class LoginController extends Controller
             $data = Registration::where('id', '=', Session::get('loginId'))->first();
         }
         return view('profile', compact('data'));
+    }
+
+    public function updateProfile(Request $request)
+    {
+        $user = Registration::where('email', '=', $request->email)->first();
+        
+        if (!$user) {
+            return redirect()->back()->withErrors(['email' => 'The email is not registered.']);
+        }
+
+        $user->firstname = $request->firstname;
+        $user->lastname = $request->lastname;
+        $user->email = $request->new_email ?: $request->email;
+        $user->save();
+        return redirect('/profile');
     }
 
     public function logout(){

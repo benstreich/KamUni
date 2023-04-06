@@ -107,6 +107,7 @@ Route::get('/profile', function () {
 });
 
 Route::get('profile', [LoginController::class, 'profile'])->middleware('isLoggedIn');
+Route::post('profile', [LoginController::class, 'updateProfile'])->middleware('isLoggedIn');
 Route::get('logout', [LoginController::class, 'logout']);
 
 Route::get('/sel_teacher', function () {
