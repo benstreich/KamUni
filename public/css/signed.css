@@ -350,6 +350,7 @@ header {
     width: 150px;
     height: 150px;
     align-items: center;
+    margin-bottom: 23px;
 }
 
 .profile-info p {
@@ -357,11 +358,21 @@ header {
 }
 
 
-
-.logout-link a {
-    text-decoration: none;
-    color: #3E9EEB;
+.logout-link{
+    display: flex;
+    align-items: center;
 }
+.logout-link a {
+    background-color: #00B0FF;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    padding: 6px 30px;
+    margin-top: 14px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 
 .profile-update  form{
     display: flex;
@@ -390,6 +401,33 @@ header {
 @media screen and (max-width: 812px) {
     .profile-section {
         max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+
+    .profile-section{
+        margin: 0;
+    }
+
+    .profile-info{
+        display: flex;
+        align-items: center;
+    }
+
+    .profile-update form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+        margin: 0;
+
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
     }
 }
 
