@@ -12,6 +12,7 @@ use App\Models\TeacherRegistration;
 use Illuminate\Auth\Events\Login;
 use App\Http\Controllers\TeacherLoginController;
 use App\Http\Middleware\AlreadyLoggedIn;
+use App\Http\Controllers\SubjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -106,6 +107,7 @@ Route::get('/profile', function () {
 });
 
 Route::get('profile', [LoginController::class, 'profile'])->middleware('isLoggedIn');
+Route::post('profile', [LoginController::class, 'updateProfile'])->middleware('isLoggedIn');
 Route::get('logout', [LoginController::class, 'logout']);
 
 Route::get('/sel_teacher', function () {
@@ -120,6 +122,9 @@ Route::get('courses_teacher', [TeacherController::class, 'courses']);
 Route::get('/sel_courses', function () {
     return view('sel_courses');
 });
+
+
+Route::post('/subjects', [SubjectController::class, 'store'])->name('subjects.store');
 
 
 

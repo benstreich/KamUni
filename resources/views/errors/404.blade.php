@@ -1,1 +1,1 @@
-<h1>Fehler</h1>
+<h1>Fehler, diese Seite gibt es nicht!</h1>

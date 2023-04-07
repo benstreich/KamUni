@@ -4,13 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Foundation\Auth\Registration as Authenticatable;
 
-
-
-class Registration extends Model
+class Subject extends Model
 {
     use HasFactory;
 
-    public $table = 'registration';
+    public $table = 'teacher_subject';
 }

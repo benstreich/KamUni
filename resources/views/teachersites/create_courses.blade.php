@@ -55,7 +55,8 @@
 	</style>
 </head>
 <body>
-<form>
+    <form action="{{ route('subjects.store') }}" method="POST">
+    @csrf
 		<label for="subjects">Ausgewählte Fächer:</label>
 		<select id="subjects" name="subjects[]" multiple >
 			<option value="math">Mathematik</option>

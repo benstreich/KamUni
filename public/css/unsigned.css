@@ -344,6 +344,17 @@ header {
 
 }
 
+@media only screen and (max-width: 767px) {
+    .box {
+        width: calc(50% - 20px);
+        font-size: 10px;
+    }
+
+
+}
+
+
+
 /*About Us*/
 .team-section {
     text-align: center;
@@ -652,7 +663,20 @@ header {
     color: grey;
 }
 
-
+.register-section input[type=file]::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #EA5455;
+    padding: 10px 20px;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+  }
+  
+  .register-section input[type=file]::file-selector-button:hover {
+    background: #FFB4B4;
+  }
 
 @media screen and (max-width: 1010px){
     .register-section{

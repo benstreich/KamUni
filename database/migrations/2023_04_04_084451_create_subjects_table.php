@@ -11,15 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-       Schema::create('teacher_available_at_date', function (Blueprint $table)
-       {
+        Schema::create('teacher_subject', function (Blueprint $table) {
             $table->id();
-            $table->string('date');
-            $table->unsignedBigInteger('teacher_id')->unsigned()->nullable();
-            $table->foreign('teacher_id')->references('id')->on('teachers_registration');
             $table->timestamps();
-
-       });
+            $table->string('name');
+            $table->unsignedBigInteger('fk_date')->unsigned()->nullable();
+            $table->foreign('fk_date')->references('id')->on('teacher_available_at_date');
+        });
     }
 
     /**
@@ -27,8 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
-        Schema::dropIfExists('teacher_abailable_at_date');
-
+        Schema::dropIfExists('teacher_subject');
     }
 };

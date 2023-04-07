@@ -320,57 +320,114 @@ header {
 
 /*Profil*/
 .profile-section {
-    text-align: center;
+    background-color: #CCE8C9;
+    padding: 15vh;
+    margin: 0px 45px 45px;
 
 }
 
 .profile-section .title {
+    text-align: center;
     font-size: 25px;
     margin: auto;
 }
 
-.profile-container {
+.profile-section .profile{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 0;
-
+    align-items: center;
 }
 
-.profile-info {
-    margin: 10px;
-    padding: 20px;
-    box-sizing: border-box;
-    max-width: 30%;
-    transition: 0.4s;
-    background-color: white;
+.profile-info{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
 }
+
 
 .profile-info img {
-    width: 200px;
-    height: 200px;
-}
-
-.profile-info p span {
-    padding: 12px;
-    font-size: 16px;
-    font-weight: bold;
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    margin-bottom: 23px;
 }
 
 .profile-info p {
-    margin: 13px 0;
+    margin: 5px 0;
 }
 
+
+.logout-link{
+    display: flex;
+    align-items: center;
+}
 .logout-link a {
-    text-decoration: none;
-    color: #3E9EEB;
+    background-color: #00B0FF;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    padding: 6px 30px;
+    margin-top: 14px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.profile-update  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+.profile-update .inputarea {
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0;
+}
+
+.profile-update form input[type="text"],
+.profile-update form input[type="email"],
+.profile-update form input[type="password"]{
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
 }
 
 @media screen and (max-width: 812px) {
-    .profile-info {
+    .profile-section {
         max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+
+    .profile-section{
+        margin: 0;
+    }
+
+    .profile-info{
+        display: flex;
+        align-items: center;
+    }
+
+    .profile-update form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+        margin: 0;
+
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
     }
 }
 
