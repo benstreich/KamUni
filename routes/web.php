@@ -26,7 +26,7 @@ use App\Http\Middleware\AlreadyLoggedIn;
 
 Route::get('/', function () {
     return view('welcome');
-})->middleware('alreadyLoggedIn');
+});
 
 Route::get('login', [LoginController::class, 'login'])->middleware('alreadyLoggedIn');
 Route::post('login-user', [LoginController::class, 'loginUser'])->name('login-user');
