@@ -32,13 +32,12 @@ Route::get('/', function () {
 Route::get('login', [LoginController::class, 'login'])->middleware('alreadyLoggedIn');
 Route::post('login-user', [LoginController::class, 'loginUser'])->name('login-user');
 
-Route::get('register', [RegistrationController::class, 'register'])->middleware('alreadyLoggedIn');
+Route::get('register', [RegistrationController::class, 'register']);
 Route::post('register-user', [RegistrationController::class, 'registerUser'])->name('register-user');
 
 Route::get('/start', function(){
     return view('welcome_signedin');
 })->middleware('isLoggedIn');
-
 
 Route::get('/create_courses/save/{date}', [DateController::class, 'save'])->middleware('isLoggedIn');
 
