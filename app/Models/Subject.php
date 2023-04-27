@@ -9,5 +9,7 @@ class Subject extends Model
 {
     use HasFactory;
 
-    public $table = 'teacher_subject';
+    public $table = 'teacher_subject'; 
+   
+
 }
