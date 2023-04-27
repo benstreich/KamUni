@@ -28,22 +28,18 @@ use Illuminate\Support\Facades\Artisan;
 
 Route::get('/', function () {
     return view('welcome');
-})->middleware('alreadyLoggedIn');
+});
 
 Route::get('login', [LoginController::class, 'login'])->middleware('alreadyLoggedIn');
 Route::post('login-user', [LoginController::class, 'loginUser'])->name('login-user');
 
-Route::get('register', [RegistrationController::class, 'register'])->middleware('alreadyLoggedIn');
+Route::get('register', [RegistrationController::class, 'register']);
 Route::post('register-user', [RegistrationController::class, 'registerUser'])->name('register-user');
 
 Route::get('/start', function(){
     return view('welcome_signedin');
 })->middleware('isLoggedIn');
 
-
-Route::get('/create_courses/save/{date}', [DateController::class, 'save'])->middleware('isLoggedIn');
-
-Route::get('/create_courses', [DateController::class, 'get'])->middleware('isLoggedIn');
 
 
 Route::get('/welcome_teacher_login', function(){
@@ -125,7 +121,12 @@ Route::get('/sel_courses', function () {
 });
 
 
-Route::post('/subjects', [SubjectController::class, 'store'])->name('subjects.store');
+Route::post('/create_subject_store', [SubjectController::class, 'store'])->name('subjects.store');
+
+
+route::get('create_subject', function (){
+    return view('teachersites/create_subject');
+});
 
 
 

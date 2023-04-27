@@ -10,14 +10,13 @@ class SubjectController extends Controller
     //
     public function store(Request $request)
     {
-        $selectedOptions = $request->input('subjects');
+        $newSubject = new Subject;
+        $newSubject->subject = $request->input('subject');
+        $newSubject->date = $request->input('date');
+        $newSubject->time = $request->input('time');
+        $newSubject->save();
 
-        foreach ($selectedOptions as $option) {
-            $subject = new Subject;
-            $subject->name = $option;
-            $subject->save();
-        }
-
+    
         return redirect()->back()->with('success', 'Selected options saved!');
     }
 }
