@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('subject');
             $table->date('date');
             $table->string('time');
+            $table->foreignId('teacher_id')->constrained('teachers_registration');
+
         });
     }
 

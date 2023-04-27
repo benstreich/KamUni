@@ -11,5 +11,8 @@ class Subject extends Model
 
     public $table = 'teacher_subject'; 
    
-
+    public function teacher()
+    {
+        return $this->belongsTo(TeacherRegistration::class);
+    }
 }

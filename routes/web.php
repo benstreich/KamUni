@@ -129,4 +129,6 @@ route::get('create_subject', function (){
 });
 
 
+route::get('profile_teacher', [TeacherController::class, 'profile']);
+
 
