@@ -13,6 +13,7 @@ use Illuminate\Auth\Events\Login;
 use App\Http\Controllers\TeacherLoginController;
 use App\Http\Middleware\AlreadyLoggedIn;
 use App\Http\Controllers\SubjectController;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -106,7 +107,7 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('profile', [LoginController::class, 'profile'])->middleware('isLoggedIn');
+Route::get('profile', [LoginController::class, 'profile', 'updateProfile'])->middleware('isLoggedIn');
 Route::post('profile', [LoginController::class, 'updateProfile'])->middleware('isLoggedIn');
 Route::get('logout', [LoginController::class, 'logout']);
 

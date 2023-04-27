@@ -39,7 +39,7 @@ class RegistrationController extends Controller
 
         if($res)
         {
-            return redirect('start');
+            return redirect('/start');
         }
         else{
             return back()->with('fail', 'Fehler');

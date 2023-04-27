@@ -8,7 +8,7 @@
     </div>
     <div class="profile">
         <div class="profile-info">
-            <img src="/images/pb.svg">
+            <img src="{{$data->image}}">
             <p><strong>Vorname:</strong> {{$data->firstname}}</p>
             <p><strong>Nachname:</strong> {{$data->lastname}}</p>
             <p><strong>Email:</strong> {{$data->email}}</p>
@@ -17,8 +17,12 @@
             </div>
         </div>
         <div class="profile-update">
-            <form action="" method="post">
+            <form action="" enctype="multipart/form-data" method="post">
                 @csrf
+
+                <div class="inputarea">
+                <input type="file" id="profimg" name="profimg">
+                </div>
 
                 <div class="inputarea">
                     <input type="text" id="firstname" name="firstname" value="{{$data->firstname}}"
