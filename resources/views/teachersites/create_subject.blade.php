@@ -125,6 +125,9 @@
 <form action="{{ route('subjects.store') }}" method="POST" class="fade-in">
     @csrf
 
+
+    <input type="hidden" name="teacher_id" value="{{$teacher_id}}">
+
     <label for="subject">Wählen sie ein Fach aus:</label>
     <select id="subject" name="subject">
         <option value="math">Mathematik</option>

@@ -18,9 +18,14 @@ class TeacherController extends Controller
 
         $data = array();
         if(Session::has('loginId')){
+           
             $data = TeacherRegistration::where('id', '=', Session::get('loginId'))->first();
+            $courses = $data->courses;
         }
-        return view('teachersites/profile_teacher', compact('data'));
+        return view('teachersites/profile_teacher', compact('data', 'courses'));
     }
+
+
+   
 
 }

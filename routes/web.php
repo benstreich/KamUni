@@ -125,7 +125,8 @@ Route::post('/create_subject_store', [SubjectController::class, 'store'])->name(
 
 
 route::get('create_subject', function (){
-    return view('teachersites/create_subject');
+    $teacher_id = Session::get('loginId');
+    return view('teachersites/create_subject', compact('teacher_id'));
 });
 
 

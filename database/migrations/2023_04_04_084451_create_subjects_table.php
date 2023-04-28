@@ -18,7 +18,6 @@ return new class extends Migration
             $table->date('date');
             $table->string('time');
             $table->foreignId('teacher_id')->constrained('teachers_registration');
-
         });
     }
 
