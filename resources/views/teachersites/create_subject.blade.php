@@ -129,11 +129,11 @@
   
     <label for="subject">Wählen sie ein Fach aus:</label>
     <select id="subject" name="subject">
-        <option value="math">Mathematik</option>
-        <option value="english">Englisch</option>
-        <option value="german">Deutsch</option>
-        <option value="science">Naturwissenschaften</option>
-        <option value="french">Französisch</option>
+        <option value="Mathematik">Mathematik</option>
+        <option value="Englisch">Englisch</option>
+        <option value="Deutsch">Deutsch</option>
+        <option value="Naturwissenschaften">Naturwissenschaften</option>
+        <option value="Französisch">Französisch</option>
     </select>
 
     <br>

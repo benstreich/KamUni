@@ -80,21 +80,18 @@ footer {
 						<th>Fach</th>
 						<th>Datum</th> 
 						<th>Zeit</th> 
- 					
+
 					</tr>
-					
+				</thead>
+				<tbody>
 					@foreach ($courses as $course)
 					<tr>
 						<td>{{$course->subject}}</td> 
 						<td>{{$course->date}}</td>
 						<td>{{$course->time}}</td>
 					</tr>
-					@endforeach 
-					
-					
-					</thead>
-				<tbody>
-					
+					@endforeach
+                  
 			</table>
 		</section>
 	</main> <br> <br>
