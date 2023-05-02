@@ -53,14 +53,6 @@ footer {
 
 }
 
-
-
-
-
-
-
-
-
     
 </style>
 <body>
@@ -70,9 +62,12 @@ footer {
 	<main>
 		<section>
 			<h2>Persöhnliche Informationen</h2> <br>
+			
 			<p><strong>Vorname:</strong> {{$data->firstname}}</p>
 			<p><strong>Name:</strong> {{$data->lastname}}</p>
-			<p><strong>Email:</strong> {{$data->email}}</p>
+			<p><strong>Email:</strong> {{$data->email}}</p> 
+		
+			 
             <div class="logout-link">
                 <a href="logout">Logout</a>
             </div>
@@ -85,18 +80,21 @@ footer {
 						<th>Fach</th>
 						<th>Datum</th> 
 						<th>Zeit</th> 
-
+ 					
 					</tr>
-				</thead>
-				<tbody>
+					
 					@foreach ($courses as $course)
 					<tr>
 						<td>{{$course->subject}}</td> 
 						<td>{{$course->date}}</td>
 						<td>{{$course->time}}</td>
 					</tr>
-					@endforeach
-                  
+					@endforeach 
+					
+					
+					</thead>
+				<tbody>
+					
 			</table>
 		</section>
 	</main> <br> <br>
