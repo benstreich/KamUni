@@ -44,6 +44,10 @@ a {
 	border-radius: 5px;
 }
 
+a:hover{
+	cursor: pointer;
+}
+
 
 footer {
 	background-color: #333;
@@ -86,9 +90,9 @@ footer {
 				<tbody>
 					@foreach ($courses as $course)
 					<tr>
-						<td>{{$course->subject}}</td> 
-						<td>{{$course->date}}</td>
-						<td>{{$course->time}}</td>
+						<td>{{$course->subject}} <a style="color: #00B0FF" id="edit">Bearbeiten</a></td> 
+						<td>{{$course->date}}<a style="color: #00B0FF" id="edit">Bearbeiten</a></td>
+						<td>{{$course->time}}<a style="color: #00B0FF" id="edit">Bearbeiten</a></td>
 					</tr>
 					@endforeach
                   
@@ -97,6 +101,10 @@ footer {
 	</main> <br> <br>
 	
 </body>
+
+
+
+
 </html>
 
 

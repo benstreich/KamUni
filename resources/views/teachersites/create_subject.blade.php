@@ -139,7 +139,7 @@
     <br>
 
     <div class="form-group">
-        <label for="date" class="form-label">Datum:</label>
+        <label for="date" class="form-label">Datum:</label> 
         <input type="date" id="date" name="date" class="form-control">
     </div>
 

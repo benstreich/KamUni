@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('subject');
-            $table->date('date');
+            $table->date('date')->format('d-m-Y');
             $table->string('time');
             $table->string('teacher_id');
         });
