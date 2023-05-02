@@ -21,7 +21,7 @@
         <a href="/start" class="logo"><img src="/svg/teacher_logo.svg" alt=""></a>
         <ul class="navbar">
             <li><a href="/welcome_teacher_signedin">Tutoring Uni</a></li>
-            <li><a href="courses_teacher">Kurse suchen</a></li>
+            <li><a href="create_subject">Kurse suchen</a></li>
             <li><a href="/">Über Uns</a></li>
         </ul>
 

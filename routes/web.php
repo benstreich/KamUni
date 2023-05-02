@@ -124,12 +124,15 @@ Route::get('/sel_courses', function () {
 Route::post('/create_subject_store', [SubjectController::class, 'store'])->name('subjects.store');
 
 
-route::get('create_subject', function (){
+Route::get('create_subject', function (){
     $teacher_id = Session::get('loginId');
-    return view('teachersites/create_subject', compact('teacher_id'));
+    return view('teachersites/create_subject', [
+        'teacher_id' => $teacher_id,
+    ]);
 });
 
 
-route::get('profile_teacher', [TeacherController::class, 'profile']);
+
+Route::get('profile_teacher', [TeacherController::class, 'profile']);
 
 

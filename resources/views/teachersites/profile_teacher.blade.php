@@ -50,8 +50,8 @@ footer {
 	color: #fff;
 	padding: 20px;
 	text-align: center;
-}
 
+}
 
 
 
@@ -83,27 +83,20 @@ footer {
 				<thead>
 					<tr>
 						<th>Fach</th>
-						<th>Datum</th>
-						<th>Zeit</th>
+						<th>Datum</th> 
+						<th>Zeit</th> 
+
 					</tr>
 				</thead>
 				<tbody>
+					@foreach ($courses as $course)
 					<tr>
-						<td>Introduction to HTML</td> 
-						<td>April 1, 2023</td>
-						<td>10:00 AM - 11:00 AM</td>
+						<td>{{$course->subject}}</td> 
+						<td>{{$course->date}}</td>
+						<td>{{$course->time}}</td>
 					</tr>
-					<tr>
-						<td>Introduction to CSS</td>
-						<td>April 2, 2023</td>
-						<td>10:00 AM - 11:00 AM</td>
-					</tr>
-					<tr>
-						<td>Introduction to JavaScript</td>
-						<td>April 3, 2023</td>
-						<td>10:00 AM - 11:00 AM</td>
-					</tr>
-				</tbody>
+					@endforeach
+                  
 			</table>
 		</section>
 	</main> <br> <br>
