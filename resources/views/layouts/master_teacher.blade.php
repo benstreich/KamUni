@@ -21,12 +21,12 @@
         <a href="/start" class="logo"><img src="/svg/teacher_logo.svg" alt=""></a>
         <ul class="navbar">
             <li><a href="/welcome_teacher_signedin">Tutoring Uni</a></li>
-            <li><a href="courses_teacher">Kurse suchen</a></li>
+            <li><a href="create_subject">Kurse suchen</a></li>
             <li><a href="/">Über Uns</a></li>
         </ul>
 
         <div class="main">
-            <a href="profile"><img src="/images/profil.png"></a>
+            <a href="profile_teacher"><img src="/images/profil.png"></a>
         </div>
     </header>
 

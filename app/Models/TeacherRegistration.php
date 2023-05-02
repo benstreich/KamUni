@@ -11,4 +11,9 @@ class TeacherRegistration extends Model
     public $timestamps = false;
 
     public $table = 'teachers_registration';
+
+    public function courses(){
+        return $this->hasMany(Subject::class);
+
+    }
 }

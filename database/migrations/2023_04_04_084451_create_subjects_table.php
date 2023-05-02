@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('subject');
             $table->date('date');
             $table->string('time');
+            $table->string('teacher_id');
         });
     }
 

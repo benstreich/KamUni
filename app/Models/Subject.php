@@ -9,7 +9,13 @@ class Subject extends Model
 {
     use HasFactory;
 
-    public $table = 'teacher_subject'; 
-   
+    protected $table = 'teacher_subject'; 
 
+
+    public $guarded = [];
+   
+    public function teacher()
+    {
+        return $this->belongsTo(TeacherRegistration::class, 'teacher_id');
+    }
 }

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Session;
 
 use App\Models\Subject;
 use Illuminate\Http\Request;
@@ -10,13 +11,25 @@ class SubjectController extends Controller
     //
     public function store(Request $request)
     {
-        $newSubject = new Subject;
-        $newSubject->subject = $request->input('subject');
-        $newSubject->date = $request->input('date');
-        $newSubject->time = $request->input('time');
-        $newSubject->save();
 
+        $teacher_id = Session::get('loginId');
+
+        
+        Subject::create([
+            'teacher_id' => $request->input('teacher_id'),
+            'subject' => $request->input('subject'),
+            'date' => $request->input('date'),
+            'time' => $request->input('time')
+        ]);
+        
     
-        return redirect()->back()->with('success', 'Selected options saved!');
+        return view('teachersites/create_subject', [
+            'teacher_id' => $teacher_id,
+        ]);
     }
+
+   /*  public function showSubjectForm($teacher_id)
+    {
+         return view('teachersites/create_subject', ['teacher_id' => $teacher_id]);
+    } */
 }

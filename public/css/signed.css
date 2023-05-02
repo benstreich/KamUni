@@ -398,11 +398,6 @@ header {
     text-transform: none;
 }
 
-@media screen and (max-width: 812px) {
-    .profile-section {
-        max-width: 100%;
-    }
-}
 
 @media screen and (max-width: 680px) {
 

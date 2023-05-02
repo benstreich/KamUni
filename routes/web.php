@@ -14,6 +14,7 @@ use Illuminate\Auth\Events\Login;
 use App\Http\Controllers\TeacherLoginController;
 use App\Http\Middleware\AlreadyLoggedIn;
 use App\Http\Controllers\SubjectController;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -103,7 +104,7 @@ Route::get('/profile', function () {
     return view('profile');
 });
 
-Route::get('profile', [LoginController::class, 'profile'])->middleware('isLoggedIn');
+Route::get('profile', [LoginController::class, 'profile', 'updateProfile'])->middleware('isLoggedIn');
 Route::post('profile', [LoginController::class, 'updateProfile'])->middleware('isLoggedIn');
 Route::get('logout', [LoginController::class, 'logout']);
 
@@ -124,8 +125,11 @@ Route::get('/sel_courses', function () {
 Route::post('/create_subject_store', [SubjectController::class, 'store'])->name('subjects.store');
 
 
-route::get('create_subject', function (){
-    return view('teachersites/create_subject');
+Route::get('create_subject', function (){
+    $teacher_id = Session::get('loginId');
+    return view('teachersites/create_subject', [
+        'teacher_id' => $teacher_id,
+    ]);
 });
 
 Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
@@ -133,5 +137,8 @@ Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPa
 Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
 Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
+
+
+Route::get('profile_teacher', [TeacherController::class, 'profile']);
 
 
