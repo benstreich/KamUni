@@ -18,6 +18,7 @@ return new class extends Migration
             $table->date('date')->format('d-m-Y');
             $table->string('time');
             $table->string('teacher_id');
+            $table->integer('price');
         });
     }
 

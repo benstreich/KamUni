@@ -43,21 +43,7 @@
         background-color: #3e8e41;
     }
 
-    .selected-options {
-        font-size: 16px;
-        margin-top: 20px;
-        padding: 10px;
-        background-color: #f2f2f2;
-        border-radius: 4px;
-        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-        text-align: center;
-        display: none;
-    }
 
-    .selected-options span {
-        margin-right: 5px;
-        font-weight: bold;
-    }
 
     .form-group {
         margin-bottom: 1rem;
@@ -119,9 +105,18 @@
         opacity: 1;
     }
 }
+
+
+.price_range{
+
+    display: block;
+    height: calc(1.5em + 0.75rem + 2px);
+    width: 300px;
+
+}
 </style>
 
-
+<body>
 <form action="{{ route('subjects.store') }}" method="POST" class="fade-in">
     @csrf
 
@@ -138,10 +133,8 @@
 
     <br>
 
-    <div class="form-group">
         <label for="date" class="form-label">Datum:</label> 
         <input type="date" id="date" name="date" class="form-control">
-    </div>
 
     <br>
 
@@ -164,6 +157,11 @@
 
     <br>
 
+
+    <label for="price" class="form-label">Preis / Stunde: <div id="price-display">170 CHF</div> </label>
+    <input type="range" id="price" name="price" class="price_range"  min="40" max="300" step="1">
+
+
     <input type="hidden" name="teacher_id" id="teacher_id" value="{{ $teacher_id }}"> 
 
     <button type="submit">Submit</button>
@@ -171,4 +169,20 @@
 
     <br> <br> <br> <br>
 </form>
+
+<script>
+
+
+let rangeInput = document.getElementById("price");
+let priceDisplay = document.getElementById("price-display");
+
+rangeInput.addEventListener("input", function() {
+  let price = this.value + ' CHF';
+  priceDisplay.textContent = price;
+});
+
+
+</script>
+
+</body>
 @endsection

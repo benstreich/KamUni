@@ -19,7 +19,8 @@ class SubjectController extends Controller
             'teacher_id' => $request->input('teacher_id'),
             'subject' => $request->input('subject'),
             'date' => $request->input('date'),
-            'time' => $request->input('time')
+            'time' => $request->input('time'),
+            'price' => $request->input('price')
         ]);
         
     
