@@ -27,6 +27,18 @@ class TeacherController extends Controller
     }
 
 
+        public function update(Request $request, $id)
+        {
+            $course = Subject::find($id);
+            $course->subject = $request->input('subject');
+            $course->save();
+        
+            return response()->json(['success' => true]);
+
+        }
+        
+      
+
    
 
 }
