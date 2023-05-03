@@ -4,6 +4,10 @@
 
 
 <section class="selcourses-section">
+
+
+
+
 @foreach ($teachers as $teacher)
 <div class="course-card">
  <div class="image"></div>
@@ -32,6 +36,7 @@
   </div>
 </div>
 @endforeach
+
 </section>
 
 

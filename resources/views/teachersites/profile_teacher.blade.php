@@ -139,6 +139,7 @@ footer {
 						<th>Fach</th>
 						<th>Datum</th> 
 						<th>Zeit</th> 
+						<th>Preis / Stunde</th>
 
 					</tr>
 				</thead>
@@ -217,7 +218,21 @@ footer {
 			</div>
 						
 						
-						
+				
+			</td>
+
+						<td>
+						<div class="subject">
+					<div id="price-display" class="subject-text">{{$course->price}} </div>
+				<button class="edit-button"> Bearbeiten</button>
+				<div class="edit-form" style="display:none;">
+				<input type="range" id="price" name="price" class="price_range"  min="40" max="300" step="1">
+
+					<button class="save-button">speichern</button>
+					<button class="cancel-button">abbrechen</button>
+				</div>
+			</div>
+
 						</td>
 					</tr>
 					@endforeach
@@ -250,14 +265,17 @@ $(document).ready(function() {
 		$(this).parent('.edit-form').siblings('.edit-button').show();
 		// Here you can use AJAX to save the updated subject to the database
 
-
-
-
 	});
 });
 
 
+let rangeInput = document.getElementById("price");
+let priceDisplay = document.getElementById("price-display");
 
+rangeInput.addEventListener("input", function() {
+  let price = this.value + ' CHF';
+  priceDisplay.textContent = price;
+});
 
 </script>
 

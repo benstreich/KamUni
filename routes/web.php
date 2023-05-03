@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\DateController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\LoginController;
@@ -15,7 +16,6 @@ use App\Http\Controllers\TeacherLoginController;
 use App\Http\Middleware\AlreadyLoggedIn;
 use App\Http\Controllers\SubjectController;
 use Illuminate\Support\Facades\Artisan;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,9 +65,7 @@ Route::post('/login-teacher', [TeacherLoginController::class, 'loginTeacher'])->
 Route::get('register-t', [TeacherRegistrationController::class, 'register-t']);
 Route::post('register-teacher', [TeacherRegistrationController::class, 'registerTeacher'])->name('register-teacher');
 
-Route::get('courses_signed', function(){
-    return view('courses_signed');
-})->middleware('isLoggedIn');
+Route::get('courses_signed', [CoursesController::class, 'show'])->middleware('isLoggedIn');
 
 Route::get('/courses', function () {
     return view('courses_unsigned');

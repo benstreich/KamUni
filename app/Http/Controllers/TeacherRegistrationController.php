@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\TeacherRegistration;
+use App\Models\Subject;
 
 class TeacherRegistrationController extends Controller
 {
@@ -52,7 +53,7 @@ class TeacherRegistrationController extends Controller
 
     public function list()
     {
-        $teachers = TeacherRegistration::all();
+        $teachers = Subject::where('subjectid', '=', '1');
 
         return view('sel_courses', [
             'teachers' => $teachers
