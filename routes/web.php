@@ -112,14 +112,11 @@ Route::get('/sel_teacher', function () {
     return view('sel_teacher');
 })->middleware('isLoggedIn');
 
-Route::get('/sel_teacher', [TeacherRegistrationController::class, 'list'])->middleware('isLoggedIn');
+Route::get('/sel_courses', [TeacherRegistrationController::class, 'list'])->middleware('isLoggedIn');
 
 
 Route::get('courses_teacher', [TeacherController::class, 'courses']);
 
-Route::get('/sel_courses', function () {
-    return view('sel_courses');
-});
 
 
 Route::post('/create_subject_store', [SubjectController::class, 'store'])->name('subjects.store');

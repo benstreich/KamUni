@@ -16,6 +16,7 @@ class SubjectController extends Controller
 
         
         Subject::create([
+            'subjectid' => $request->input('subjectid'),
             'teacher_id' => $request->input('teacher_id'),
             'subject' => $request->input('subject'),
             'date' => $request->input('date'),

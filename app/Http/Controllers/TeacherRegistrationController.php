@@ -54,7 +54,7 @@ class TeacherRegistrationController extends Controller
     {
         $teachers = TeacherRegistration::all();
 
-        return view('sel_teacher', [
+        return view('sel_courses', [
             'teachers' => $teachers
         ]);
     }

@@ -117,6 +117,13 @@
 </style>
 
 <body>
+
+<script>
+
+
+
+</script>
+
 <form action="{{ route('subjects.store') }}" method="POST" class="fade-in">
     @csrf
 
@@ -130,6 +137,7 @@
         <option value="Naturwissenschaften">Naturwissenschaften</option>
         <option value="Französisch">Französisch</option>
     </select>
+
 
     <br>
 
@@ -162,6 +170,8 @@
     <input type="range" id="price" name="price" class="price_range"  min="40" max="300" step="1">
 
 
+    <input type="hidden" name="subjectid" id="subjectid">
+
     <input type="hidden" name="teacher_id" id="teacher_id" value="{{ $teacher_id }}"> 
 
     <button type="submit">Submit</button>
@@ -180,6 +190,34 @@ rangeInput.addEventListener("input", function() {
   let price = this.value + ' CHF';
   priceDisplay.textContent = price;
 });
+
+var subjectId;
+
+
+let subjectselect = document.getElementById('subject').addEventListener('change', subjectchange);
+
+function subjectchange(){
+
+    let subject = document.getElementById("subject").value;
+
+
+if (subject === "Mathematik") {
+    console.log(subject); //test
+    subjectId = 1; 
+}  if (subject === "Englisch") {
+    console.log(subject); //test
+    subjectId = 2;
+}  if (subject === "Deutsch") {
+    subjectId = 3;
+}  if (subject === "Naturwissenschaften") {
+    subjectId = 4;
+}  if (subject === "Französisch") {
+    subjectId = 5;
+}
+
+document.getElementById('subjectid').value = subjectId;
+
+}
 
 
 </script>
