@@ -3,7 +3,11 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Registration;
 use Illuminate\Database\Seeder;
+use App\Models\TeacherRegistration;
+use App\Models\Subject;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,7 +22,14 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        
+        Registration::truncate();
+        Registration::factory()->count(50)->create();
 
+        TeacherRegistration::truncate();
+        TeacherRegistration::factory()->count(50)->create();
 
+        Subject::truncate();
+        Subject::factory()->count(50)->create();
     }
 }
