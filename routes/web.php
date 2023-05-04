@@ -117,6 +117,8 @@ Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPass
 
 
 Route::get('profile_teacher', [TeacherController::class, 'profile']);
+Route::post('profile_teacher', [TeacherController::class, 'updateProfile']);
+Route::get('logout', [TeacherController::class, 'logout']);
 
 Route::post('profile_teacher_edit_store/{id}', [TeacherController::class, 'update']);
 

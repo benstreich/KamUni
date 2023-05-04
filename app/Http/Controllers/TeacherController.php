@@ -25,6 +25,29 @@ class TeacherController extends Controller
         return view('teachersites/profile_teacher', compact('data', 'courses'));
     }
 
+    public function updateProfile(Request $request)
+    {
+        $user = TeacherRegistration::where('email', '=', $request->email)->first();
+        
+        if (!$user) {
+            return redirect()->back()->withErrors(['email' => 'The email is not registered.']);
+        }
+
+        //$user->image = $request->file('profimg')->store('public/profileimg');
+        $user->firstname = $request->firstname;
+        $user->lastname = $request->lastname;
+        $user->email = $request->new_email ?: $request->email;
+        $user->save();
+        return redirect('/profile_teacher');
+    }
+
+    public function logout(){
+        if(Session::has('loginId')){
+            Session::pull('loginId');
+            return redirect('/');
+        }
+    }
+
 
         public function update(Request $request, $id)
         {

@@ -15,7 +15,7 @@
                     <input type="file" id="profimg" name="profimg">
                 </div>
 
-                <img src="{{$data->image}}">
+                <img src="{{asset('storage/app/'.$data->image)}}">
 
                 <div class="inputarea">
                     <h5>Vorname</h5>
