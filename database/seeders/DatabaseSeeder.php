@@ -31,5 +31,7 @@ class DatabaseSeeder extends Seeder
 
         Subject::truncate();
         Subject::factory()->count(50)->create();
+
+        
     }
 }

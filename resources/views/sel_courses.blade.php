@@ -11,11 +11,18 @@
 
 
       <span class="title">
-        <p>{{$data->firstname}} {{$data->lastname}} </p>
         
+        @php
+        $teacherRegistration = $data->where('id', $teacher->teacher_id)->first();
+        @endphp
+
+        <p>{{ $teacherRegistration->firstname }}</p>
+        <p>{{$teacherRegistration->email}}</p>
+
+
       </span>
-
-
+   
+   
    
     <p class="desc">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae

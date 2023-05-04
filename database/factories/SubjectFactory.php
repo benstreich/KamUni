@@ -17,6 +17,7 @@ class SubjectFactory extends Factory
     public function definition(): array
     {
         return [
+
             'subjectid' => $this->faker->numberBetween(1, 5),
             'subject' => $this->faker->randomElement(['Mathematik', 'Englisch', 'Französisch', 'Deutsch', 'Naturwissenschaften']),
             'date' => $this->faker->dateTimeThisMonth()->format('d.m.Y'),
