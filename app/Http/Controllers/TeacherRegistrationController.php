@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\TeacherRegistration;
+use App\Models\Subject;
+use Illuminate\Support\Facades\Session;
+
 
 class TeacherRegistrationController extends Controller
 {
@@ -52,10 +55,19 @@ class TeacherRegistrationController extends Controller
 
     public function list()
     {
-        $teachers = TeacherRegistration::all();
+       Session::put('temp_id', 1);
 
-        return view('sel_teacher', [
-            'teachers' => $teachers
+        $data = TeacherRegistration::all();
+        $teachers = Subject::where('subjectid', '=', Session::get('temp_id'))->get();
+
+        return view('sel_courses', [
+            'teachers' => $teachers,
+            'data' => $data
         ]);
     }
+
+
+   
+
+
 }

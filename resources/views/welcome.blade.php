@@ -8,8 +8,6 @@
     </div>
 </div>
 
-
-
 <section class="features-section">
     <h1>Unsere Features</h1>
     <p>Unsere Lernplattform stellt dir besondere Funktionen zur Verfügung, die dir 

@@ -12,12 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('teacher_subject', function (Blueprint $table) {
+            $table->integer('subjectid');
             $table->id();
             $table->timestamps();
             $table->string('subject');
-            $table->date('date');
+            $table->date('date')->format('d-m-Y');
             $table->string('time');
-            $table->foreignId('teacher_id')->constrained('teachers_registration');
+            $table->string('teacher_id');
+            $table->integer('price');
         });
     }
 

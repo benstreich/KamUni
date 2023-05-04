@@ -5,7 +5,7 @@
 <div class="container-boxes">
 
 
-    <div class="box" onclick="window.location.href='/courses_math'">
+    <div class="box" id="math-box">
         <img src="/images/math-book.png" alt="Bild 2">
         <div>
             <h2>Mathematik</h2>
@@ -50,5 +50,19 @@
     
 
 </div>
+
+<script>
+
+  document.getElementById("math-box").addEventListener("click", function() {
+        window.location.href = "/sel_courses";
+    });
+
+
+
+
+</script>
+
+
+
 
 @endsection

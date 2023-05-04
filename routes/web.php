@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\DateController;
+use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
@@ -14,7 +16,6 @@ use App\Http\Controllers\TeacherLoginController;
 use App\Http\Middleware\AlreadyLoggedIn;
 use App\Http\Controllers\SubjectController;
 use Illuminate\Support\Facades\Artisan;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -64,9 +65,7 @@ Route::post('/login-teacher', [TeacherLoginController::class, 'loginTeacher'])->
 Route::get('register-t', [TeacherRegistrationController::class, 'register-t']);
 Route::post('register-teacher', [TeacherRegistrationController::class, 'registerTeacher'])->name('register-teacher');
 
-Route::get('courses_signed', function(){
-    return view('courses_signed');
-})->middleware('isLoggedIn');
+Route::get('courses_signed', [CoursesController::class, 'show'])->middleware('isLoggedIn');
 
 Route::get('/courses', function () {
     return view('courses_unsigned');
@@ -111,25 +110,34 @@ Route::get('/sel_teacher', function () {
     return view('sel_teacher');
 })->middleware('isLoggedIn');
 
-Route::get('/sel_teacher', [TeacherRegistrationController::class, 'list'])->middleware('isLoggedIn');
+Route::get('/sel_courses', [TeacherRegistrationController::class, 'list'])->middleware('isLoggedIn');
 
 
 Route::get('courses_teacher', [TeacherController::class, 'courses']);
 
-Route::get('/sel_courses', function () {
-    return view('sel_courses');
-});
 
 
 Route::post('/create_subject_store', [SubjectController::class, 'store'])->name('subjects.store');
 
 
-route::get('create_subject', function (){
+Route::get('create_subject', function (){
     $teacher_id = Session::get('loginId');
-    return view('teachersites/create_subject', compact('teacher_id'));
+    return view('teachersites/create_subject', [
+        'teacher_id' => $teacher_id,
+    ]);
 });
 
+Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
+Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
+Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
+Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
-route::get('profile_teacher', [TeacherController::class, 'profile']);
+
+
+Route::get('profile_teacher', [TeacherController::class, 'profile']);
+
+Route::post('profile_teacher_edit_store/{id}', [TeacherController::class, 'update']);
+
+Route::get('handle_box_click', [TeacherRegistrationController::class, 'handleBoxClick']);
 
 

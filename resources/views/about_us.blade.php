@@ -2,7 +2,6 @@
 @section('title', 'Über Uns')
 @section('content')
 
-
 <section class="team-section">
         <div class="title">
             <h1>Unser Team</h1>
@@ -61,7 +60,5 @@
             
         </div>
     </section>
-
-
 
 @endsection

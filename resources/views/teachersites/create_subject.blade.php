@@ -43,21 +43,7 @@
         background-color: #3e8e41;
     }
 
-    .selected-options {
-        font-size: 16px;
-        margin-top: 20px;
-        padding: 10px;
-        background-color: #f2f2f2;
-        border-radius: 4px;
-        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
-        text-align: center;
-        display: none;
-    }
 
-    .selected-options span {
-        margin-right: 5px;
-        font-weight: bold;
-    }
 
     .form-group {
         margin-bottom: 1rem;
@@ -119,54 +105,128 @@
         opacity: 1;
     }
 }
+
+
+.price_range{
+
+    display: block;
+    height: calc(1.5em + 0.75rem + 2px);
+    width: 300px;
+
+}
 </style>
 
+<body>
+
+<script>
+
+
+
+</script>
 
 <form action="{{ route('subjects.store') }}" method="POST" class="fade-in">
     @csrf
 
-
-    <input type="hidden" name="teacher_id" value="{{$teacher_id}}">
-
+ 
+  
     <label for="subject">Wählen sie ein Fach aus:</label>
     <select id="subject" name="subject">
-        <option value="math">Mathematik</option>
-        <option value="english">Englisch</option>
-        <option value="german">Deutsch</option>
-        <option value="science">Naturwissenschaften</option>
-        <option value="french">Französisch</option>
+        <option value="Mathematik">Mathematik</option>
+        <option value="Englisch">Englisch</option>
+        <option value="Deutsch">Deutsch</option>
+        <option value="Naturwissenschaften">Naturwissenschaften</option>
+        <option value="Französisch">Französisch</option>
     </select>
+
 
     <br>
 
-    <div class="form-group">
-        <label for="date" class="form-label">Datum:</label>
+        <label for="date" class="form-label">Datum:</label> 
         <input type="date" id="date" name="date" class="form-control">
-    </div>
 
     <br>
 
     <label for="time">Zeit:</label>
     <select id="time" name="time">
-        <option value="9:00 - 10:00">8:00 - 9:00</option>
+        <option value="8:00 - 9:00">8:00 - 9:00</option>
         <option value="9:00 - 10:00">9:00 - 10:00</option>
         <option value="10:00 - 11:00">10:00 - 11:00</option>
         <option value="11:00 - 12:00">11:00 - 12:00</option>
         <option value="12:00 - 13:00">12:00 - 13:00</option>
         <option value="13:00 - 14:00">13:00 - 14:00</option>
-        <option value="13:00 - 14:00">14:00 - 15:00</option>
-        <option value="13:00 - 14:00">16:00 - 17:00</option>
-        <option value="13:00 - 14:00">17:00 - 18:00</option>
-        <option value="13:00 - 14:00">18:00 - 19:00</option>
-        <option value="13:00 - 14:00">19:00 - 20:00</option>
-        <option value="13:00 - 14:00">20:00 - 21:00</option>
-        <option value="13:00 - 14:00">21:00 - 22:00</option>
+        <option value="14:00 - 15:00">14:00 - 15:00</option>
+        <option value="16:00 - 17:00">16:00 - 17:00</option>
+        <option value="17:00 - 18:00">17:00 - 18:00</option>
+        <option value="18:00 - 19:00">18:00 - 19:00</option>
+        <option value="19:00 - 20:00">19:00 - 20:00</option>
+        <option value="20:00 - 21:00">20:00 - 21:00</option>
+        <option value="21:00 - 22:00">21:00 - 22:00</option>
     </select>
 
     <br>
 
+
+    <label for="price" class="form-label">Preis / Stunde: <div id="price-display">170 CHF</div> </label>
+    <input type="range" id="price" name="price" class="price_range"  min="40" max="300" step="1">
+
+
+    <input type="hidden" name="subjectid" id="subjectid">
+
+    <input type="hidden" name="teacher_id" id="teacher_id" value="{{ $teacher_id }}"> 
+
     <button type="submit">Submit</button>
+
 
     <br> <br> <br> <br>
 </form>
+
+<script>
+
+
+let rangeInput = document.getElementById("price");
+let priceDisplay = document.getElementById("price-display");
+
+rangeInput.addEventListener("input", function() {
+  let price = this.value + ' CHF';
+  priceDisplay.textContent = price;
+});
+
+var subjectId = 1;
+document.getElementById('subjectid').value = subjectId;
+
+let subjectselect = document.getElementById('subject').addEventListener('change', subjectchange);
+
+function subjectchange(){
+
+    
+    let subject = document.getElementById("subject").value;
+
+
+if (subject === "Mathematik") {
+    subjectId = 1; 
+    console.log(subject); //test
+}  if (subject === "Englisch") {
+    subjectId = 2;
+    console.log(subject); //test
+}  if (subject === "Deutsch") {
+    
+    subjectId = 3;
+    console.log(subject); //test
+}  if (subject === "Naturwissenschaften") {
+   
+    subjectId = 4;
+    console.log(subject); //test
+}  if (subject === "Französisch") {
+    subjectId = 5;
+    console.log(subject); //test
+}
+
+document.getElementById('subjectid').value = subjectId;
+
+}
+
+
+</script>
+
+</body>
 @endsection
