@@ -80,6 +80,10 @@ Route::get('/about_us_signed', function () {
     return view('about_us_signed_in');
 });
 
+Route::get('/about_us_teacher', function () {
+    return view('about_us_teacher');
+});
+
 Route::get('/profile', function () {
     return view('profile');
 });
