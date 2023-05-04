@@ -18,11 +18,11 @@
 <body>
 
     <header>
-        <a href="/start" class="logo"><img src="/svg/teacher_logo.svg" alt=""></a>
+        <a href="/welcome_teacher_signedin" class="logo"><img src="/svg/teacher_logo.svg" alt=""></a>
         <ul class="navbar">
             <li><a href="/welcome_teacher_signedin">Tutoring Uni</a></li>
-            <li><a href="create_subject">Kurse erstellen</a></li>
-            <li><a href="/about_us">Über Uns</a></li>
+            <li><a href="/create_subject">Kurse erstellen</a></li>
+            <li><a href="/about_us_teacher">Über Uns</a></li>
         </ul>
 
         <div class="main">
