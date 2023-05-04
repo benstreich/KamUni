@@ -191,28 +191,34 @@ rangeInput.addEventListener("input", function() {
   priceDisplay.textContent = price;
 });
 
-var subjectId;
-
+var subjectId = 1;
+document.getElementById('subjectid').value = subjectId;
 
 let subjectselect = document.getElementById('subject').addEventListener('change', subjectchange);
 
 function subjectchange(){
 
+    
     let subject = document.getElementById("subject").value;
 
 
 if (subject === "Mathematik") {
-    console.log(subject); //test
     subjectId = 1; 
-}  if (subject === "Englisch") {
     console.log(subject); //test
+}  if (subject === "Englisch") {
     subjectId = 2;
+    console.log(subject); //test
 }  if (subject === "Deutsch") {
+    
     subjectId = 3;
+    console.log(subject); //test
 }  if (subject === "Naturwissenschaften") {
+   
     subjectId = 4;
+    console.log(subject); //test
 }  if (subject === "Französisch") {
     subjectId = 5;
+    console.log(subject); //test
 }
 
 document.getElementById('subjectid').value = subjectId;

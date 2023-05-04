@@ -138,4 +138,6 @@ Route::get('profile_teacher', [TeacherController::class, 'profile']);
 
 Route::post('profile_teacher_edit_store/{id}', [TeacherController::class, 'update']);
 
+Route::get('handle_box_click', [TeacherRegistrationController::class, 'handleBoxClick']);
+
 

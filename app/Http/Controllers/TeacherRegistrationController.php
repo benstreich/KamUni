@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\TeacherRegistration;
 use App\Models\Subject;
+use Illuminate\Support\Facades\Session;
+
 
 class TeacherRegistrationController extends Controller
 {
@@ -53,10 +55,18 @@ class TeacherRegistrationController extends Controller
 
     public function list()
     {
-        $teachers = Subject::where('subjectid', '=', '1');
+       Session::put('temp_id', 1);
+
+      
+        $teachers = Subject::where('subjectid', '=', Session::get('temp_id'))->get();
 
         return view('sel_courses', [
             'teachers' => $teachers
         ]);
     }
+
+
+   
+
+
 }
