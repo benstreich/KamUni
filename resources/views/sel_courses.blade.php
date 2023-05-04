@@ -11,7 +11,7 @@
 
 
       <span class="title">
-        <p>{{$teacher->firstname}} {{$teacher->lastname}} </p>
+        <p>{{$data->firstname}} {{$data->lastname}} </p>
         
       </span>
 
