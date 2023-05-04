@@ -25,23 +25,26 @@
                 </div>
 
                 <div class="inputarea">
-                    <input type="text" id="firstname" name="firstname" value="{{$data->firstname}}"
-                        placeholder="Vorname">
+                    <h5>Vorname</h5>
+                    <input type="text" id="firstname" name="firstname" value="{{$data->firstname}}" placeholder="Vorname">
                 </div>
 
                 <div class="inputarea">
+                    <h5>Nachname</h5>
                     <input type="text" id="lastname" name="lastname" value="{{$data->lastname}}" placeholder="Nachname">
                 </div>
 
                 <div class="inputarea">
+                    <h5>Email</h5>
                     <input type="email" id="email" name="email" value="{{$data->email}}" placeholder="Email">
                 </div>
 
                 <div class="inputarea">
+                    <h5>Neue Email</h5>
                     <input type="email" id="email" name="new_email" placeholder="Neue Email">
                 </div>
 
-                <button type="submit" name="submit">Bearbeiten</button>
+                <button type="submit" name="submit">Profil Bearbeiten</button>
 
             </form>
         </div>
