@@ -7,26 +7,20 @@
         <h1>Mein Profil</h1>
     </div>
     <div class="profile">
-        <div class="profile-info">
-            <img src="{{$data->image}}">
-            <p><strong>Vorname:</strong> {{$data->firstname}}</p>
-            <p><strong>Nachname:</strong> {{$data->lastname}}</p>
-            <p><strong>Email:</strong> {{$data->email}}</p>
-            <div class="logout-link">
-                <a href="logout">Logout</a>
-            </div>
-        </div>
         <div class="profile-update">
             <form action="" enctype="multipart/form-data" method="post">
                 @csrf
 
                 <div class="inputarea">
-                <input type="file" id="profimg" name="profimg">
+                    <input type="file" id="profimg" name="profimg">
                 </div>
+
+                <img src="{{$data->image}}">
 
                 <div class="inputarea">
                     <h5>Vorname</h5>
-                    <input type="text" id="firstname" name="firstname" value="{{$data->firstname}}" placeholder="Vorname">
+                    <input type="text" id="firstname" name="firstname" value="{{$data->firstname}}"
+                        placeholder="Vorname">
                 </div>
 
                 <div class="inputarea">
@@ -45,6 +39,9 @@
                 </div>
 
                 <button type="submit" name="submit">Profil Bearbeiten</button>
+                <div class="logout-link">
+                    <a href="logout">Logout</a>
+                </div>
 
             </form>
         </div>

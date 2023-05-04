@@ -48,9 +48,5 @@ jetzt angemeldet 😎" transform="translate(93.975 80.917)" fill="#707070" font-
 
 
 
-
-
-
-
 </div>
 @endsection

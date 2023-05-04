@@ -338,45 +338,13 @@ header {
     align-items: center;
 }
 
-.profile-info{
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   justify-content: center;
-}
 
-
-.profile-info img {
+.profile-update  img {
     width: 150px;
     height: 150px;
     align-items: center;
     margin-bottom: 23px;
 }
-
-.profile-info p {
-    margin: 5px 0;
-}
-
-
-.logout-link{
-    display: flex;
-    align-items: center;
-}
-.logout-link a {
-    background-color: #00B0FF;
-    color: #fff;
-    border-radius: 3px;
-    border: none;
-    padding: 6px 30px;
-    margin-top: 14px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.logout-link a:hover {
-    scale: 1.03;
-}
-
 
 .profile-update  form{
     display: flex;
@@ -428,16 +396,30 @@ header {
     scale: 1.03;
 }
 
+.logout-link{
+    display: flex;
+    align-items: center;
+}
+.logout-link a {
+    background-color: #ED2B2A;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    padding: 6px 30px;
+    margin-top: 14px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logout-link a:hover {
+    scale: 1.03;
+}
+
 
 @media screen and (max-width: 680px) {
 
     .profile-section{
         margin: 0;
-    }
-
-    .profile-info{
-        display: flex;
-        align-items: center;
     }
 
     .profile-update form{
