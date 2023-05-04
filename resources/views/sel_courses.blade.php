@@ -16,8 +16,7 @@
         $teacherRegistration = $data->where('id', $teacher->teacher_id)->first();
         @endphp
 
-        <p>{{ $teacherRegistration->firstname }}</p>
-        <p>{{$teacherRegistration->email}}</p>
+        <p>{{ $teacherRegistration->firstname }} {{$teacherRegistration->lastname}}</p>
 
 
       </span>

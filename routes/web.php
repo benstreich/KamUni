@@ -92,9 +92,6 @@ Route::get('profile', [LoginController::class, 'profile', 'updateProfile'])->mid
 Route::post('profile', [LoginController::class, 'updateProfile'])->middleware('isLoggedIn');
 Route::get('logout', [LoginController::class, 'logout']);
 
-Route::get('/sel_teacher', function () {
-    return view('sel_teacher');
-})->middleware('isLoggedIn');
 
 Route::get('/sel_courses/{subject_clicked}', [TeacherRegistrationController::class, 'list'])->middleware('isLoggedIn');
 
