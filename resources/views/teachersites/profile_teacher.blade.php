@@ -103,7 +103,6 @@
     }
 
 </style>
-
 <main>
     <section class="profile-section">
         <div class="title">
@@ -112,7 +111,7 @@
         <div class="profile">
             <div class="profile-update">
                 <form action="" enctype="multipart/form-data" method="post">
-                    @csrf
+                @csrf
 
                     <div class="inputarea">
                         <input type="file" id="profimg" name="profimg">
@@ -168,13 +167,13 @@
             </thead>
             <tbody>
                 @foreach ($courses as $course)
+
                 <tr>
                     <td>
                         <!-- {{$course->subject}} <a style="color: #00B0FF" id="edit">Bearbeiten</a> -->
 
                         <div class="subject">
                             <span class="subject-text">{{$course->subject}}</span>
-                            <button class="edit-button">Bearbeiten</button>
                             <div class="edit-form" style="display:none;">
                                 <select class="subject-dropdown">
                                     <option value="Mathematik">Mathematik</option>
@@ -183,8 +182,6 @@
                                     <option value="Naturwissenschaft">Naturwissenschaft</option>
                                     <option value="Französisch">Französisch</option>
                                 </select>
-                                <button class="save-button">speichern</button>
-                                <button class="cancel-button">abbrechen</button>
                             </div>
                         </div>
 
@@ -197,18 +194,11 @@
 
                         <div class="subject">
                             <span class="subject-text">{{$course->date}}</span>
-                            <button class="edit-button">Bearbeiten</button>
                             <div class="edit-form" style="display:none;">
                                 <input type="date" id="date" name="date" class="subject-dropdown">
 
-                                <button class="save-button">speichern</button>
-                                <button class="cancel-button">abbrechen</button>
                             </div>
                         </div>
-
-
-
-
 
 
                     </td>
@@ -216,7 +206,6 @@
 
                         <div class="subject">
                             <span class="subject-text">{{$course->time}}</span>
-                            <button class="edit-button">Bearbeiten</button>
                             <div class="edit-form" style="display:none;">
                                 <select class="subject-dropdown">
                                     <option value="08:00 - 09:00">08:00 - 09:00</option>
@@ -235,8 +224,6 @@
                                     <option value="21:00 - 22:00">21:00 - 22:00</option>
 
                                 </select>
-                                <button class="save-button">speichern</button>
-                                <button class="cancel-button">abbrechen</button>
                             </div>
                         </div>
 
@@ -247,14 +234,11 @@
                     <td>
                         <div class="subject">
                             <div id="price-display" class="subject-text">{{$course->price}} </div>
-                            <button class="edit-button"> Bearbeiten</button>
-                            <div class="edit-form" style="display:none;">
-                                <input type="range" id="price" name="price" class="price_range" min="40" max="300"
-                                    step="1">
-
-                                <button class="save-button">speichern</button>
-                                <button class="cancel-button">abbrechen</button>
-                            </div>
+                            <form action="/profile_teacher_delete" method="post">
+                                @csrf
+                                 <input type="hidden" name="course_id" value="{{$course->id}}">
+                                 <button type="submit" class="edit-button">Löschen</button>
+                            </form>
                         </div>
 
                     </td>
@@ -268,40 +252,11 @@
 
 
 <script>
-    $(document).ready(function () {
-        $('.edit-button').click(function () {
-            $(this).hide();
-            $(this).siblings('.subject-text').hide();
-            $(this).siblings('.edit-form').show();
-        });
-
-        $('.cancel-button').click(function () {
-            $(this).parent('.edit-form').hide();
-            $(this).parent('.edit-form').siblings('.subject-text').show();
-            $(this).parent('.edit-form').siblings('.edit-button').show();
-        });
-
-        $('.save-button').click(function () {
-            var subject = $(this).siblings('.subject-dropdown').val();
-            $(this).parent('.edit-form').siblings('.subject-text').text(subject);
-            $(this).parent('.edit-form').hide();
-            $(this).parent('.edit-form').siblings('.subject-text').show();
-            $(this).parent('.edit-form').siblings('.edit-button').show();
-            // Here you can use AJAX to save the updated subject to the database
-
-        });
-    });
 
 
-    let rangeInput = document.getElementById("price");
-    let priceDisplay = document.getElementById("price-display");
-
-    rangeInput.addEventListener("input", function () {
-        let price = this.value + ' CHF';
-        priceDisplay.textContent = price;
-    });
 
 </script>
+
 
 
 @endsection

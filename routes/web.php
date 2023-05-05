@@ -123,6 +123,6 @@ Route::get('logout', [TeacherController::class, 'logout']);
 
 Route::post('profile_teacher_edit_store/{id}', [TeacherController::class, 'update']);
 
-Route::get('handle_box_click', [TeacherRegistrationController::class, 'handleBoxClick']);
+Route::post('profile_teacher_delete', [TeacherController::class, 'delete']);
 
 

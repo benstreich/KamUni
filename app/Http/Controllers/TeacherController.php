@@ -48,16 +48,20 @@ class TeacherController extends Controller
         }
     }
 
-
-        public function update(Request $request, $id)
-        {
-            $course = Subject::find($id);
-            $course->subject = $request->input('subject');
-            $course->save();
-        
-            return response()->json(['success' => true]);
-
+    public function delete(Request $request){
+        $course = Subject::find($request->input('course_id'));
+    
+        if (!$course) {
+            return response()->json(['message' => 'Course not found'], 404);
         }
+    
+        $course->delete();
+    
+        return redirect()->back();
+    }
+    
+    
+    
         
       
 
