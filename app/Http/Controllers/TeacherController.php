@@ -37,6 +37,7 @@ class TeacherController extends Controller
         $user->firstname = $request->firstname;
         $user->lastname = $request->lastname;
         $user->email = $request->new_email ?: $request->email;
+        $user->desc = $request->desc;
         $user->save();
         return redirect('/profile_teacher');
     }
@@ -62,8 +63,18 @@ class TeacherController extends Controller
     
     
     
-        
-      
+         
+    public function info($id){
+
+        $teacher = TeacherRegistration::find($id);
+        $subject = Subject::where('teacher_id', $id)->first();
+
+        return view('display_info_teacher', [
+            'teacher' => $teacher,
+            'subject' => $subject
+        ]);
+
+    }
 
    
 

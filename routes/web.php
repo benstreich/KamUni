@@ -125,4 +125,6 @@ Route::post('profile_teacher_edit_store/{id}', [TeacherController::class, 'updat
 
 Route::post('profile_teacher_delete', [TeacherController::class, 'delete']);
 
+Route::get('displayinfo/{id}', [TeacherController::class, 'info'])->name('teacher.details');
+
 
