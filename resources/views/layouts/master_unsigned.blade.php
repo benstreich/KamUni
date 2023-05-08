@@ -47,7 +47,7 @@
                 <div class="socials">
                     <ul>
                         <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-                        <li><a href="instagram.com/kamuni_kamuni88"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a target="blank" href="https://www.instagram.com/kamuni_kamuni88"><i class="fa-brands fa-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
