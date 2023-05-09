@@ -55,8 +55,8 @@ form button[type="submit"]:hover {
 
 
 
-<form action="send_email/ben_streich@sluz.ch" method="POST">
-
+<form action="{{ route('send_email', ['email' => 'ben_streich@sluz.ch']) }}" method="POST">
+@csrf
   <h2>Deine Informationen</h2> <br> <br>
 
   <!-- Name -->
@@ -81,10 +81,9 @@ form button[type="submit"]:hover {
     <input type="text" id="telefon" name="telefon" required>
   </div>
 
-  <!-- Adresse -->
   <div>
-    <label for="adresse">Adresse:</label>
-    <input type="text" id="adresse" name="adresse" required>
+    <label for="addresse">Adresse:</label>
+    <input type="text" id="addresse" name="addresse" required>
   </div>
 
   <!-- Professional Information -->
