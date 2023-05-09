@@ -21,7 +21,7 @@ class TeacherRegistrationFactory extends Factory
             'lastname' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
             'password' => bcrypt('augh123'), // hashed password
-           
+           'desc' => $this->faker->text(50)
         ];
     }
 }
