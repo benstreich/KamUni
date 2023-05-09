@@ -20,6 +20,7 @@ return new class extends Migration
             $table->binary('certificate')->nullable();
             $table->rememberToken();
             $table->timestamps();
+            $table->string('desc')->nullable();
         });
     }
 

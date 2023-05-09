@@ -72,13 +72,15 @@ class TeacherRegistrationController extends Controller
        Session::put('temp_id', 5);
 
         
-        $teachers = Subject::where('subjectid', '=', Session::get('temp_id'))->get();
-        $data = TeacherRegistration::all();
+       $teachers = Subject::where('subjectid', '=', Session::get('temp_id'))->get();
+       $registrations = TeacherRegistration::all();
+       
+       return view('sel_courses', [
+           'teachers' => $teachers,
+           'registrations' => $registrations
+       ]);
 
-        return view('sel_courses', [
-            'teachers' => $teachers,
-            'data' => $data
-        ]);
+       
     }
 
 

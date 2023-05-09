@@ -761,3 +761,72 @@ footer {
         flex-direction: column;
     }
 }
+
+.course-card .action span {
+    transition: .3s ease;
+  }
+  
+  .course-card .action:hover span {
+    transform: translateX(4px);
+  }
+
+  .course-card {
+    max-width: 300px;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border: 1px solid transparent;
+  }
+  
+  .course-card .content {
+    padding: 1.1rem;
+  }
+  
+  .course-card .image {
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+    background-color: #006ed5;
+  }
+  
+  .course-card .title {
+    color: #111827;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+  }
+
+  .course-card .title p{
+    margin-top: 2px;
+  }
+  
+  .course-card .desc {
+    margin-top: 0.5rem;
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  
+  .course-card .action {
+    display: inline-flex;
+    margin-top: 1rem;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    align-items: center;
+    gap: 0.25rem;
+    background-color: #2563EB;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+
+  .selcourses-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    padding: 40px 0;
+}

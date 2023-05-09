@@ -16,9 +16,8 @@
         cursor: pointer;
         border-radius: 5px;
         float: right;
-
+        
     }
-
     .save-button {
         background-color: #459AC0;
         border: none;
@@ -58,6 +57,7 @@
         float: left;
 
     }
+
 
 
 
@@ -141,6 +141,12 @@
                         <input type="email" id="email" name="new_email" placeholder="Neue Email">
                     </div>
 
+
+                    <div class="inputarea">
+                        <h5>Beschreibung</h5>
+                        <input type="text" id="desc" name="desc" placeholder="Beschreibung">         
+                    </div>
+
                     <button type="submit" name="submit">Profil Bearbeiten</button>
                     <div class="logout-link">
                         <a href="logout">Logout</a>
@@ -206,24 +212,6 @@
 
                         <div class="subject">
                             <span class="subject-text">{{$course->time}}</span>
-                            <div class="edit-form" style="display:none;">
-                                <select class="subject-dropdown">
-                                    <option value="08:00 - 09:00">08:00 - 09:00</option>
-                                    <option value="09:00 - 10:00">09:00 - 10:00</option>
-                                    <option value="10:00 - 11:00">10:00 - 11:00</option>
-                                    <option value="11:00 - 12:00">11:00 - 12:00</option>
-                                    <option value="12:00 - 13:00">12:00 - 13:00</option>
-                                    <option value="13:00 - 14:00">13:00 - 14:00</option>
-                                    <option value="14:00 - 15:00">14:00 - 15:00</option>
-                                    <option value="15:00 - 16:00">15:00 - 16:00</option>
-                                    <option value="16:00 - 17:00">16:00 - 17:00</option>
-                                    <option value="17:00 - 18:00">17:00 - 18:00</option>
-                                    <option value="18:00 - 19:00">18:00 - 19:00</option>
-                                    <option value="19:00 - 20:00">19:00 - 20:00</option>
-                                    <option value="20:00 - 21:00">20:00 - 21:00</option>
-                                    <option value="21:00 - 22:00">21:00 - 22:00</option>
-
-                                </select>
                             </div>
                         </div>
 
