@@ -107,6 +107,7 @@
     <p class="desc">
      {{$teacherRegistration->desc}}
     </p>  
+
 </div>
 
 
