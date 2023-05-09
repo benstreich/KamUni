@@ -96,4 +96,56 @@ class TeacherController extends Controller
     }
    
 
+    public function send($emailtosent){
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+          $name = $_POST['name'];
+          $vorname = $_POST['vorname'];
+          $addresse = $_POST['addresse'];
+          $email = $_POST['email'];
+          $teacher_vorname = $_POST['teacher_vorname'];
+          $teacher_nachname = $_POST['teacher_nachname'];
+          $fach = $_POST['fach'];
+          $datum = $_POST['datum'];
+          $zeit = $_POST['zeit'];
+          $preis = $_POST['preis'];
+        $mitteilung = $_POST['mitteilung'];
+        }
+
+        $to = '$emailtosent';
+        $betreff = 'Neue Buchung von:' . $vorname .$name. 'Tutor:'. $teacher_vorname. $teacher_nachname;
+        $message_body = "Vorname: $vorname\n Nachname: $name\n Addresse: $addresse\n Email: $email\n\n\n
+        
+        Gebuchtes Fach: $fach\n Datum: $datum\n Zeit: $zeit\n Preis: $preis\n\n\n
+
+        
+        $mitteilung
+        ";
+
+
+        $headers = "From: $name <$email>\r\n";
+        $headers .= "Reply-To: $email\r\n";
+        $headers .= "Content-type: text/plain; charset=utf-8\r\n";
+
+
+        if(mail($to, $betreff, $message_body, $headers))
+        {
+            echo 'email has been sent';
+        }
+         else {
+        echo 'There was an error sending your message. Please try again later.';
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 }

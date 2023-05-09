@@ -55,7 +55,7 @@ form button[type="submit"]:hover {
 
 
 
-<form action="" method="POST">
+<form action="send_email/ben_streich@sluz.ch" method="POST">
 
   <h2>Deine Informationen</h2> <br> <br>
 
@@ -73,7 +73,7 @@ form button[type="submit"]:hover {
 
   <div>
     <label for="email">Email:</label>
-    <input type="text" id="email" name="email" value="{{$data->email}}" required>
+    <input type="text" id="email" name="email" required>
   </div>
 
   <div>
@@ -92,36 +92,40 @@ form button[type="submit"]:hover {
 
   <!-- Job Title -->
   <div>
-    <label for="company-address">Tutor Vorname:</label>
-    <input type="text" id="company-address" name="company-address" value="{{$teacher->firstname}}" readonly>
+    <label for="teacher_vorname">Tutor Vorname:</label>
+    <input type="text" id="teacher_vorname" name="teacher_vorname" value="{{$teacher->firstname}}" readonly>
   </div>
 
   <div>
-    <label for="company-address">Tutor Nachname:</label>
-    <input type="text" id="company-address" name="company-address" value="{{$teacher->lastname}}" readonly>
+    <label for="teacher_nachname">Tutor Nachname:</label>
+    <input type="text" id="teacher_nachname" name="teacher_nachname" value="{{$teacher->lastname}}" readonly>
   </div>
 
   <!-- Company Name -->
   <div>
-    <label for="company-name">Fach: </label>
-    <input type="text" id="company-name" name="company-name" value="{{$subject->subject}}" readonly>
+    <label for="fach">Fach: </label>
+    <input type="text" id="fach" name="fach" value="{{$subject->subject}}" readonly>
   </div>
 
   <div>
-    <label for="company-name">Datum: </label>
-    <input type="text" id="company-name" name="company-name" value="{{$subject->date}}" readonly>
+    <label for="datum">Datum: </label>
+    <input type="text" id="datum" name="datum" value="{{$subject->date}}" readonly>
   </div>
 
   <div>
-    <label for="company-name">Zeit: </label>
-    <input type="text" id="company-name" name="company-name" value="{{$subject->time}}" readonly>
+    <label for="zeit">Zeit: </label>
+    <input type="text" id="zeit" name="zeit" value="{{$subject->time}}" readonly>
   </div>
 
   <div>
-    <label for="company-name">Preis: </label>
-    <input type="text" id="company-name" name="company-name" value="{{$subject->price}}" readonly>
+    <label for="preis">Preis: </label>
+    <input type="text" id="preis" name="preis" value="{{$subject->price}}" readonly>
   </div>
   
+  <div>
+    <label for="preis">Mitteilung: </label>
+    <input type="text" id="mitteilung" name="mitteilung" maxlength="100">
+  </div>
 
 
 

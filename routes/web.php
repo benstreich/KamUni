@@ -129,3 +129,4 @@ Route::get('displayinfo/{id}', [TeacherController::class, 'info'])->name('teache
 
 Route::get('book_teacher/{id}/{subject_id}', [TeacherController::class, 'book'])->name('book.teacher');
 
+Route::post('send_email/{email}', [TeacherController::class, 'send']);
