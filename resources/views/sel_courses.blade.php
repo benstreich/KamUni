@@ -1,5 +1,5 @@
 @extends('layouts.master_unsigned')
-@section('title', 'Kurs auswählen')
+@section('title', 'Lehrer auswählen')
 @section('content')
 
 
@@ -70,6 +70,7 @@
 
 .action:hover {
   background-color: #65a9e1;
+ 
 }
 
 .action span {
@@ -123,12 +124,7 @@
       </span>
       </a>
 
-    <a class="action">
-      Buchen
-      <span aria-hidden="true">
-        →
-      </span>
-    </a>
+   
   </div>
   </div>
 </div>

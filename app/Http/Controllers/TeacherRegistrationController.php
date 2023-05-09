@@ -79,6 +79,7 @@ class TeacherRegistrationController extends Controller
            'teachers' => $teachers,
            'registrations' => $registrations
        ]);
+
        
     }
 

@@ -66,8 +66,13 @@ class TeacherController extends Controller
          
     public function info($id){
 
+        
+
+
+        $subject = array();
+
         $teacher = TeacherRegistration::find($id);
-        $subject = Subject::where('teacher_id', $id)->first();
+        $subject =Subject::where('teacher_id', $id)->get();
 
         return view('display_info_teacher', [
             'teacher' => $teacher,
@@ -76,6 +81,10 @@ class TeacherController extends Controller
 
     }
 
+
+    public function book(){
+        return view('book_teacher');
+    }
    
 
 }
