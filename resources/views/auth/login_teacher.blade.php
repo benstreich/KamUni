@@ -26,7 +26,7 @@
             <div class="inputarea">
                 <span class="text-danger">@error('password') {{$message}} @enderror</span>
                 <input type="password" id="password" name="password" value="" placeholder="Passwort">
-                <a href="{{ route('forget.password.get') }}">Passwort vergessen</a>
+                <a href="{{ route('forget.password.teacher.get') }}">Passwort vergessen</a>
             </div>
 
             <button type="submit" name="submit">Sign In</button>

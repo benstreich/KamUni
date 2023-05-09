@@ -3,6 +3,7 @@
 use App\Http\Controllers\CoursesController;
 use App\Http\Controllers\DateController;
 use App\Http\Controllers\ForgotPasswordController;
+use App\Http\Controllers\ForgotPasswordTeacherController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
@@ -115,7 +116,10 @@ Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPa
 Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
 Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
-
+Route::get('forget-password-teacher', [ForgotPasswordTeacherController::class, 'showForgetPasswordForm'])->name('forget.password.teacher.get');
+Route::post('forget-password-teacher', [ForgotPasswordTeacherController::class, 'submitForgetPasswordForm'])->name('forget.password.teacher.post'); 
+Route::get('reset-password-teacher/{token}', [ForgotPasswordTeacherController::class, 'showResetPasswordForm'])->name('reset.password.teacher.get');
+Route::post('reset-password-teacher', [ForgotPasswordTeacherController::class, 'submitResetPasswordForm'])->name('reset.password.teacher.post');
 
 Route::get('profile_teacher', [TeacherController::class, 'profile']);
 Route::post('profile_teacher', [TeacherController::class, 'updateProfile']);
