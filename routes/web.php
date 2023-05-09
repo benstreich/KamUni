@@ -127,5 +127,5 @@ Route::post('profile_teacher_delete', [TeacherController::class, 'delete']);
 
 Route::get('displayinfo/{id}', [TeacherController::class, 'info'])->name('teacher.details');
 
-Route::get('book_teacher', [TeacherController::class, 'book'])->name('book.teacher');
+Route::get('book_teacher/{id}/{subject_id}', [TeacherController::class, 'book'])->name('book.teacher');
 

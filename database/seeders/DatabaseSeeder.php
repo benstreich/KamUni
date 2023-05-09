@@ -29,9 +29,7 @@ class DatabaseSeeder extends Seeder
         TeacherRegistration::truncate();
         TeacherRegistration::factory()->count(50)->create();
 
-        Subject::truncate();
-        Subject::factory()->count(50)->create();
-
+     
         
     }
 }

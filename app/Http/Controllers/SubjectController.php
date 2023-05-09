@@ -14,12 +14,14 @@ class SubjectController extends Controller
 
         $teacher_id = Session::get('loginId');
 
+        $date = $request->input('date');
+        $formattedDate = date('d-m-Y', strtotime($date));
         
         Subject::create([
             'subjectid' => $request->input('subjectid'),
             'teacher_id' => $request->input('teacher_id'),
             'subject' => $request->input('subject'),
-            'date' => $request->input('date'),
+            'date' => $formattedDate,
             'time' => $request->input('time'),
             'price' => $request->input('price')
         ]);

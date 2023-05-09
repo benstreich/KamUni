@@ -165,8 +165,13 @@ main {
 
                     <td>
                         <div class="subject">
-                            <div id="price-display" class="subject-text">{{$subjects->price}} </div>
-                            
+                            <span id="price-display" class="subject-text">{{$subjects->price}} </span>
+                            <a href="{{ route('book.teacher', ['id' => $teacher->id, 'subject_id' => $subjects->id]) }}" class="action">
+               Buchen
+               <span aria-hidden="true">
+          →
+      </span>
+    </a>
                         </div>
 
                     </td>
@@ -180,12 +185,7 @@ main {
 
 
 
-         <a href="{{ route('book.teacher') }}" class="action">
-        Buchen
-      <span aria-hidden="true">
-        →
-      </span>
-    </a>
+       
 
 
 </div>

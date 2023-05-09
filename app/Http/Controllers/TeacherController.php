@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Registration;
 use Illuminate\Support\Facades\Session;
 use App\Models\TeacherRegistration;
 use App\Models\Subject;
@@ -66,8 +67,6 @@ class TeacherController extends Controller
          
     public function info($id){
 
-        
-
 
         $subject = array();
 
@@ -82,8 +81,18 @@ class TeacherController extends Controller
     }
 
 
-    public function book(){
-        return view('book_teacher');
+    public function book($id, $subject_id){
+
+        $teacher = TeacherRegistration::find($id);
+        $data = Registration::find(Session::get('loginId'));
+        $subject = Subject::findOrFail($subject_id);
+
+
+        return view('book_teacher',[
+            'teacher' => $teacher,
+            'data' => $data,
+            'subject' => $subject
+        ]);
     }
    
 
