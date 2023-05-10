@@ -37,14 +37,19 @@ class SubjectFactory extends Factory
                 break;
         }
     
+        $startTime = $this->faker->numberBetween(8, 20);
+        $endTime = $startTime + 1;
+        $time = sprintf('%02d:00 - %02d:00', $startTime, $endTime);
+    
         return [
             'subjectid' => $subjectId,
             'subject' => $subjectName,
             'date' => $this->faker->dateTimeThisMonth()->format('d.m.Y'),
             'teacher_id' => $this->faker->numberBetween(1, 50), 
             'price' => $this->faker->numberBetween(40, 300),
-            'time' => $this->faker->time()
+            'time' => $time
         ];
     }
+    
     
 }
