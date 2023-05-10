@@ -73,7 +73,7 @@ form button[type="submit"]:hover {
 
   <div>
     <label for="email">Email:</label>
-    <input type="text" id="email" name="email" required>
+    <input type="text" id="email" name="email" value="{{$data->email}}" required>
   </div>
 
   <div>
@@ -86,10 +86,8 @@ form button[type="submit"]:hover {
     <input type="text" id="addresse" name="addresse" required>
   </div>
 
-  <!-- Professional Information -->
   <h2>Tutor Information</h2> <br> <br>
 
-  <!-- Job Title -->
   <div>
     <label for="teacher_vorname">Tutor Vorname:</label>
     <input type="text" id="teacher_vorname" name="teacher_vorname" value="{{$teacher->firstname}}" readonly>
@@ -100,7 +98,6 @@ form button[type="submit"]:hover {
     <input type="text" id="teacher_nachname" name="teacher_nachname" value="{{$teacher->lastname}}" readonly>
   </div>
 
-  <!-- Company Name -->
   <div>
     <label for="fach">Fach: </label>
     <input type="text" id="fach" name="fach" value="{{$subject->subject}}" readonly>

@@ -56,20 +56,7 @@ class TeacherRegistrationController extends Controller
     public function list($subject_clicked)
     {
 
-        if ($subject_clicked == 1)
-       Session::put('temp_id', 1);
-
-       else if($subject_clicked == 2)
-       Session::put('temp_id', 2);
-
-       else if($subject_clicked == 3)
-       Session::put('temp_id', 3);
-
-       else if($subject_clicked == 4)
-       Session::put('temp_id', 4);
-
-       else if($subject_clicked == 5)
-       Session::put('temp_id', 5);
+        Session::put('temp_id', $subject_clicked);
 
         
        $teachers = Subject::where('subjectid', '=', Session::get('temp_id'))->get();

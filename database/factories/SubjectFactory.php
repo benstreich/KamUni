@@ -16,15 +16,35 @@ class SubjectFactory extends Factory
      */
     public function definition(): array
     {
+        $subjectName = $this->faker->randomElement(['Mathematik', 'Englisch', 'Französisch', 'Deutsch', 'Naturwissenschaften']);
+        $subjectId = null;
+    
+        switch ($subjectName) {
+            case 'Mathematik':
+                $subjectId = 1;
+                break;
+            case 'Englisch':
+                $subjectId = 2;
+                break;
+            case 'Französisch':
+                $subjectId = 5;
+                break;
+            case 'Deutsch':
+                $subjectId = 3;
+                break;
+            case 'Naturwissenschaften':
+                $subjectId = 4;
+                break;
+        }
+    
         return [
-
-            'subjectid' => $this->faker->numberBetween(1, 5),
-            'subject' => $this->faker->randomElement(['Mathematik', 'Englisch', 'Französisch', 'Deutsch', 'Naturwissenschaften']),
+            'subjectid' => $subjectId,
+            'subject' => $subjectName,
             'date' => $this->faker->dateTimeThisMonth()->format('d.m.Y'),
             'teacher_id' => $this->faker->numberBetween(1, 50), 
             'price' => $this->faker->numberBetween(40, 300),
             'time' => $this->faker->time()
-           
         ];
     }
+    
 }
