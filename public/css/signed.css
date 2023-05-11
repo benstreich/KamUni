@@ -148,6 +148,129 @@ header {
     }
 }
 
+/*Features*/
+.features-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #B4E4FF;
+}
+
+.features-section h1 {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.features-section p {
+    color: #707070;
+    font-size: 20px;
+    max-width: 700px;
+    text-align: center;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 325px;
+    height: 360px;
+    text-align: center;
+    margin-right: 25px;
+    margin-left: 25px;
+    background-color: #B4E4FF;
+}
+
+
+.card-img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img img {
+    width: 80%;
+    height: auto;
+}
+
+.description {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.description h1 {
+    font-size: 20px;
+    color: #222;
+    margin-top: 10px;
+
+}
+
+.description p {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.description span {
+    margin-left: 6px;
+}
+
+/*End section*/
+.end-section {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #d6edd4;
+}
+
+.end-section h1 {
+    font-size: 25px;
+    max-width: 700px;
+    text-align: center;
+}
+
+.end {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.end .start-now {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 550;
+    width: 250px;
+    height: 55px;
+    border-radius: 5px;
+    border-style: none;
+    background-color: #00B0FF;
+    cursor: pointer;
+}
+
+.end .start-now:hover {
+    scale: 1.05;
+}
+
 /*Kurse suchen*/
 .container-boxes {
     display: flex;
