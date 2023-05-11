@@ -26,7 +26,7 @@
         </ul>
 
         <div class="main">
-            <a href="profile_teacher"><img src="/images/profil.png"></a>
+            <a href="/profile_teacher"><img src="/images/profil.png"></a>
         </div>
     </header>
 
@@ -61,10 +61,10 @@
             <div class="contact">
                 <h2>Kontakt</h2>
                 <ul>
-                    <li>Email einfügen</li>
-                    <li>Email einfügen</li>
-                    <li>Email einfügen</li>
-                    <li>Email einfügen</li>
+                <li><a href="mailto:ben_streich@sluz.ch">ben_streich@sluz.ch</a></li>
+                    <li><a href="mailto:lian_eifert@sluz.ch">lian_eifert@sluz.ch</a></li>
+                    <li><a href="mailto:rakul_rajgopu@sluz.ch">rakul_rajgopu@sluz.ch</a></li>
+                    <li><a href="mailto:simon_gerhard@sluz.ch">simon_gerhard@sluz.ch</a></li>
                 </ul>
             </div>
         </div>
