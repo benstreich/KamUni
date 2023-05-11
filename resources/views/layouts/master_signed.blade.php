@@ -60,8 +60,8 @@
                 <h2>Links</h2>
                 <ul>
                     <li><a href="/start">Home</a></li>
-                    <li><a href="/courses">Kurse suchen</a></li>
-                    <li><a href="/about_us">Über Uns</a></li>
+                    <li><a href="/courses_signed">Kurse suchen</a></li>
+                    <li><a href="/about_us_signed">Über Uns</a></li>
                 </ul>
             </div>
             <div class="contact">
