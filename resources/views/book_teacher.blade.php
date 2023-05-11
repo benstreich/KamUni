@@ -32,6 +32,7 @@
     }
 
     form h2 {
+        color: #FF595B;
         margin-top: 40px;
         font-size: 24px;
         font-weight: bold;
