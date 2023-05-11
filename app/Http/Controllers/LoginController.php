@@ -66,7 +66,6 @@ class LoginController extends Controller
             return redirect()->back()->withErrors(['email' => 'The email is not registered.']);
         }
 
-        //$user->image = $request->file('profimg')->store('public/profileimg');
         $user->firstname = $request->firstname;
         $user->lastname = $request->lastname;
         $user->email = $request->new_email ?: $request->email;

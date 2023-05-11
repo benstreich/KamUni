@@ -12,12 +12,6 @@
                 @csrf
 
                 <div class="inputarea">
-                    <input type="file" id="profimg" name="profimg">
-                </div>
-
-                <img src="{{asset('storage/app/'.$data->image)}}">
-
-                <div class="inputarea">
                     <h5>Vorname</h5>
                     <input type="text" id="firstname" name="firstname" value="{{$data->firstname}}"
                         placeholder="Vorname">
