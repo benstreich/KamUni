@@ -697,7 +697,7 @@ footer {
 
 
 .links ul li a:hover {
-    color: black;
+    color: grey;
 }
 
 
@@ -723,7 +723,7 @@ footer {
 
 .socials ul li a:hover {
     background-color: white;
-    color: black;
+    color: grey;
 }
 
 
@@ -731,6 +731,16 @@ footer {
     display: flex;
     align-items: center;
     margin-bottom: 15px;
+}
+
+.contact ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+.contact ul li a:hover{
+    text-decoration: none;
+    color: grey;
 }
 
 
