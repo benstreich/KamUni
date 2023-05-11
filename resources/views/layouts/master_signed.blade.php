@@ -17,7 +17,7 @@
 
 <body>
 <style>
-    a {
+     a .contact{
         color: white;
         text-decoration: none;
     }

@@ -16,6 +16,12 @@
 </head>
 
 <body>
+<style>
+     a .contact{
+        color: white;
+        text-decoration: none;
+    }
+</style>
 
     <header>
         <a href="/welcome_teacher_signedin" class="logo"><img src="/svg/teacher_logo.svg" alt=""></a>
