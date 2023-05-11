@@ -118,7 +118,7 @@
                     @if ($data)
                     <div class="inputarea">
                         <h5>Vorname</h5>
-                        <input type="text" id="firstname" name="firstname" value="{{$data->firstname}}"
+                        <input type="text" id="firstname" name="firstname" value="{{ $data->firstname }}"
                             placeholder="Vorname">
                     </div>
                     @endif
