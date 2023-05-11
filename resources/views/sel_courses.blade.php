@@ -1,4 +1,4 @@
-@extends('layouts.master_unsigned')
+@extends('layouts.master_signed')
 @section('title', 'Lehrer auswählen')
 @section('content')
 

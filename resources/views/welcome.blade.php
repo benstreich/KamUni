@@ -50,7 +50,7 @@
             </div>
             <div class="description">
                 <h1>Bezahlung</h1>
-                <p>Du kannst aus verschiedenen Bezahlungsmethoden diejenige auswählen, die am besten zu dir passt.</p>
+                <p>Die Bezahlung erfolgt als Rechnung.</p>
             </div>
         </div>
         <div class="card">

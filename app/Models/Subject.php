@@ -14,7 +14,7 @@ class Subject extends Model
 
     public $guarded = [];
    
-    public function teacher()
+    public function teachers()
     {
         return $this->belongsTo(TeacherRegistration::class, 'teacher_id');
     }

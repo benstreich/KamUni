@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Registration;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use App\Models\TeacherRegistration;
 use App\Models\Subject;
@@ -95,5 +96,42 @@ class TeacherController extends Controller
         ]);
     }
    
+
+    public function send($emailtosent)
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $name = $_POST['name'];
+            $vorname = $_POST['vorname'];
+            $addresse = $_POST['addresse'];
+            $email = $_POST['email'];
+            $teacher_vorname = $_POST['teacher_vorname'];
+            $teacher_nachname = $_POST['teacher_nachname'];
+            $fach = $_POST['fach'];
+            $datum = $_POST['datum'];
+            $zeit = $_POST['zeit'];
+            $preis = $_POST['preis'];
+            $mitteilung = $_POST['mitteilung'];
+        }
+    
+        Mail::send('email.invoice', ['name' => $name, 'vorname' => $vorname, 'addresse' => $addresse, 'email' => $email, 'teacher_vorname' => $teacher_vorname, 'teacher_nachname' => $teacher_nachname, 'fach' => $fach, 'datum' => $datum, 'zeit' => $zeit, 'preis' => $preis, 'mitteilung' => $mitteilung], function ($message) use ($emailtosent) {
+            $message->to($emailtosent);
+            $message->subject('Rechnung');
+        });
+
+        
+        return view('/welcome_signedin');
+        
+    }
+    
+
+
+
+
+
+
+
+
+
+
 
 }
