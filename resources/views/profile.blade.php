@@ -24,7 +24,7 @@
 
                 <div class="inputarea">
                     <h5>Email</h5>
-                    <input type="email" id="email" name="email" value="{{$data->email}}" placeholder="Email">
+                    <input type="email" id="email" name="email" value="{{$data->email}}" placeholder="Email" readonly>
                 </div>
 
                 <div class="inputarea">

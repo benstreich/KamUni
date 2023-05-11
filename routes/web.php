@@ -100,9 +100,6 @@ Route::get('/sel_courses/{subject_clicked}', [TeacherRegistrationController::cla
 
 
  
-
-
-
 Route::post('/create_subject_store', [SubjectController::class, 'store'])->name('subjects.store')->middleware('isLoggedIn');   
 
 
