@@ -2,11 +2,16 @@
 @section('title', 'Sign In')
 @section('content')
 <style>
-    .login-form {
+  .login-form {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
   padding: 50px;
+}
+
+.col-md-8{
+  display: flex;
+  justify-content: center;
 }
 
 .card {
@@ -15,9 +20,10 @@
 }
 
 .card-header {
-  background-color: #F2F2F2;
+  color: #FF595B;
   border-bottom: none;
   font-weight: bold;
+  padding-bottom: 10px;
   text-transform: uppercase;
 }
 
@@ -33,11 +39,11 @@
 .form-control {
   border: 1px solid #E2E2E2;
   border-radius: 3px;
-  height: 40px;
+  height: 20px;
   width: 100%;
   padding: 10px;
+  margin-top: 20px;
 }
-
 .btn-primary {
   background-color: #0066CC;
   border: none;
@@ -58,7 +64,7 @@
       <div class="row justify-content-center">
           <div class="col-md-8">
               <div class="card">
-                  <div class="card-header">Reset Password</div>
+                  <div class="card-header">Passwort zurücksetzen</div>
                   <div class="card-body">
   
                     @if (Session::has('message'))
@@ -70,7 +76,7 @@
                       <form action="{{ route('forget.password.teacher.post') }}" method="POST">
                           @csrf
                           <div class="form-group row">
-                              <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+                              <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Adresse</label>
                               <div class="col-md-6">
                                   <input type="text" id="email_address" class="form-control" name="email" required autofocus>
                                   @if ($errors->has('email'))
@@ -80,7 +86,7 @@
                           </div>
                           <div class="col-md-6 offset-md-4">
                               <button type="submit" class="btn btn-primary">
-                                  Send Password Reset Link
+                                Passwort zurücksetzen
                               </button>
                           </div>
                       </form>
