@@ -4,43 +4,46 @@
 
 <style>
     .teacher-details {
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin: 20px 0;
-}
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-color: #f2f2f2;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 20px 0;
+    }
 
-.teacher-details h1 {
-    font-size: 32px;
-    margin: 0 0 10px 0;
-}
+    .teacher-details h1 {
+        font-size: 32px;
+        margin: 0 0 10px 0;
+    }
 
-.teacher-details p {
-    font-size: 18px;
-    margin: 0 0 5px 0;
-}
+    .teacher-details p {
+        font-size: 18px;
+        margin: 0 0 5px 0;
+    }
 
 
-.action {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 12px;
-  background-color: #2563EB;
-  color: white;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-}
+    .action {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 12px;
+        background-color: #2563EB;
+        color: white;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration: none;
+    }
 
-.action:hover {
-  background-color: #65a9e1;
-  cursor: pointer;
-  
-  
+    .action:hover {
+        background-color: #65a9e1;
+        cursor: pointer;
 
-}
 
-main {
+
+    }
+
+    main {
         margin: 20px;
     }
 
@@ -69,7 +72,7 @@ main {
         color: #fff;
     }
 
-    a {
+  .subject a {
         float: right;
         color: #fff;
         padding: 10px;
@@ -77,20 +80,17 @@ main {
         border-radius: 5px;
     }
 
-    a:hover {
+    .subject a:hover {
         cursor: pointer;
     }
 
-    a:hover {
-        cursor: pointer;
+    .action span {
+        margin-left: 8px;
+        font-size: 20px;
+        line-height: 1;
+        position: relative;
+        top: 1px;
     }
-.action span {
-  margin-left: 8px;
-  font-size: 20px;
-  line-height: 1;
-  position: relative;
-  top: 1px;
-}
 
 </style>
 
@@ -103,7 +103,7 @@ main {
     <p>{{ $teacher->desc }}</p> <br><br>
 
 
-   
+
 
     <section>
         <table>
@@ -156,36 +156,36 @@ main {
 
                         <div class="subject">
                             <span class="subject-text">{{$subjects->time}}</span>
-                            </div>
                         </div>
+</div>
 
 
 
-                    </td>
+</td>
 
-                    <td>
-                        <div class="subject">
-                            <span id="price-display" class="subject-text">{{$subjects->price}} </span>
-                            <a href="{{ route('book.teacher', ['id' => $teacher->id, 'subject_id' => $subjects->id]) }}" class="action">
-               Buchen
-               <span aria-hidden="true">
-          →
-      </span>
-    </a>
-                        </div>
+<td>
+    <div class="subject">
+        <span id="price-display" class="subject-text">{{$subjects->price}} </span>
+        <a href="{{ route('book.teacher', ['id' => $teacher->id, 'subject_id' => $subjects->id]) }}" class="action">
+            Buchen
+            <span aria-hidden="true">
+                →
+            </span>
+        </a>
+    </div>
 
-                    </td>
-                </tr>
-                @endforeach
+</td>
+</tr>
+@endforeach
 
-        </table>
-    </section>
+</table>
+</section>
 </main> <br> <br>
 
 
 
 
-       
+
 
 
 </div>

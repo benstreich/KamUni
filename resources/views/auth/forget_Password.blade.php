@@ -2,13 +2,23 @@
 @section('title', 'Sign In')
 @section('content')
 <style>
-  .login-form {
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding-bottom: 60px;
+  height: 100vh;
 }
 
+h3{
+  font-size: 17px;
+  text-align: center;
+  max-width: 900px;
+  padding-bottom: 5px;
+  color: grey;
+}
 .col-md-8{
   display: flex;
   justify-content: center;
@@ -40,8 +50,9 @@
   border: 1px solid #E2E2E2;
   border-radius: 3px;
   height: 20px;
-  width: 100%;
-  padding: 10px;
+  width: 200px;
+  padding: 10px 15px;
+  font-size: 15px;
   margin-top: 20px;
 }
 
@@ -62,7 +73,12 @@
 
 </style>
 
+
 <main class="login-form">
+<h3>Geben Sie Ihre E-Mail-Adresse in das dafür vorgesehene Feld ein, um den Vorgang zum 
+    Zurücksetzen Ihres Passworts zu starten. Sie erhalten anschließend eine E-Mail mit 
+    weiteren Anweisungen und einem Link, um Ihr Passwort zurückzusetzen. Befolgen Sie 
+    die Schritte in der E-Mail, um den Zugriff auf Ihr Konto wiederherzustellen.</h3>
   <div class="cotainer">
       <div class="row justify-content-center">
           <div class="col-md-8">
