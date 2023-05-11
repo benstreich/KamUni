@@ -86,7 +86,8 @@
 <section class="selcourses-section">
 @foreach ($teachers as $teacher)
 <div class="course-card">
- <div class="image"></div>
+   
+ <div class="image"><img src="/images/Lehrer_logo.png" style="width: 200px; height:100px;  margin-top: 33px;"></div>
  <div class="wrapper">
   <div class="content">
 
@@ -112,7 +113,6 @@
 
 
 
-    <!-- Display the price for the teacher -->
     <p class="price-wrapper">
         Preis: {{ $teacher->price }} CHF
     </p>
