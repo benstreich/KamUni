@@ -16,6 +16,12 @@
 </head>
 
 <body>
+<style>
+    a .contact{
+        color: white;
+        text-decoration: none;
+    }
+</style>
 
     <header>
         <a href="/" class="logo"><img src="/images/logo.png" alt=""></a>

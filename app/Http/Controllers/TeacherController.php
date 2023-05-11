@@ -111,9 +111,10 @@ class TeacherController extends Controller
             $zeit = $_POST['zeit'];
             $preis = $_POST['preis'];
             $mitteilung = $_POST['mitteilung'];
+            $anrede = $_POST['anrede'];
         }
     
-        Mail::send('email.invoice', ['name' => $name, 'vorname' => $vorname, 'addresse' => $addresse, 'email' => $email, 'teacher_vorname' => $teacher_vorname, 'teacher_nachname' => $teacher_nachname, 'fach' => $fach, 'datum' => $datum, 'zeit' => $zeit, 'preis' => $preis, 'mitteilung' => $mitteilung], function ($message) use ($emailtosent) {
+        Mail::send('email.invoice', ['name' => $name, 'vorname' => $vorname, 'addresse' => $addresse, 'email' => $email, 'teacher_vorname' => $teacher_vorname, 'teacher_nachname' => $teacher_nachname, 'fach' => $fach, 'datum' => $datum, 'zeit' => $zeit, 'preis' => $preis, 'mitteilung' => $mitteilung, 'anrede' => $anrede], function ($message) use ($emailtosent) {
             $message->to($emailtosent);
             $message->subject('Rechnung');
         });

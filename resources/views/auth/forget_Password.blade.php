@@ -2,11 +2,26 @@
 @section('title', 'Sign In')
 @section('content')
 <style>
-    .login-form {
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 50px;
+  height: 100vh;
+}
+
+h3{
+  font-size: 17px;
+  text-align: center;
+  max-width: 900px;
+  padding-bottom: 5px;
+  color: grey;
+}
+.col-md-8{
+  display: flex;
+  justify-content: center;
 }
 
 .card {
@@ -15,9 +30,10 @@
 }
 
 .card-header {
-  background-color: #F2F2F2;
+  color: #FF595B;
   border-bottom: none;
   font-weight: bold;
+  padding-bottom: 10px;
   text-transform: uppercase;
 }
 
@@ -33,9 +49,11 @@
 .form-control {
   border: 1px solid #E2E2E2;
   border-radius: 3px;
-  height: 40px;
-  width: 100%;
-  padding: 10px;
+  height: 20px;
+  width: 200px;
+  padding: 10px 15px;
+  font-size: 15px;
+  margin-top: 20px;
 }
 
 .btn-primary {
@@ -52,13 +70,20 @@
 .btn-primary:hover {
   background-color: #0050A0;
 }
+
 </style>
+
+
 <main class="login-form">
+<h3>Geben Sie Ihre E-Mail-Adresse in das dafür vorgesehene Feld ein, um den Vorgang zum 
+    Zurücksetzen Ihres Passworts zu starten. Sie erhalten anschließend eine E-Mail mit 
+    weiteren Anweisungen und einem Link, um Ihr Passwort zurückzusetzen. Befolgen Sie 
+    die Schritte in der E-Mail, um den Zugriff auf Ihr Konto wiederherzustellen.</h3>
   <div class="cotainer">
       <div class="row justify-content-center">
           <div class="col-md-8">
               <div class="card">
-                  <div class="card-header">Reset Password</div>
+                  <div class="card-header">Passwort zurücksetzen</div>
                   <div class="card-body">
   
                     @if (Session::has('message'))
@@ -70,7 +95,7 @@
                       <form action="{{ route('forget.password.post') }}" method="POST">
                           @csrf
                           <div class="form-group row">
-                              <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+                              <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Adresse</label>
                               <div class="col-md-6">
                                   <input type="text" id="email_address" class="form-control" name="email" required autofocus>
                                   @if ($errors->has('email'))
@@ -80,7 +105,7 @@
                           </div>
                           <div class="col-md-6 offset-md-4">
                               <button type="submit" class="btn btn-primary">
-                                  Send Password Reset Link
+                                  Passwort zurücksetzen
                               </button>
                           </div>
                       </form>

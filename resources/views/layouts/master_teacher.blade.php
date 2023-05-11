@@ -16,6 +16,12 @@
 </head>
 
 <body>
+<style>
+     a .contact{
+        color: white;
+        text-decoration: none;
+    }
+</style>
 
     <header>
         <a href="/welcome_teacher_signedin" class="logo"><img src="/svg/teacher_logo.svg" alt=""></a>
@@ -26,7 +32,7 @@
         </ul>
 
         <div class="main">
-            <a href="/profile_teacher"><img src="/images/profil.png"></a>
+            <a href="/profile_teacher"><img src="/images/profile.png"></a>
         </div>
     </header>
 
@@ -53,9 +59,9 @@
             <div class="links">
                 <h2>Links</h2>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="/courses">Kurse suchen</a></li>
-                    <li><a href="/about_us">Über Uns</a></li>
+                    <li><a href="/welcome_teacher_signedin">Home</a></li>
+                    <li><a href="/create_subject">Kurse erstellen</a></li>
+                    <li><a href="/about_us_teacher">Über Uns</a></li>
                 </ul>
             </div>
             <div class="contact">
