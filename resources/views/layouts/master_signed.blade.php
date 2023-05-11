@@ -26,7 +26,7 @@
         </ul>
 
         <div class="main">
-            <a href="profile"><img src="/images/profil.png"></a>
+            <a href="profile"><img src="/images/profile.png"></a>
         </div>
     </header>
 
