@@ -49,4 +49,50 @@ jetzt angemeldet 😎" transform="translate(93.975 80.917)" fill="#707070" font-
 
 
 </div>
+
+
+<section class="features-section">
+    <h1>Unsere Features</h1>
+    <p>Unsere Lernplattform stellt dir besondere Funktionen zur Verfügung, die dir
+        ein einzigartiges Lernerlebnis bietet.</p>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-img">
+                <img src="svg/diploma.svg">
+            </div>
+            <div class="description">
+                <h1>Diplomkontrolle</h1>
+                <p>Wir stellen sicher, dass alle unsere Tutoren einer Diplomkontrolle unterzogen werden,
+                    bevor sie für unsere Plattform zugelassen werden.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="svg/payment.svg">
+            </div>
+            <div class="description">
+                <h1>Bezahlung</h1>
+                <p>Die Bezahlung erfolgt als Rechnung.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-img">
+                <img src="svg/security.svg">
+            </div>
+            <div class="description">
+                <h1>Sicherheit</h1>
+                <p>Bei uns steht Sicherheit an erster Stelle und garantieren, dass deine Daten bei uns sicher aufbewahrt
+                    werden.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="end-section">
+    <div class="end">
+        <h1>Jetzt verfügbare Kurse auf der Lernplattform suchen und finden, um dein Wissen zu erweitern und neue
+            Fähigkeiten zu erlernen.</h1>
+        <a href="/courses_signed"><button class="start-now">Jetzt Kurse suchen</button> </a>
+    </div>
+</section>
 @endsection
