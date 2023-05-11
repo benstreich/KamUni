@@ -1,4 +1,4 @@
 <h1>Forget Password Email</h1>
    
-You can reset password from bellow link:
+Sie können ihr Passwort über diesn Link zurücksetzen:
 <a href="{{ route('reset.password.get', $token) }}">Reset Password</a>

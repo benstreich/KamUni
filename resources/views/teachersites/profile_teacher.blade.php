@@ -113,12 +113,8 @@
                 <form action="" enctype="multipart/form-data" method="post">
                 @csrf
 
-                    <div class="inputarea">
-                        <input type="file" id="profimg" name="profimg">
-                    </div>
-                    @if ($data)
-                    <img src="{{asset('storage/app/'.$data->image)}}">
-                    @endif
+                  
+                   
                     @if ($data)
                     <div class="inputarea">
                         <h5>Vorname</h5>
@@ -147,7 +143,7 @@
 
                     <div class="inputarea">
                         <h5>Beschreibung</h5>
-                        <input type="text" id="desc" name="desc" placeholder="Beschreibung">         
+                        <input type="text" id="desc" name="desc" placeholder="Beschreibung" value="{{$data->desc}}">         
                     </div>
 
                     <button type="submit" name="submit">Profil Bearbeiten</button>

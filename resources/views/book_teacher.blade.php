@@ -55,9 +55,11 @@ form button[type="submit"]:hover {
 
 
 
-<form action="{{ route('send_email', ['email' => 'ben_streich@sluz.ch']) }}" method="POST">
+<form action="{{ route('send_email', ['email' => '$data->email']) }}" method="POST">
 @csrf
   <h2>Deine Informationen</h2> <br> <br>
+
+
 
   <!-- Name -->
   <div>
@@ -73,12 +75,12 @@ form button[type="submit"]:hover {
 
   <div>
     <label for="email">Email:</label>
-    <input type="text" id="email" name="email" value="{{$data->email}}" required>
+    <input type="text" id="email" name="email" value="{{$data->email}}" readonly>
   </div>
 
   <div>
     <label for="telefon">Telefon:</label>
-    <input type="text" id="telefon" name="telefon" required>
+    <input type="text" id="telefon" name="telefon" >
   </div>
 
   <div>
