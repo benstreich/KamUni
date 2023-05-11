@@ -53,7 +53,7 @@
             <div class="links">
                 <h2>Links</h2>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="/start">Home</a></li>
                     <li><a href="/courses">Kurse suchen</a></li>
                     <li><a href="/about_us">Über Uns</a></li>
                 </ul>
