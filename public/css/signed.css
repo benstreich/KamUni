@@ -272,6 +272,13 @@ header {
 }
 
 /*Kurse suchen*/
+.box-wrapper{
+    display: flex;
+    width: 100%;
+    padding: 100px 0px 100px;
+    justify-content: center;
+}
+
 .container-boxes {
     display: flex;
     flex-wrap: wrap;
